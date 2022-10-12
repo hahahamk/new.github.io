@@ -42,7 +42,10 @@
     }
     .gnb{display: flex;
         li{
-            &:hover, &.on > a{color:$co-blue;}
+            &:hover > a{color:$co-blue;}
+            &:hover{
+                .snb-menu{display:block; display:flex;}
+            }
             a{position:relative;font-size:14px; font-weight:600; padding:12px 16px; display:block;}
             .snb-menu{display:none; position:absolute; left:0; top:90px; width:100%; height:368px; background:$co-w; padding:34px 40px 24px;
                 ul{padding-right:24px;
