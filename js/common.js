@@ -1,4 +1,4 @@
-//hader, footer, bottom_menu include 
+//common include 
 includeHTML();
 
 
