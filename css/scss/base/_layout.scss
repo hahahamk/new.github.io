@@ -9,6 +9,10 @@
     }
 }
 .contents{width:100%;
+    @include mobile{
+        padding-top: rem(56px); 
+    }
+
     @include tablet{
         display:flex;
     }
@@ -29,7 +33,7 @@
 
 //상단공통영역
 .page-header{
-    position:relative; padding:24px 40px 0; height:104px;font-size:20px;
+    position:relative; padding:24px 40px 0; height:104px;font-size:20px; background:$co-w;
     .top-menu{display:flex; justify-content: space-between; padding-bottom:12px;
         h1{
             a{display:block;width:157px; height:16px; background:url($img-common+'/bi.svg'); background-size:100%; @include txt-blind;}
@@ -70,7 +74,7 @@
     }
 
     @include mobile{
-        height:rem(56px);font-size:rem(20px); padding:rem(20px);
+        height:rem(56px);font-size:rem(20px); padding:rem(20px); position:fixed; left:0; top:0; width:100%;
         .top-menu{
             .util{display:none}
             h1{
@@ -78,6 +82,20 @@
             }
         }
         .gnb, .snb-menu{display:none;}
+    }
+}
+
+//모바일용 하단 메뉴
+.service-gnb-btm{display:none; transition:bottom .2s;}
+@include mobile{
+    .service-gnb-btm{width:100%; display:block; position:fixed; left:0; bottom:-62px; background:$co-w; border-top:1px solid #F3F0F5;
+        ul{width:100%;display:flex; }
+        li{font-family: 'messapia'; text-align:center; width:100%;
+            a{display:block; height: rem(60px); padding-top:rem(45px); font-size:rem(6px); position:relative;
+                &::after{content:""; width:rem(30px); height:rem(30px); position:absolute; left:50%; top:rem(8px); background:url($img-common+'/bar-cate.svg'); background-size:100%; transform: $tlx;}
+            }
+        }
+        &.show{bottom:0;}
     }
 }
 
