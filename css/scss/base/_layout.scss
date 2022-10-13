@@ -22,7 +22,7 @@
     }
 }
 .component {
-    background:#DFE0FF; flex-grow: 1; 
+    flex-grow: 1; 
     @include mobile{
         font-size: rem(16px); padding: rem(20px) 0 rem(10px); 
     }
@@ -40,10 +40,13 @@
         }
         .util{display:flex;
             li{font-size:12px; 
-                a{padding:0 18px; color:#78767A}
+                a{padding:0 18px; color:#78767A;
+                    &:last-child{padding-right:0;}
+                }
             }
         }
     }
+    .service-gnb{display:flex; justify-content: space-between;}
     .gnb{display: flex;
         li{
             &:hover > a{color:$co-blue;}
@@ -72,6 +75,18 @@
             &:nth-last-child(3) a::after{content:""; height:24px; position:absolute; left:0; top:8px; width:1px; background:#E4E1E6;}
         }
     }
+    .side-menu{display:flex;
+        li{margin-left:15px; 
+            a{width:24px; height:24px; background:url($img-common+'/ico-search.svg'); background-size:100%; display:block; text-indent:-9999em; 
+                &.cart{background:url($img-common+'/ico-cart.svg');}
+                &.cart-in{background:url($img-common+'/ico-cart-in.svg'); text-indent:0; font-family: 'messapia'; font-size:6px; text-align:center; line-height:30px; }
+                &.cart-full{background:url($img-common+'/ico-cart-full.svg'); text-indent:0; font-family: 'messapia'; text-align:center; line-height:30px; }
+            }
+        }
+        @include mobile{
+            position:absolute; right:18px; top:16px;
+        }
+    }
 
     @include mobile{
         height:rem(56px);font-size:rem(20px); padding:rem(20px); position:fixed; left:0; top:0; width:100%;
@@ -88,7 +103,7 @@
 //모바일용 하단 메뉴
 .service-gnb-btm{display:none; transition:bottom .2s;}
 @include mobile{
-    .service-gnb-btm{width:100%; display:block; position:fixed; left:0; bottom:-62px; background:$co-w; border-top:1px solid #F3F0F5;
+    .service-gnb-btm{width:100%; display:block; position:fixed; left:0; bottom:-65px; background:$co-w; border-top:1px solid #F3F0F5;
         ul{width:100%;display:flex; }
         li{font-family: 'messapia'; text-align:center; width:100%;
             a{display:block; height: rem(60px); padding-top:rem(45px); font-size:rem(6px); position:relative;
@@ -182,3 +197,5 @@
         .notice{padding-top:24px;}
     }
 }
+
+h2.sample{padding:20px 0 10px}

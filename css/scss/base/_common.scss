@@ -1,1 +1,4 @@
-button{background:$co-bk; color:$co-w; border-radius:2px; font-size:14px; font-weight:600}
+
+.btn{background:$co-bk; color:$co-w; font-size:16px; font-weight:600; width:100%; line-height:56px;
+	&.btn-white{background:$co-w;color:$co-bk; border:1px solid $co-bk}
+}
