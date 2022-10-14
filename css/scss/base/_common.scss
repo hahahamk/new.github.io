@@ -1,4 +1,16 @@
 
 .btn{background:$co-bk; color:$co-w; font-size:16px; font-weight:600; width:100%; line-height:56px;
-	&.btn-white{background:$co-w;color:$co-bk; border:1px solid $co-bk}
+	&:disabled{background:$co-disable; color:$co-w; border:none; cursor:default}
+	&.btn-white{background:$co-w; color:$co-bk; border:1px solid $co-bk;
+		&:disabled{color:$co-disable; border-color:$co-disable; cursor:default}
+	}
+}
+
+.txt{border:1px solid #F2F1F7; line-height:48px; height:48px;border-radius:2px; padding:15px 16px;
+	&:focus{border-color:$co-bk}
+	&::placeholder{color:#959499}
+	&:disabled, &:read-only{background:#F8F7FB;
+		&::placeholder{color:$co-disable}
+	}
+	&.wrong{border-color:$co-red}
 }
