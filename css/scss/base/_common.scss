@@ -1,16 +1,49 @@
-
+//공통버튼
 .btn{background:$co-bk; color:$co-w; font-size:16px; font-weight:600; width:100%; line-height:56px;
 	&:disabled{background:$co-disable; color:$co-w; border:none; cursor:default}
 	&.btn-white{background:$co-w; color:$co-bk; border:1px solid $co-bk;
 		&:disabled{color:$co-disable; border-color:$co-disable; cursor:default}
 	}
+
+	@include mobile{
+		font-size:rem(16px); line-height:rem(56px);
+	}
 }
 
-.txt{border:1px solid #F2F1F7; line-height:48px; height:48px;border-radius:2px; padding:15px 16px;
+//form
+.txt{border:1px solid #F2F1F7; line-height:48px; height:48px;border-radius:2px; padding:15px 16px; width:100%;
 	&:focus{border-color:$co-bk}
 	&::placeholder{color:#959499}
 	&:disabled, &:read-only{background:#F8F7FB;
 		&::placeholder{color:$co-disable}
 	}
 	&.wrong{border-color:$co-red}
+
+	@include mobile{
+		font-size: rem(14px); padding:rem(15px) rem(16px); line-height:rem(48px); height:rem(48px); border-radius:rem(2px);
+	}
 }
+
+.error-msg{color:$co-red; font-size:12px; padding:8px 0;
+	@include mobile{
+		font-size: rem(12px); padding:rem(8px) 0; 
+	}
+}
+
+//layer
+.modal-custom{display:none; position:fixed; z-index:1; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgb(0,0,0); background-color:rgba(0,0,0,0.4); 
+}
+.modal-content{position:absolute; left:50%; top:50%; transform:$tla;background-color:#fefefe; margin:auto; padding:0; border:1px solid #888; width:80%; box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); -webkit-animation-name:animatetop; -webkit-animation-duration:0.4s; animation-name:animatetop; animation-duration:0.4s}
+@-webkit-keyframes animatetop{
+     from{top:49%; opacity:0}
+     to{top:50%; opacity:1}
+}
+@keyframes animatetop{
+    from{top:49%; opacity:0}
+    to{top:50%; opacity:1}
+}
+.close-modal{float:right; font-size:28px; font-weight:bold; }
+.close-modal:hover,.close-modal:focus{color:#000; text-decoration:none; cursor:pointer; }
+.modal-header{padding:2px 16px;}
+.modal-body{padding:2px 16px; }
+.modal-footer{padding:2px 16px; background-color:#000; color:white; }
