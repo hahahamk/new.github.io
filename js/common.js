@@ -11,8 +11,10 @@ includeHTML();
 
 // 사업자정보
 function comInfo() {
-	var element = document.getElementById("com-adr");
-	element.classList.toggle("on");
+	var btmadr = document.querySelector('.com-adr');
+	var btmbtn = document.querySelector('.menu-list .info');
+	btmadr.classList.toggle("on");
+	btmbtn.classList.toggle("on");
 }
 
 // 모바일 하단 바로가기
@@ -51,28 +53,28 @@ function hasScrolled(){
 	lastScrollTop = nowScrollTop;
 }
 
-//modal
-var btn = document.querySelectorAll("button.modal-custom-button");
-var modals = document.querySelectorAll('.modal-custom');
-var spans = document.getElementsByClassName("close-modal");
+//modal layer
+var openbtn= document.querySelectorAll(".open-modal");
+var modals = document.querySelectorAll('.modal-layer');
+var closebtn = document.getElementsByClassName("close-modal");
 
-for (var i = 0; i < btn.length; i++) {
-    btn[i].onclick = function (e) {
+for (var i = 0; i < openbtn.length; i++) {
+    openbtn[i].onclick = function (e) {
         e.preventDefault();
         modal = document.querySelector(e.target.getAttribute("href"));
         modal.style.display = "block";
     }
     
-    spans[i].onclick = function () {
+    closebtn[i].onclick = function () {
         for (var index in modals) {
             if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
         }
     }
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// close
 window.onclick = function (event) {
-    if (event.target.classList.contains('modal-custom')) {
+    if (event.target.classList.contains('modal-layer')) {
         for (var index in modals) {
             if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
         }

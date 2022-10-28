@@ -26,58 +26,74 @@
 		<!-- 사이드바 -->
 		<section include-html="layout/snb.html"></section>
 
-		<section class="component" style="min-height:1000px">
-			<h2 class="sample">공통 컴포넌트 input</h2>
+		<section class="content-area">
+			<!-- 공통요소 모음 -->
+			<h2 class="sample">inputbox</h2>
 			<input type="text" class="txt" placeholder="Place holder" />
 			<input type="text" class="txt wrong" placeholder="Place holder" />
 			<p class="error-msg">Error</p>
 			<input type="text" class="txt" placeholder="Place holder" disabled/>
+			
+			<h2 class="sample">checkbox, radio</h2>
+			<label class="inp">checkbox 01
+				<input type="checkbox" checked="checked">
+				<span class="checkmark"></span>
+			</label>
+			<label class="inp">checkbox 02
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+			</label>
+			<label class="inp">checkbox 03
+				<input type="checkbox" disabled />
+				<span class="checkmark"></span>
+			</label>
+			<br /><br />
+			<label class="inp">radio 01
+				<input type="radio" checked="checked" name="radio">
+				<span class="checkmark radio"></span>
+			</label>
+			<label class="inp">radio 02
+				<input type="radio" name="radio">
+				<span class="checkmark radio"></span>
+			</label>
+			<label class="inp">radio 03
+				<input type="radio" name="radio" disabled>
+				<span class="checkmark radio"></span>
+			</label>
 
-			<h2 class="sample">공통 컴포넌트 button</h2>
+			<h2 class="sample">button</h2>
 			<button type="button" class="btn">LABEL</button>
 			<button type="button" class="btn btn-white">LABEL</button>
 			<button type="button" class="btn" disabled>LABEL</button>
 			<button type="button" class="btn btn-white" disabled>LABEL</button>
 
-			<h2 class="sample">공통 컴포넌트 modal</h2>
-			<button class="modal-custom-button" href="#myModal1">Open Modal1</button>
-			<!-- The Modal -->
-			<div id="myModal1" class="modal-custom">
-				<!-- Modal content -->
+			<h2 class="sample">modal layer</h2>
+			<button class="open-modal" href="#myModal1">버튼1개 modal</button>
+			<div id="myModal1" class="modal-layer">
 				<div class="modal-content">
-					<div class="modal-header">
-						<span class="close-modal">×</span>
-						<h2>타이틀</h2>
-					</div>
+					<h2>타이틀</h2>
 					<div class="modal-body">
-						<p>modal1</p>
-						<p>Some other text...1</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident est qui hic non quas eos et praesentium fuga recusandae doloremque adipisci perferendis temporibus totam reiciendis maiores aspernatur nulla, suscipit veritatis!</p>
 					</div>
 					<div class="modal-footer">
-						<h3>Modal Footer</h3>
+						<button type="button" class="btn close-modal">LABEL</button>
 					</div>
 				</div>
 			</div>
 
-			<button class="modal-custom-button" href="#myModal2">Open Modal2</button>
-			<!-- The Modal -->
-			<div id="myModal2" class="modal-custom">
-				<!-- Modal content -->
+			<button class="open-modal" href="#myModal2">버튼2개 modal</button>
+			<div id="myModal2" class="modal-layer">
 				<div class="modal-content">
-					<div class="modal-header">
-						<span class="close-modal">×</span>
-						<h2>타이틀</h2>
-					</div>
+					<h2>타이틀</h2>
 					<div class="modal-body">
-						<p>modal2</p>
-						<p>Some other text...1</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident est qui hic non quas eos et praesentium fuga recusandae doloremque adipisci perferendis temporibus totam reiciendis maiores aspernatur nulla, suscipit veritatis!</p>
 					</div>
 					<div class="modal-footer">
-						<h3>Modal Footer</h3>
+						<button type="button" class="btn btn-white">LABEL</button>
+						<button type="button" class="btn close-modal">LABEL</button>
 					</div>
 				</div>
 			</div>
-
 		</section>
 	</section>
 	<nav class="service-gnb-btm show">
