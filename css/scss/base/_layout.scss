@@ -107,7 +107,7 @@
     }
 
     @include mobile{
-        height:rem(56px);font-size:rem(20px); padding:rem(20px); position:fixed; left:0; top:0; width:100%;
+        height:rem(56px);font-size:rem(20px); padding:rem(20px); position:fixed; left:0; top:0; width:100%; background:$co-w;z-index:10;
         .top-menu{
             .util{display:none}
             h1{
@@ -121,10 +121,10 @@
 //모바일용 하단 메뉴
 .service-gnb-btm{display:none; transition:bottom .2s;}
 @include mobile{
-    .service-gnb-btm{width:100%; display:block; position:fixed; left:0; bottom:rem(-56px); background:$co-w; border-top:1px solid #F3F0F5;
+    .service-gnb-btm{width:100%; display:block; position:fixed; left:0; bottom:rem(-60px); background:$co-w; border-top:1px solid #F3F0F5;
         ul{width:100%;display:flex; }
         li{font-family: 'messapia'; text-align:center; width:100%;
-            a{display:block; height: rem(60px); padding-top:rem(39px); font-size:rem(6px); position:relative;
+            a{display:block; height: rem(56px); padding-top:rem(39px); font-size:rem(6px); position:relative;
                 &::after{content:""; width:rem(24px); height:rem(24px); position:absolute; left:50%; top:rem(8px); background:url($img-common+'/ico-category.svg'); background-size:100%; fill:rgb(42,169,224); transform: $tlx;}
             }
         }
