@@ -132,6 +132,7 @@
                 }
             }
             .num{font-size:rem(12px); color:#B5B4B9; font-weight:400; padding-left:rem(8px)}
+            strong{max-width:rem(150px); @include txt-hd; }
         }
         .btn-back{width:rem(24px); height:rem(24px); background:url($img-common+'ico-header-back.svg'); background-size:100%;text-indent:-9999em; margin-right:rem(10px); }
     }
