@@ -16,7 +16,6 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
-	<script type="text/javascript" src="../js/includeHTML.js"></script>
 </head>
 
 <div class="wrap">
@@ -26,16 +25,15 @@
 	<section class="contents">
 		<!-- 사이드바 -->
 		<section include-html="../layout/snb.html"></section>
-
-		<section class="content-area">
 		
+		<section class="content-area">
 			<!-- 공통요소 모음 -->
 			<h2 class="sample">inputbox</h2>
 			<input type="text" class="txt" placeholder="Place holder" />
 			<input type="text" class="txt wrong" placeholder="Place holder" />
 			<p class="error-msg">Error</p>
 			<input type="text" class="txt" placeholder="Place holder" disabled/>
-
+			
 			<h2 class="sample">checkbox, radio</h2>
 			<label class="inp">checkbox 01
 				<input type="checkbox" checked="checked">
@@ -96,25 +94,25 @@
 					</div>
 				</div>
 			</div>
-
 		</section>
-
-		<nav class="service-gnb-btm show">
-			<ul>
-				<li><a href="javascript:;">CATEGORY</a></li>
-				<li><a href="javascript:;">DESIGNER</a></li>
-				<li><a href="javascript:;">HOME</a></li>
-				<li><a href="javascript:;">LIKE</a></li>
-				<li><a href="javascript:;">MY</a></li>
-			</ul>
-		</nav>
 	</section>
+
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
 
 	<!-- 하단 공통 영역 -->
 	<section include-html="../layout/footer.html"></section>
 </div>
 
 <!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
 <script type="text/javascript" src="../js/common.js"></script>
 <script>
 	includeHTML();

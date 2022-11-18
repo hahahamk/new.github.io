@@ -9,6 +9,13 @@ function comInfo() {
 	btmbtn.classList.toggle("on");
 }
 
+// 사업자정보
+function catego() {
+	var mcate = document.querySelector('.service-gnb-btm .btm-cate');
+	var mcatelist = document.querySelector('.mw-category');
+	mcatelist.classList.add("on");
+}
+
 // 모바일 하단 바로가기
 var lastScrollTop = 0;
 var delta = 5;

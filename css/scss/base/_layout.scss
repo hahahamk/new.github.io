@@ -38,9 +38,9 @@
 //상단공통영역
 .page-header{
     position:relative; padding:16px 40px 0; height:98px;font-size:20px; background:$co-w;
-    .top-menu{display:flex; justify-content: space-between; 
+    .top-menu{display:flex; justify-content: space-between; align-items: center;
         h1{padding-bottom:11px;
-            a{display:block;width:243px; height:25px; background:url($img-common+'/bi.svg'); background-size:100%; @include txt-blind;}
+            a{width:243px; height:25px; background:url($img-common+'bi.svg'); background-size:100%; display:block; @include txt-blind;}
         }
         .util{display:flex;
             li{font-size:12px; 
@@ -49,7 +49,7 @@
             }
         }
     }
-    .service-gnb{display:flex; justify-content: space-between;}
+    .service-gnb{display:flex; justify-content: space-between; align-items: center;}
     .gnb{display: flex;
         li{
             &:hover > a{color:$co-blue;}
@@ -86,58 +86,85 @@
             &:nth-last-child(3) a::after{content:""; height:12px; position:absolute; left:0; top:8px; width:1px; background:#E9E8EE;}
         }
     }
-    .side-menu{display:flex;
-        li{margin-left:15px; 
-            a{width:24px; height:24px; background:url($img-common+'/ico-search.svg'); background-size:100%; display:block; text-indent:-9999em; position:relative;
-                &.cart{background:url($img-common+'/ico-cart.svg');background-size:100%;
-                    em{position:absolute; right:-8px; top:-5px; width:20px; height:20px; line-height:20px; text-align:center; color:$co-w; font-size:10px; font-weight:700; background:$co-blue; border-radius:50%;text-indent:0;}
-                }
-            }
-        }
-        @include mobile{
-            position:absolute; right:18px; top:16px;
-            li{
-                a{width:rem(24px); height:rem(24px); 
-                    &.cart{
-                        em{right:rem(-8px); top:rem(-5px); width:rem(20px); height:rem(20px); line-height:rem(20px);font-size:rem(10px);}
-                    }
-                }
-            }
-        }
-    }
+    
 
     @include mobile{
-        height:rem(56px);font-size:rem(20px); padding:rem(20px); position:fixed; left:0; top:0; width:100%; background:$co-w;z-index:10;
+        height:rem(56px);font-size:rem(20px); padding:rem(8px) rem(18px); position:fixed; left:0; top:0; width:100%; background:$co-w;z-index:10; display:flex; justify-content: space-between;
         .top-menu{
             .util{display:none}
-            h1{
-                a{ width:rem(183px); height:rem(19px);}
+            h1{padding:rem(11px) 0;
+                a{width:rem(183px); height:rem(19px); }
             }
         }
         .gnb, .snb-menu{display:none;}
     }
 }
 
+//gnb-side
+.side-menu{display:flex;
+    li{margin-left:15px; 
+        a{width:24px; height:24px; display:block; text-indent:-9999em; position:relative;
+            &.search{background:url($img-common+'ico-search.svg');background-size:100%;}
+            &.cart{background:url($img-common+'ico-cart.svg');background-size:100%;
+                em{position:absolute; right:-8px; top:-5px; width:20px; height:20px; line-height:20px; text-align:center; color:$co-w; font-size:10px; font-weight:700; background:$co-blue; border-radius:50%;text-indent:0;}
+            }
+        }
+    }
+    @include mobile{
+        li{
+            a{width:rem(24px); height:rem(24px); 
+                &.cart{
+                    em{right:rem(-8px); top:rem(-5px); width:rem(20px); height:rem(20px); line-height:rem(20px);font-size:rem(10px);}
+                }
+            }
+        }
+    }
+}
+
+
+//모바일 sub-header
+@include mobile{
+    .header-sub{height:rem(56px);font-size:rem(20px); padding:rem(8px) rem(18px); position:fixed; left:0; top:0; width:100%; background:$co-w;z-index:10; display:flex; justify-content: space-between; align-items: center; 
+        h2{font-size:rem(20px); font-family: 'messapia'; line-height:rem(40px);color:#3A3A3E; display:flex; align-items: center;
+            &.sub{font-family:"Pretendard",sans-serif; font-weight:600; font-size:rem(20px);
+                .dpt{padding-left:rem(30px); position:relative;
+                    &::after{content:""; position:absolute; left:rem(15px); top:rem(9.5px); width:rem(2px); height:rem(20px); background:#3A3A3E}
+                }
+            }
+            .num{font-size:rem(12px); color:#B5B4B9; font-weight:400; padding-left:rem(8px)}
+        }
+        .btn-back{width:rem(24px); height:rem(24px); background:url($img-common+'ico-header-back.svg'); background-size:100%;text-indent:-9999em; margin-right:rem(10px); }
+    }
+}
+
+//모바일용 카테고리
+.mw-category{display:none; 
+    &.on{display:block;}
+    @include mobile{
+        padding-top:rem(56px);z-index:11; position:fixed; left:0; top:0; width:100%; height:100%; overflow:auto; background:$co-w;
+    }
+}
+
 //모바일용 하단 메뉴
 .service-gnb-btm{display:none; transition:bottom .2s;}
 @include mobile{
-    .service-gnb-btm{width:100%; display:block; position:fixed; left:0; bottom:rem(-60px); background:$co-w; border-top:1px solid #F3F0F5;
+    .service-gnb-btm{width:100%; display:block; position:fixed; left:0; bottom:rem(-60px); z-index:12; background:$co-w; border-top:1px solid #F3F0F5;
         ul{width:100%;display:flex; }
         li{font-family: 'messapia'; text-align:center; width:100%;
             a{display:block; height: rem(56px); padding-top:rem(39px); font-size:rem(6px); position:relative; color:#D9D8DD;
-                &::after{content:""; width:rem(24px); height:rem(24px); position:absolute; left:50%; top:rem(8px); background:url($img-common+'/ico-category.svg'); background-size:100%; transform: $tlx;}
-                &.btm-designer::after{background:url($img-common+'/ico-designer.svg');}
-                &.btm-home::after{background:url($img-common+'/ico-home.svg');}
-                &.btm-like::after{background:url($img-common+'/ico-like.svg');}
-                &.btm-my::after{background:url($img-common+'/ico-my.svg');}
+                &::after{content:""; width:rem(24px); height:rem(24px); position:absolute; left:50%; top:rem(8px); background:url($img-common+'ico-category.svg'); background-size:100%; transform: $tlx;}
+                &.btm-designer::after{background:url($img-common+'ico-designer.svg'); background-size:100%;}
+                &.btm-home::after{background:url($img-common+'ico-home.svg'); background-size:100%;}
+                &.btm-like::after{background:url($img-common+'ico-like.svg'); background-size:100%;}
+                &.btm-my::after{background:url($img-common+'ico-my.svg'); background-size:100%;}
             }
             &.active{
                 a{color:#3A3A3E;
-                    &.btm-cate::after{background:url($img-common+'/ico-category-active.svg');}
-                    &.btm-designer::after{background:url($img-common+'/ico-designer-active.svg');}
-                    &.btm-home::after{background:url($img-common+'/ico-home-active.svg');}
-                    &.btm-like::after{background:url($img-common+'/ico-like-active.svg');}
-                    &.btm-my::after{background:url($img-common+'/ico-my-active.svg');}
+                    &.btm-cate::after{background:url($img-common+'ico-category-active.svg'); background-size:100%;}
+                    &.btm-designer::after{background:url($img-common+'ico-designer-active.svg');background-size:100%;}
+                    &.btm-home::after{background:url($img-common+'ico-home-active.svg');background-size:100%;}
+                    &.btm-like::after{background:url($img-common+'ico-like-active.svg');background-size:100%;}
+                    &.btm-my::after{background:url($img-common+'ico-my-active.svg');background-size:100%;}
                 }
             }
         }
