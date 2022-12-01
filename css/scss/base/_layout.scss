@@ -37,7 +37,7 @@
 
 //상단공통영역
 .page-header{
-    position:relative; padding:16px 40px 0; height:98px;font-size:20px; background:$co-w;
+    position:relative; padding:16px 0px 0; height:98px;font-size:20px; background:$co-w; width:1280px; margin:0 auto;
     .top-menu{display:flex; justify-content: space-between; align-items: center;
         h1{padding-bottom:11px;
             a{width:243px; height:25px; background:url($img-common+'bi.svg'); background-size:100%; display:block; @include txt-blind;}
@@ -89,7 +89,7 @@
     
 
     @include mobile{
-        height:rem(56px);font-size:rem(20px); padding:rem(8px) rem(18px); position:fixed; left:0; top:0; width:100%; background:$co-w;z-index:10; display:flex; justify-content: space-between;
+        height:rem(56px);font-size:rem(20px); padding:rem(8px) rem(18px); position:fixed; left:0; top:0; width:100%; background:$co-w;z-index:10; display:flex; justify-content: space-between; 
         .top-menu{
             .util{display:none}
             h1{padding:rem(11px) 0;
@@ -126,7 +126,7 @@
 @include mobile{
     .header-sub{height:rem(56px);font-size:rem(20px); padding:rem(8px) rem(18px); position:fixed; left:0; top:0; width:100%; background:$co-w;z-index:10; display:flex; justify-content: space-between; align-items: center; 
         h2{font-size:rem(20px); font-family: 'messapia'; line-height:rem(40px);color:#3A3A3E; display:flex; align-items: center;
-            &.sub{font-family:"Pretendard",sans-serif; font-weight:600; font-size:rem(20px);
+            &.sub{font-family:"Pretendard",sans-serif; font-weight:600; font-size:rem(20px); width:100%;
                 .dpt{padding-left:rem(30px); position:relative;
                     &::after{content:""; position:absolute; left:rem(15px); top:rem(9.5px); width:rem(2px); height:rem(20px); background:#3A3A3E}
                 }
@@ -134,7 +134,9 @@
             .num{font-size:rem(12px); color:#B5B4B9; font-weight:400; padding-left:rem(8px)}
             strong{max-width:rem(150px); @include txt-hd; }
         }
-        .btn-back{width:rem(24px); height:rem(24px); background:url($img-common+'ico-header-back.svg'); background-size:100%;text-indent:-9999em; margin-right:rem(10px); }
+        .btn-back{width:rem(34px); height:rem(24px); text-indent:-9999em; position:relative;
+            &::after{content:""; position:absolute; left:0; top:0; width:rem(24px); height:rem(24px); background:url($img-common+'ico-header-back.svg'); background-size:100%;}
+        }
     }
 }
 
@@ -195,7 +197,8 @@
 
 //푸터
 .page-footer{
-    padding:36px 20px; background:$co-bk; color:$co-w;
+    padding:36px 0px; background:$co-bk; color:$co-w; 
+    .footer-area{width:1280px; margin:0 auto;}
     a{color:$co-w; }
     .sns-box{display:flex;
         a{width:24px; height:24px; display:block; @include txt-blind; margin-right:24px;
@@ -232,6 +235,7 @@
 
     @include mobile{
         padding:rem(36px) rem(20px); 
+        .footer-area{width:100%;}
         .sns-box{margin-right:rem(24px);
             a{width:rem(24px); height:rem(24px);}
         }

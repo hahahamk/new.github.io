@@ -79,3 +79,18 @@ window.onclick = function (event) {
         }
     }
 }
+
+//search
+function openSearch() {
+	document.querySelector('.search-area').style.display = "block";
+}
+function closeSearch() {
+	document.querySelector('.search-area').style.display = "none";
+}
+
+function searchRank() {
+	var btmadr = document.querySelector('.rank-more');
+	var btmbtn = document.querySelector('.ranking');
+	btmadr.classList.toggle("on");
+	btmbtn.classList.toggle("on");
+}

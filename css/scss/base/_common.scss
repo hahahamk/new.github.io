@@ -10,17 +10,26 @@
 	}
 }
 
+//닫기
+.btn-close{width:18px; height:18px; @include txt-blind;
+	&::after, &::before{position:absolute; left:0; top:0; content:""; height:18px; width:2px; background:#B5B4B9}
+	&::before{transform: rotate(45deg);}
+	&::after{transform: rotate(-45deg);}
+}
+
 //form
-.txt{border:1px solid #F2F1F7; line-height:48px; height:48px;border-radius:2px; padding:15px 16px; width:100%;
-	&:focus{border-color:$co-bk}
-	&::placeholder{color:#959499}
+.txt{border:1px solid #E9E8EE; line-height:40px; height:40px;border-radius:2px; padding:15px 16px; width:100%; font-weight:400;color:#3A3A3E;font-size:rem(14px);
+	&:focus{border-color:$co-bk; border-width:1.5px}
+	&::placeholder{color:#B5B4B9}
 	&:disabled, &:read-only{background:#F8F7FB;
 		&::placeholder{color:$co-disable}
 	}
 	&.wrong{border-color:$co-red}
+	&.search{text-indent:26px; background:url($img-common+'ico-search-gr.svg') 8px 8px no-repeat; background-size:24px; }
 
 	@include mobile{
-		font-size: rem(14px); padding:rem(15px) rem(16px); line-height:rem(48px); height:rem(48px); border-radius:rem(2px);
+		font-size: rem(14px); padding:rem(15px) rem(16px); line-height:rem(40px); height:rem(40px); border-radius:rem(2px);
+		&.search{font-size:rem(14px); text-indent:rem(26px); background-position:rem(8px) rem(8px); background-size:rem(24px);}
 	}
 }
 
