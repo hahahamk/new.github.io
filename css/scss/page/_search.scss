@@ -41,11 +41,11 @@
 		.search-autocomplete{display:none; width:768px; height:625px; z-index: 13; position:absolute; left:50%; top:40px; background:#fff; transform: $tlx;
 			ul{padding:24px 40px;
 				li{line-height:42px; display: flex; justify-content: space-between; align-items: center;
-					.keyword{color:#6C6C71;
+					.keyword{color:#6C6C71; @include txt-hd; width:590px;
 						strong{color:#3A3A3E; font-weight:600; padding-left:24px; background:url($img-common+'ico-search-brd.svg') left top 2px no-repeat; background-size:13px;}
 						.mark{color:#0000F0 !important}
 					}
-					.more{
+					.more{width: 60px;
 						a{color:#B5B4B9; padding-right:23px; background:url($img-common+'ico-arrow_right.svg') right top no-repeat; background-size:16px;}
 					}
 				}
@@ -98,11 +98,11 @@
 			.search-autocomplete{position:fixed;top:rem(56px); left:0; width:100%; height:100%; overflow:auto; transform: none;
 				ul{padding:rem(24px) rem(20px);
 					li{line-height:rem(42px);
-						.keyword{
-							strong{padding-left:rem(24px); background-position:left top 0.2rem; background-size:rem(13px);}
+						.keyword{font-size:rem(14px); width:80%;
+							strong{padding-left:rem(24px); background-position:left top 0.2rem; background-size:rem(13px); }
 						}
-						.more{
-							a{padding-right:rem(23px); background-size:rem(16px);}
+						.more{width:rem(60px);
+							a{padding-right:rem(23px); background-size:rem(16px); font-size:rem(12px)}
 						}
 					}
 				}
