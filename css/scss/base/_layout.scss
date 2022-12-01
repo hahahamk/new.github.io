@@ -37,7 +37,7 @@
 
 //상단공통영역
 .page-header{
-    position:relative; padding:16px 0px 0; height:98px;font-size:20px; background:$co-w; width:1280px; margin:0 auto;
+    position:relative; padding:24px 0px 0; height:110px;font-size:20px; background:$co-w; width:1280px; margin:0 auto;
     .top-menu{display:flex; justify-content: space-between; align-items: center;
         h1{padding-bottom:11px;
             a{width:243px; height:25px; background:url($img-common+'bi.svg'); background-size:100%; display:block; @include txt-blind;}
@@ -56,7 +56,7 @@
             &:hover{
                 .snb-menu{display:block; display:flex;}
             }
-            a{position:relative;font-size:14px; font-weight:600; padding:0 16px; line-height:28px; height:50px; display:block;}
+            a{position:relative;font-size:14px; font-weight:600; padding:0 20px; line-height:28px; height:50px; display:block; color:#3A3A3E}
             .snb-menu{display:none; border-top:1px solid #F2F1F7; position:absolute; left:0; top:95px; width:100%; min-height:368px; background:$co-w; padding:36px 40px 46px; z-index:100;
                 ul{padding-right:24px;
                     li{min-width:180px;
@@ -80,7 +80,7 @@
             }
             &.on .snb-menu{display:block; display:flex; }
             &:first-child a{padding-left:0;}
-            &:nth-last-child(-n+3) a{font-weight:400; color:#3A3A3E;
+            &:nth-last-child(-n+3) a{font-weight:400; 
                 &:hover{color:$co-blue;}
             }
             &:nth-last-child(3) a::after{content:""; height:12px; position:absolute; left:0; top:8px; width:1px; background:#E9E8EE;}
@@ -154,7 +154,7 @@
     .service-gnb-btm{width:100%; display:block; position:fixed; left:0; bottom:rem(-60px); z-index:12; background:$co-w; border-top:1px solid #F3F0F5;
         ul{width:100%;display:flex; }
         li{font-family: 'messapia'; text-align:center; width:100%;
-            a{display:block; height: rem(56px); padding-top:rem(39px); font-size:rem(6px); position:relative; color:#D9D8DD;
+            a{display:block; height: rem(56px); padding-top:rem(39px); font-size:rem(8px); position:relative; color:#D9D8DD;
                 &::after{content:""; width:rem(24px); height:rem(24px); position:absolute; left:50%; top:rem(8px); background:url($img-common+'ico-category.svg'); background-size:100%; transform: $tlx;}
                 &.btm-designer::after{background:url($img-common+'ico-designer.svg'); background-size:100%;}
                 &.btm-home::after{background:url($img-common+'ico-home.svg'); background-size:100%;}
@@ -209,7 +209,7 @@
     }
     .term-list{padding:24px 0; display:flex;
         li{margin-right:16px;
-            a{font-weight:600;}
+            a{font-weight:600; color:#f2f1f7}
         }
     }
     .menu-list{width:100%; font-size:12px; display:flex; flex-wrap: wrap; 
@@ -234,7 +234,7 @@
     .copyright{font-size:9px; color:#959499; padding-top:16px; }
 
     @include mobile{
-        padding:rem(36px) rem(20px); 
+        padding:rem(36px) rem(20px) rem(200px); 
         .footer-area{width:100%;}
         .sns-box{margin-right:rem(24px);
             a{width:rem(24px); height:rem(24px);}
