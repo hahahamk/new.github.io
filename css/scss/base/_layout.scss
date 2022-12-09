@@ -22,7 +22,7 @@
     }
 
     @include desktop{
-        display:flex; width:1280px; margin:0 auto;
+        display:flex; width:1280px; margin:0 auto; padding:0 40px;
     }
 }
 .content-area {
@@ -37,7 +37,7 @@
 
 //상단공통영역
 .page-header{
-    position:relative; padding:24px 0px 0; height:110px;font-size:20px; background:$co-w; width:1280px; margin:0 auto;
+    position:relative; padding:24px 40px 0; height:110px;font-size:20px; background:$co-w; width:1280px; margin:0 auto;
     .top-menu{display:flex; justify-content: space-between; align-items: center;
         h1{padding-bottom:11px;
             a{width:243px; height:25px; background:url($img-common+'bi.svg'); background-size:100%; display:block; @include txt-blind;}
@@ -57,7 +57,7 @@
                 .snb-menu{display:block; display:flex;}
             }
             a{position:relative;font-size:14px; font-weight:600; padding:0 20px; line-height:28px; height:50px; display:block; color:#3A3A3E}
-            .snb-menu{display:none; border-top:1px solid #F2F1F7; position:absolute; left:0; top:95px; width:100%; min-height:368px; background:$co-w; padding:36px 40px 46px; z-index:100;
+            .snb-menu{display:none; border-top:1px solid #F2F1F7; position:absolute; left:0; top:110px; width:100%; min-height:368px; background:$co-w; padding:36px 40px 46px; z-index:100;
                 ul{padding-right:24px;
                     li{min-width:180px;
                         a{color:#6C6C71;
@@ -87,6 +87,9 @@
         }
     }
     
+    @include tablet{
+        width:100%;
+    }
 
     @include mobile{
         height:rem(56px);font-size:rem(20px); padding:rem(8px) rem(18px); position:fixed; left:0; top:0; width:100%; background:$co-w;z-index:10; display:flex; justify-content: space-between; 
@@ -198,7 +201,7 @@
 //푸터
 .page-footer{
     padding:36px 0px; background:$co-bk; color:$co-w; 
-    .footer-area{width:1280px; margin:0 auto;}
+    .footer-area{width:1280px; margin:0 auto; padding:0 40px;}
     a{color:$co-w; }
     .sns-box{display:flex;
         a{width:24px; height:24px; display:block; @include txt-blind; margin-right:24px;
@@ -233,9 +236,13 @@
     .notice{color:#959499; font-size:12px; line-height:16px}
     .copyright{font-size:9px; color:#959499; padding-top:16px; }
 
+    @include tablet{
+        .footer-area{width:100%;}
+    }
+
     @include mobile{
         padding:rem(36px) rem(20px) rem(200px); 
-        .footer-area{width:100%;}
+        .footer-area{width:100%; padding:0;}
         .sns-box{margin-right:rem(24px);
             a{width:rem(24px); height:rem(24px);}
         }
