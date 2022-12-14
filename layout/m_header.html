@@ -23,8 +23,10 @@
 	<section include-html="../layout/header.html"></section>
 
 	<section class="contents">
-		<h2 class="sample">모바일용 헤더 모음</h2>
+		
+		<h2 class="sample02">모바일용 헤더 모음</h2>
 		<!-- 실제 쓰여질 경우엔 style="position:static" 제거 -->
+
 		<header class="header-sub" style="position:static">
 			<h2>CATEGORY</h2>
 			<ul class="side-menu">
@@ -32,7 +34,7 @@
 				<li><a href="javascript:;" class="cart">장바구니</a></li>
 			</ul>
 		</header>
-
+		
 		<header class="header-sub" style="position:static">
 			<h2 class="sub"><button type="button" class="btn-back">이전</button>여성<span class="dpt">CLOTHING</span></h2>
 			<ul class="side-menu">
@@ -49,11 +51,20 @@
 			</ul>
 		</header>
 
-		<header class="header-sub" style="position:static">
-			<h2 class="sub"><button type="button" class="btn-back">이전</button><input type="text" class="txt search" placeholder="브랜드,상품명,카테고리"></h2>
+		<header class="header-sub"  style="position:static">
+			<h2 class="sub">
+				<button type="button" class="btn-back" onclick="closeSearch()">이전</button>
+				<input type="text" class="txt search" placeholder="브랜드,상품명,카테고리" id="searchKeyword">
+				<button type="button" class="btn-delet" id="deleteInput">삭제</button>
+			</h2>
 			<ul class="side-menu">
-				<li><a href="javascript:;" class="search">검색</a></li>
+				<li><a href="javascript:;" class="cart">장바구니<em>99+</em></a></li>
 			</ul>
+		</header>
+
+		<!-- 마이페이지 -->
+		<header class="header-sub" style="position:static">
+			<h2 class="sub"><button type="button" class="btn-back">이전</button>FAQ</h2>
 		</header>
 		
 	</section>

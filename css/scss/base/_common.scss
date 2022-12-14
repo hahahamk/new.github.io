@@ -1,5 +1,5 @@
 //공통버튼
-.btn{background:$co-bk; color:$co-w; font-size:16px; font-weight:600; width:100%; line-height:56px;
+.btn{background:#1B1B1F; color:$co-w; font-size:16px; font-weight:600; width:100%; line-height:56px; border-radius:2px;
 	&:disabled{background:$co-disable; color:$co-w; border:none; cursor:default}
 	&.btn-white{background:$co-w; color:$co-bk; border:1px solid $co-bk;
 		&:disabled{color:$co-disable; border-color:$co-disable; cursor:default}
@@ -88,4 +88,60 @@
 	}
 }
 
+//filter chip
+.filter-chip{display:flex; gap:8px; flex-wrap: wrap;
+	li{
+		a{display:block; line-height:32px; border:1px solid #E9E8EE; color:#6C6C71; border-radius:2px;padding:0 16px;}
+		&.active{
+			a{border-color:#1B1B1F; background:#1B1B1F; color:$co-w;}
+		}
+	}
 
+	@include mobile{
+		gap:rem(8px);
+		li{
+			a{line-height:rem(32px); border-radius:rem(2px); padding:0 rem(16px); font-size:rem(14px);}
+		}
+	}
+}
+
+//pagination
+.pagination{display:flex; justify-content: center; gap:15px; align-items: center; margin:48px 0;
+	li{height:32px; min-width:32px; display:flex; justify-content: center; align-items: center;
+		a{font-family: 'messapia'; text-align:center; color:#B5B4B9; height:16px; padding:0 2px; font-size:12px;}
+		&.active{
+			a{color:#1B1B1F; position:relative;
+				&::after{content:""; position:absolute; left:0; bottom:-2px; width:100%; height:2px; background:#1B1B1F}
+			}
+		}
+		&.first, &.prev, &.next, &.last{
+			min-width:20px;
+			a{@include txt-blind; width:16px; height:16px; background:#000; background:url($img-common+'ico-paging.png') no-repeat;}
+		}
+		&.first{
+			a{background-position:0 0}
+			&.disable a{background-position:0 -27px}
+		}
+		&.prev{
+			a{background-position:-32px 0px}
+			&.disable a{background-position:-32px -27px}
+		}
+		&.next{
+			a{background-position:-66px 0px}
+			&.disable a{background-position:-66px -27px}
+		}
+		&.last{
+			a{background-position:-100px 0px}
+			&.disable a{background-position:-100px -27px}
+		}
+	}
+
+	@include mobile{
+		display:none;
+	}
+}
+
+//모바일용 더보기 버튼
+.btn-more{padding:rem(24px) 0 0;
+	.btn{background:$co-w; color:#6C6C71; font-size:rem(14px); line-height:rem(40px); border:1px solid #F2F1F7}
+}

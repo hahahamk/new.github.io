@@ -94,3 +94,43 @@ function searchRank() {
 	btmadr.classList.toggle("on");
 	btmbtn.classList.toggle("on");
 }
+
+// faq, 공지사항 아코디언메뉴
+var accordionBtn = document.querySelectorAll('.mypage-list .title');
+var allTexts = document.querySelectorAll('.text');
+var accIcon = document.querySelectorAll('.accIcon');
+
+// event listener
+accordionBtn.forEach(function (el) {
+    el.addEventListener('click', toggleAccordion)
+});
+
+// function
+function toggleAccordion(el) {
+   var targetText = el.currentTarget.nextElementSibling.classList;
+   var targetAccIcon = el.currentTarget.children[0];
+   var target = el.currentTarget;
+   
+   if (targetText.contains('show')) {
+       targetText.remove('show');
+       targetAccIcon.classList.remove('anime');
+       target.classList.remove('active');
+   } 
+   else {
+      accordionBtn.forEach(function (el) {
+         el.classList.remove('active');
+         
+         allTexts.forEach(function (el) {
+            el.classList.remove('show');
+         })
+         
+         accIcon.forEach(function (el) {
+          el.classList.remove('anime');
+         }) 
+         
+      })
+         targetText.add('show');
+         target.classList.add('active');
+         targetAccIcon.classList.add('anime');
+   }  
+}
