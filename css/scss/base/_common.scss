@@ -144,4 +144,12 @@
 //모바일용 더보기 버튼
 .btn-more{padding:rem(24px) 0 0;
 	.btn{background:$co-w; color:#6C6C71; font-size:rem(14px); line-height:rem(40px); border:1px solid #F2F1F7}
+
+	@include desktop{
+		display:none;
+	}
+
+	@include tablet{
+		display:none;
+	}
 }
