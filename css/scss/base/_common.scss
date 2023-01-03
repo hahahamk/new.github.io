@@ -116,23 +116,23 @@
 		}
 		&.first, &.prev, &.next, &.last{
 			min-width:20px;
-			a{@include txt-blind; width:16px; height:16px; background:#000; background:url($img-common+'ico-paging.png') no-repeat;}
+			a{@include txt-blind; width:16px; height:16px; background-size:100%;}
 		}
 		&.first{
-			a{background-position:0 0}
-			&.disable a{background-position:0 -27px}
+			a{background:url($img-common+'pagination_pprev_on.svg');}
+			&.disable a{background:url($img-common+'pagination_pprev.svg') no-repeat;}
 		}
 		&.prev{
-			a{background-position:-32px 0px}
-			&.disable a{background-position:-32px -27px}
+			a{background:url($img-common+'pagination_prev_on.svg');}
+			&.disable a{background:url($img-common+'pagination_prev.svg');}
 		}
 		&.next{
-			a{background-position:-66px 0px}
-			&.disable a{background-position:-66px -27px}
+			a{background:url($img-common+'pagination_next_on.svg')}
+			&.disable a{background:url($img-common+'pagination_next.svg')}
 		}
 		&.last{
-			a{background-position:-100px 0px}
-			&.disable a{background-position:-100px -27px}
+			a{background:url($img-common+'pagination_nnext_on.svg')}
+			&.disable a{background:url($img-common+'pagination_nnext.svg')}
 		}
 		&.disable a{cursor:auto}
 	}

@@ -96,7 +96,7 @@ function searchRank() {
 }
 
 // faq, 공지사항 아코디언메뉴
-var accordionBtn = document.querySelectorAll('.mypage-list .title');
+var accordionBtn = document.querySelectorAll('.accordion .title');
 var allTexts = document.querySelectorAll('.text');
 var accIcon = document.querySelectorAll('.accIcon');
 
