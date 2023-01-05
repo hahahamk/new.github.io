@@ -1,6 +1,6 @@
 //notice, faq
 .accordion-items {
-	li{display:flex; flex-direction: column;}
+	display:flex; flex-direction: column;
 	.expandIcon{width:9.5px; height:9.5px; display: flex; margin-top: -3px; align-items: center; justify-content: center;
 		&:before {width: 1.32px; height:9.5px;}
 		&:after {width:9.5px;height: 1.32px;}
@@ -50,20 +50,23 @@
 }
 
 .cs-notice{
-	.accordion-items{border-top:1px solid #1B1B1F;
-		li{
-			&.top{padding-top:16px;
-				.summary{font-weight:600;
-					.date{color:#6C6C71}
-				}
-				& + .top{padding-top:0;}
-				&.last{border-bottom:1px solid #1B1B1F; padding-bottom:16px;}
+	border-top:1px solid #1B1B1F; 
+	.accordion-items{
+		&.top{padding-top:16px;
+			.summary{font-weight:600;
+				.date{color:#6C6C71}
 			}
+			& + .top{padding-top:0;}
+			&.last{border-bottom:1px solid #1B1B1F; padding-bottom:16px;}
 		}
 		.summary{padding:18px 40px 18px 0; font-weight:400;
 			&::after{display:none}
 			.date{display:block; color:#B5B4B9; font-size:14px; font-weight:400; padding-top:4px}
-			.new{background:url($--image-url+'/common/badge_new.svg') no-repeat; width:14px; height:14px; text-indent:-9999em;display:inline-block; vertical-align:-2px; margin-left:5px}
+			.new{background:url($--image-url+'/common/badge_new.svg') no-repeat; background-size:100%; width:14px; height:14px; text-indent:-9999em;display:inline-block; vertical-align:-2px; margin-left:5px}
 		}
+	}
+
+	@include mobile{
+		margin-top:16px;
 	}
 }
