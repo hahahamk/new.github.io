@@ -7,7 +7,7 @@
 	.search-box{width:688px; margin:0 auto; position:relative;
 		.no-msg{color:#B5B4B9; line-height:32px; margin-bottom: 48px;}
 		input{margin-bottom:24px;}
-		.btn-delet{display:none; position:absolute; right:12px; top:12px; background:url($img-common+'ico-search-del.svg'); background-size:100%; width:15px; height:15px; @include txt-blind;}
+		.btn-delet{display:none; position:absolute; right:12px; top:12px; background:url($--image-url+'/common/ico-search-del.svg'); background-size:100%; width:15px; height:15px; @include txt-blind;}
 		.tit{display:flex;justify-content: space-between; align-items: center; height:48px; 
 			h3{color:#6C6C71; font-weight:600; font-size:14px}
 			span, a{font-size:12px; color:#B5B4B9}
@@ -20,9 +20,9 @@
 				em{width:26px; font-weight:600; color:#3A3A3E}
 				a{width:228px; @include txt-hd; color:#6C6C71;}
 				span{width:45px; font-size:10px; text-align: right; color:#B5B4B9;
-					&.up{color:#0000F0; background:url($img-common+'ico-up.svg') 22px 14px no-repeat; background-size:8px 4px; }
-					&.down{background:url($img-common+'ico-down.svg') 22px 14px no-repeat;background-size:8px 4px;}
-					&.same{background:url($img-common+'ico-same.svg') 38px 16px no-repeat; background-size:6px 1px; @include txt-blind;}
+					&.up{color:#0000F0; background:url($--image-url+'/common/ico-up.svg') 22px 14px no-repeat; background-size:8px 4px; }
+					&.down{background:url($--image-url+'/common/ico-down.svg') 22px 14px no-repeat;background-size:8px 4px;}
+					&.same{background:url($--image-url+'/common/ico-same.svg') 38px 16px no-repeat; background-size:6px 1px; @include txt-blind;}
 					&.new{color:#0000F0; font-size:10px; font-weight:600}
 				}
 			}
@@ -42,11 +42,11 @@
 			ul{padding:24px 40px;
 				li{line-height:42px; display: flex; justify-content: space-between; align-items: center;
 					.keyword{color:#6C6C71; @include txt-hd; width:590px;
-						strong{color:#3A3A3E; font-weight:600; padding-left:24px; background:url($img-common+'ico-search-brd.svg') left top 2px no-repeat; background-size:13px;}
+						strong{color:#3A3A3E; font-weight:600; padding-left:24px; background:url($--image-url+'/common/ico-search-brd.svg') left top 2px no-repeat; background-size:13px;}
 						.mark{color:#0000F0 !important}
 					}
 					.more{width: 60px;
-						a{color:#B5B4B9; padding-right:23px; background:url($img-common+'ico-arrow_right.svg') right top no-repeat; background-size:16px;}
+						a{color:#B5B4B9; padding-right:23px; background:url($--image-url+'/common/ico-arrow_right.svg') right top no-repeat; background-size:16px;}
 					}
 				}
 				&+ul{border-top:1px solid #F2F1F7}
@@ -68,7 +68,7 @@
 				h3{font-size:rem(14px)}
 				span, a{font-size:rem(12px)}
 				span{padding-right:rem(23px); position:relative;}
-				.rank-more{display:block; position:absolute; right:0; top:0; width:rem(16px); height:rem(16px); background:url($img-common+'ico-search-arrow.svg') right top no-repeat; background-size:100%; @include txt-blind;
+				.rank-more{display:block; position:absolute; right:0; top:0; width:rem(16px); height:rem(16px); background:url($--image-url+'/common/ico-search-arrow.svg') right top no-repeat; background-size:100%; @include txt-blind;
 					&.on{transform: rotate(-180deg);}
 				}
 			}

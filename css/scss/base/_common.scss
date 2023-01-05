@@ -25,7 +25,7 @@
 		&::placeholder{color:$co-disable}
 	}
 	&.wrong{border-color:$co-red}
-	&.search{text-indent:26px; background:url($img-common+'ico-search-gr.svg') 8px 8px no-repeat; background-size:24px; }
+	&.search{text-indent:26px; background:url($--image-url+'/common/ico-search-gr.svg') 8px 8px no-repeat; background-size:24px; }
 
 	@include mobile{
 		font-size: rem(14px); padding:rem(15px) rem(16px); line-height:rem(40px); height:rem(40px); border-radius:rem(2px);
@@ -119,20 +119,20 @@
 			a{@include txt-blind; width:16px; height:16px; background-size:100%;}
 		}
 		&.first{
-			a{background:url($img-common+'pagination_pprev_on.svg');}
-			&.disable a{background:url($img-common+'pagination_pprev.svg') no-repeat;}
+			a{background:url($--image-url+'/common/pagination_pprev_on.svg');}
+			&.disable a{background:url($--image-url+'/common/pagination_pprev.svg') no-repeat;}
 		}
 		&.prev{
-			a{background:url($img-common+'pagination_prev_on.svg');}
-			&.disable a{background:url($img-common+'pagination_prev.svg');}
+			a{background:url($--image-url+'/common/pagination_prev_on.svg');}
+			&.disable a{background:url($--image-url+'/common/pagination_prev.svg');}
 		}
 		&.next{
-			a{background:url($img-common+'pagination_next_on.svg')}
-			&.disable a{background:url($img-common+'pagination_next.svg')}
+			a{background:url($--image-url+'/common/pagination_next_on.svg')}
+			&.disable a{background:url($--image-url+'/common/pagination_next.svg')}
 		}
 		&.last{
-			a{background:url($img-common+'pagination_nnext_on.svg')}
-			&.disable a{background:url($img-common+'pagination_nnext.svg')}
+			a{background:url($--image-url+'/common/pagination_nnext_on.svg')}
+			&.disable a{background:url($--image-url+'/common/pagination_nnext.svg')}
 		}
 		&.disable a{cursor:auto}
 	}

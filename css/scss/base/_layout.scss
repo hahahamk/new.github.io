@@ -42,7 +42,7 @@
     position:relative; padding:24px 0px 0; height:110px;font-size:20px; background:$co-w; width:100%;
     .top-menu{display:flex; justify-content: space-between; align-items: center; width:1280px; padding:0 40px; margin:0 auto 20px;
         h1{
-            a{width:273px; height:26px; background:url($img-common+'bi.svg'); background-size:100%; display:block; @include txt-blind;}
+            a{width:273px; height:26px; background:url($--image-url+'/common/bi.svg'); background-size:100%; display:block; @include txt-blind;}
         }
         .util{display:flex;
             li{font-size:12px; 
@@ -113,8 +113,8 @@
 .side-menu{display:flex;
     li{margin-left:15px; 
         a{width:24px; height:24px; display:block; text-indent:-9999em; position:relative;
-            &.search{background:url($img-common+'ico-search.svg');background-size:100%;}
-            &.cart{background:url($img-common+'ico-cart.svg');background-size:100%;
+            &.search{background:url($--image-url+'/common/ico-search.svg');background-size:100%;}
+            &.cart{background:url($--image-url+'/common/ico-cart.svg');background-size:100%;
                 em{position:absolute; right:-8px; top:-5px; width:20px; height:20px; line-height:20px; text-align:center; color:$co-w; font-size:10px; font-weight:700; background:$co-blue; border-radius:50%;text-indent:0;}
             }
         }
@@ -144,7 +144,7 @@
             strong{max-width:rem(150px); @include txt-hd; }
         }
         .btn-back{width:rem(34px); height:rem(24px); text-indent:-9999em; position:relative;
-            &::after{content:""; position:absolute; left:0; top:0; width:rem(24px); height:rem(24px); background:url($img-common+'ico-header-back.svg'); background-size:100%;}
+            &::after{content:""; position:absolute; left:0; top:0; width:rem(24px); height:rem(24px); background:url($--image-url+'/common/ico-header-back.svg'); background-size:100%;}
         }
     }
 }
@@ -164,19 +164,19 @@
         ul{width:100%;display:flex; }
         li{font-family: 'messapia'; text-align:center; width:100%;
             a{display:block; height: rem(56px); padding-top:rem(39px); font-size:rem(8px); position:relative; color:#D9D8DD;
-                &::after{content:""; width:rem(24px); height:rem(24px); position:absolute; left:50%; top:rem(8px); background:url($img-common+'ico-category.svg'); background-size:100%; transform: $tlx;}
-                &.btm-designer::after{background:url($img-common+'ico-designer.svg'); background-size:100%;}
-                &.btm-home::after{background:url($img-common+'ico-home.svg'); background-size:100%;}
-                &.btm-like::after{background:url($img-common+'ico-like.svg'); background-size:100%;}
-                &.btm-my::after{background:url($img-common+'ico-my.svg'); background-size:100%;}
+                &::after{content:""; width:rem(24px); height:rem(24px); position:absolute; left:50%; top:rem(8px); background:url($--image-url+'/common/ico-category.svg'); background-size:100%; transform: $tlx;}
+                &.btm-designer::after{background:url($--image-url+'/common/ico-designer.svg'); background-size:100%;}
+                &.btm-home::after{background:url($--image-url+'/common/ico-home.svg'); background-size:100%;}
+                &.btm-like::after{background:url($--image-url+'/common/ico-like.svg'); background-size:100%;}
+                &.btm-my::after{background:url($--image-url+'/common/ico-my.svg'); background-size:100%;}
             }
             &.active{
                 a{color:$co-bk;
-                    &.btm-cate::after{background:url($img-common+'ico-category-active.svg'); background-size:100%;}
-                    &.btm-designer::after{background:url($img-common+'ico-designer-active.svg');background-size:100%;}
-                    &.btm-home::after{background:url($img-common+'ico-home-active.svg');background-size:100%;}
-                    &.btm-like::after{background:url($img-common+'ico-like-active.svg');background-size:100%;}
-                    &.btm-my::after{background:url($img-common+'ico-my-active.svg');background-size:100%;}
+                    &.btm-cate::after{background:url($--image-url+'/common/ico-category-active.svg'); background-size:100%;}
+                    &.btm-designer::after{background:url($--image-url+'/common/ico-designer-active.svg');background-size:100%;}
+                    &.btm-home::after{background:url($--image-url+'/common/ico-home-active.svg');background-size:100%;}
+                    &.btm-like::after{background:url($--image-url+'/common/ico-like-active.svg');background-size:100%;}
+                    &.btm-my::after{background:url($--image-url+'/common/ico-my-active.svg');background-size:100%;}
                 }
             }
         }
@@ -214,9 +214,9 @@
     a{color:$co-w; }
     .sns-box{display:flex;
         a{width:24px; height:24px; display:block; @include txt-blind; margin-right:24px;
-            &:nth-child(1){background:url($img-common+'sns-kakao.svg'); background-size:100%;}
-            &:nth-child(2){background:url($img-common+'sns-instar.svg'); background-size:100%;}
-            &:nth-child(3){background:url($img-common+'sns-naver.svg'); background-size:100%;}
+            &:nth-child(1){background:url($--image-url+'/common/sns-kakao.svg'); background-size:100%;}
+            &:nth-child(2){background:url($--image-url+'/common/sns-instar.svg'); background-size:100%;}
+            &:nth-child(3){background:url($--image-url+'/common/sns-naver.svg'); background-size:100%;}
         }
     }
     .term-list{padding:24px 0; display:flex;

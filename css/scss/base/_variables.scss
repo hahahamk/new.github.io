@@ -16,7 +16,7 @@ $ls-1:-1px;
 $ls-2:-2px;
 
 //images
-$img-common: "../images/common/";
+$--image-url: "https://d2zjlxn1rmjreq.cloudfront.net/assets/images"; // AWS S3 (s3://leenhan-frontend)
 
 //align
 $tlx: translateX(-50%);
