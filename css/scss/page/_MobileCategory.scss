@@ -3,8 +3,9 @@
     .mw-cateList{border-bottom:1px solid #F2F1F7; padding:rem(16px) 0 rem(24px);
 		li{line-height:rem(56px); position:relative;
 			.summary{display:block; margin:0 20px;font-size:rem(16px); 
-				.expandIcon{right:rem(20px);
-					&.anime.expandIcon:before{transform: rotate(90deg);}
+				.expandIcon{right:rem(20px);}
+				&.active{
+					.expandIcon:before{transform: rotate(90deg);}
 				}
 			}
 			.sub-menu{background:#F8F7FB; padding:rem(16px) rem(22px) rem(16px) rem(43px); display:flex;gap:0 rem(8px); flex-wrap:wrap; border-bottom:none;
