@@ -27,7 +27,7 @@
 }
 .content-area {
     flex-grow: 1; padding-bottom:100px;
-    h3{font-size:24px; font-weight:600; line-height:32px; margin-bottom:40px;}
+    h3{font-size:24px; font-weight:600; line-height:40px; margin-bottom:40px;}
     h3 +.filter-chip{margin:-16px 0 24px}
 
     @include mobile{
@@ -130,6 +130,13 @@
     }
 }
 
+@include tablet {
+    .page-header {
+        .top-menu, .service-gnb {
+            width: 100%
+        }
+    }
+}
 
 //모바일 sub-header
 @include mobile{
