@@ -9,10 +9,11 @@
 	}
 
 	.shop-list{overflow:auto; max-height:532px;
-		li{padding:18px 20px 18px 0; font-size:12px; color:#6C6C71; display:flex; flex-direction: column; 
+		li{padding:18px 20px 18px 0; font-size:14px; color:#6C6C71; display:flex; flex-direction: column; 
 			&:hover{background:#F8F7FB}
 			strong{font-weight:600; font-size:14px; line-height:18px; padding-bottom:4px; color:#3A3A3E;}
-			a{color:#B5B4B9; font-size:14px;padding-top:6px; cursor: default; text-decoration: underline;}
+			a{color:#B5B4B9; padding-top:6px; cursor: default; text-decoration: underline;}
+			.btn-copy{text-decoration: none; font-size:14px; padding:0 0 0 24px; background:url($--image-url+'/common/ico-copy.svg') 8px 1px no-repeat; background-size:16px; cursor:pointer}
 		}
 	}
 
