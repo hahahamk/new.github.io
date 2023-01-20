@@ -15,6 +15,9 @@
 			a{color:#B5B4B9; padding-top:6px; cursor: default; text-decoration: underline;}
 			.btn-copy{text-decoration: none; font-size:14px; padding:0 0 0 24px; background:url($--image-url+'/common/ico-copy.svg') 8px 1px no-repeat; background-size:16px; cursor:pointer}
 		}
+		&::-webkit-scrollbar {width:6px;}
+		&::-webkit-scrollbar-thumb {height:30%;background: #3A3A3E; border-radius: 10px;}
+		&::-webkit-scrollbar-track {background:none}
 	}
 
 	@include mobile{
