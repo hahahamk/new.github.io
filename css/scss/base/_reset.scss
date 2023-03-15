@@ -1,7 +1,7 @@
 *{margin:0;padding:0;font:inherit;color:inherit;}
 *, :after, :before {box-sizing:border-box;}
 :root {-webkit-tap-highlight-color:unset;-webkit-text-size-adjust:100%;text-size-adjust:100%;cursor:default; overflow-wrap:break-word;word-break:break-word;}
-body {font-family: 'Pretendard', sans-serif;font-weight:400;  font-size:14px; color:#3A3A3E}
+body {font-family: 'Pretendard', sans-serif;font-weight:400;  font-size:14px; color:#3A3A3E; background:#f5f7fa}
 img, picture, video, canvas, svg {display: block;max-width:100%;}
 select::-ms-expand { display: none; }
 button {cursor:pointer}
@@ -22,3 +22,6 @@ input[type=number]::-webkit-inner-spin-button {
 -webkit-appearance: none; margin: 0;}
 input[type=number] {-moz-appearance: textfield;}
 ::selection{color: #3A3A3E; background: #efefef;}
+textarea{resize: none;
+	&:focus{outline:none}
+}
