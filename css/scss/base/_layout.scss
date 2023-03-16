@@ -60,7 +60,7 @@
 
 //사이드메뉴
 .side-navigation{
-    transition: all .2s ease-out; position:fixed; left:0px; top:0; width:220px; height:100%; overflow:auto; padding-top:65px; border-right:1px solid $co-line; background:#fff;
+    transition: all .2s ease-out; position:fixed; left:0px; top:0; width:220px; height:100%; overflow:auto; padding-top:65px; border-right:1px solid $co-line; background:#fff; z-index:10; @include scroll;
     h4{font-size:14px; color:$co-bk; line-height:48px; font-weight:600}
     .nav-setting{opacity:.7; background:url(https://cdn-icons-png.flaticon.com/128/2099/2099058.png) no-repeat right 5px top 11px; font-size:11px; background-size:12px; text-align:right; display:block; padding:10px 20px 0;}
     .lnb{margin-bottom:48px; padding:0 20px;

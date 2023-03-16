@@ -17,7 +17,7 @@
 	<title>HANSTYLE Admin</title>
 	
 	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
-	<link rel="stylesheet" type="text/css" href="../css/main.css?cVer=20221209">
+	<link rel="stylesheet" type="text/css" href="../css/main.css?cVer=20230316">
 </head>
 
 <div class="app-wrapper">
@@ -27,7 +27,7 @@
 	<section class="contents">
 		<!-- gnb -->
 		<input class="nav-check" type="checkbox" id="nav-check" /><label class="nav-icon" for="nav-check"><span class="nav-sticks"></span></label>
-		<aside class="side-navigation scroll-bk">
+		<aside class="side-navigation">
 			<a href="javascript:;" class="nav-setting">메뉴설정</a>
 			<div class="lnb">
 				<ul>
@@ -102,7 +102,12 @@
 					<li class="on">
 						<a href="javascript:;">게시판</a>
 						<ul>
-							<li><a href="javascript:;">공지사항</a></li>
+							<li><a href="javascript:;">공지사항</a>
+								<ul>
+									<li><a href="javascript:;">사이트 공지</a></li>
+									<li><a href="javascript:;">내부 공지</a></li>
+								</ul>
+							</li>
 							<li><a href="javascript:;">FAQ</a></li>
 							<li><a href="javascript:;">배너관리</a></li>
 						</ul>
@@ -136,71 +141,110 @@
 		<span class="nav-category">게시판 &gt;<strong>FAQ</strong></span>
 		<section class="content-area">
 			<h3>FAQ</h3>
-			<div class="tb-box">
-				<ul class="table-type">
-					<li><span>사이트</span>
-						<select class="custom-select">
-							<option>Ally Aagaard</option>
-							<option>Alec Haag</option>
-							<option>Aagaard</option>
-						</select>
-					</li>
+
+			<div class="box">
+				<!-- 텍스트 샘플 -->
+				<p class="caution-txt">해당 목록이 없습니다.</p>
+				<ul class="form-type w-3">
 					<li><span>FAQ유형</span>
 						<select class="custom-select">
-							<option>Ally Aagaard</option>
-							<option>Alec Haag</option>
-							<option>Aagaard</option>
+							<option>전체</option>
+							<option>[10] 배송</option>
+							<option>[20] 취소,교환,반품,AS</option>
+							<option>[30] 주문/결제</option>
+							<option>[55] 멤버십</option>
+							<option>[60] 포인트/쿠폰</option>
+							<option>[70] 상품권/기타</option>
 						</select>
 					</li>
 					<li><span>질문</span><input type="text" class="txt" /></li>
 					<li><span>사용여부</span>
 						<select class="custom-select">
-							<option>Ally Aagaard</option>
-							<option>Alec Haag</option>
-							<option>Aagaard</option>
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
 						</select>
 					</li>
 				</ul>
-				<table style="display:none">
-					<tbody>
-						<tr>
-							<th>사이트</th>
-							<td>
-								<select class="custom-select">
-									<option>Ally Aagaard</option>
-									<option>Alec Haag</option>
-									<option>Aagaard</option>
-								</select>
-							</td>
-							<th>FAQ유형</th>
-							<td>
-								<select class="custom-select">
-									<option>Ally Aagaard</option>
-									<option>Alec Haag</option>
-									<option>Aagaard</option>
-								</select>
-							</td>
-						</tr>
-						<tr>
-							<th>질문</th>
-							<td><input type="text" class="txt" /></td>
-							<th>사용여부</th>
-							<td>
-								<select class="custom-select">
-									<option>Ally Aagaard</option>
-									<option>Alec Haag</option>
-									<option>Aagaard</option>
-								</select>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div class="btn-area">
+				<div class="btn-area mt20">
 					<button type="button" class="btn">조회</button>
 					<button type="button" class="btn btn-white">엑셀다운로드</button>
 				</div>
+
+				<!-- faq list -->
+				<div class="table-type mt20">
+					<table>
+						<colgroup>
+							<col width="5%">
+							<col width="12%">
+							<col width="*">
+							<col width="7">
+							<col width="7%">
+							<col width="7%">
+							<col width="10%">
+							<col width="7%">
+							<col width="10%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">FAQ번호</th>
+								<th scope="col">FAQ유형</th>
+								<th scope="col">질문</th>
+								<th scope="col">조회수</th>
+								<th scope="col">사용여부</th>
+								<th scope="col">등록자</th>
+								<th scope="col">등록일시</th>
+								<th scope="col">수정자</th>
+								<th scope="col">수정일시</th>
+							</tr>
+						</thead>
+						<tbody>
+							<script>
+								for(var f=1; f < 10; f++){
+									document.write('<tr>');
+									document.write("<td>"+ (f) +"</td>"); 
+									document.write("<td>"+ '[70] 상품권/기타'+"</td>");
+									document.write("<td class='align-left'>"+ '<a href="#">선물포장이 가능한가요?</a>'+"</td>"); 
+									document.write("<td>"+ '0' +"</td>"); 
+									document.write("<td>"+ '<label class="inp"><input type="checkbox"><span class="checkmark"></span></label>'+"</td>");
+									document.write("<td>"+ '최민경'+"</td>");
+									document.write("<td>"+ '2023-03-16 14:31'+"</td>");
+									document.write("<td>"+ '최민경'+"</td>");
+									document.write("<td>"+ '2023-03-17 14:31'+"</td>");
+									document.write('</tr>');
+								}
+							</script>
+							<tr>
+								<td>10</td>
+								<td>[70] 상품권/기타</td>
+								<td class="align-left"><a href="#">쿠폰을 사용한 주문을 취소, 반품할 경우 쿠폰이 재발행되나요?</a></td>
+								<td>0</td>
+								<td>
+									<label class="inp"><input type="checkbox" checked="checked"><span class="checkmark"></span></label>
+								</td>
+								<td>최민경</td>
+								<td>2023-03-16 14:31</td>
+								<td>최민경</td>
+								<td>2023-03-17 14:31</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<ul class="pagination">
+					<li class="first"><a href="javascript:;">처음으로</a></li>
+					<li class="prev"><a href="javascript:;">이전</a></li>
+					<li><a href="javascript:;">1</a></li>
+					<li class="active"><a href="javascript:;">2</a></li>
+					<li><a href="javascript:;">3</a></li>
+					<li><a href="javascript:;">4</a></li>
+					<li><a href="javascript:;">5</a></li>
+					<li><a href="javascript:;">6</a></li>
+					<li><a href="javascript:;">7</a></li>
+					<li class="next"><a href="javascript:;">다음</a></li>
+					<li class="last"><a href="javascript:;">마지막</a></li>
+				</ul>
+				<!--// faq list -->
 			</div>
-			
 		</section>
 		<!-- content-->
 
@@ -216,5 +260,6 @@
 <script>
 	includeHTML();
 </script>
+
 </body>
 </html>

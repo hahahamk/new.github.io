@@ -41,7 +41,7 @@
 }
 
 //chk,radio
-.inp{position: relative; padding:0 10px 0 28px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size:rem(14px);
+.inp{position: relative; padding:0 10px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-size:rem(14px);
 	input{
 		&:checked ~ .checkmark{background: $co-bk;}
 		&:checked ~ .checkmark:after{display:block;}
@@ -179,6 +179,14 @@ select{width:100%; padding:7px 25px 7px 10px; background: #fff url($--image-url+
 	}
 }
 
+//여백
+.mb50{margin-bottom:50px;}
+.mt20{margin-top:20px;}
+
+//정렬
+.align-center{text-align:center !important}
+.align-left{text-align:left !important}
+
 //상품뱃지
 .badge{line-height:16px; display:inline-block; font-size:10px; padding:0 6px; border:1px solid $co-bk;
 	&.bk{background:$co-bk; color:$co-w}
@@ -186,30 +194,35 @@ select{width:100%; padding:7px 25px 7px 10px; background: #fff url($--image-url+
 	&+.badge{margin-left:-1px;}
 }
 
-//스크롤바 커스텀
-.scroll-bk {padding-right:2px; overflow-y:auto; scrollbar-color:$co-line; scrollbar-width: thin;
-	&::-webkit-scrollbar,
-	*::-webkit-scrollbar {width: 6px;}
-	&::-webkit-scrollbar-track,
-	*::-webkit-scrollbar-track {background-color: #fff;}
-	&::-webkit-scrollbar-thumb,
-	*::-webkit-scrollbar-thumb {background-color:$co-line}
-}
-
-//table
-.tb-box{background:#fff; border-top:1px solid $co-line; border-bottom:1px solid $co-line;  padding:20px;}
-table{width:100%;
-	td{padding:0 10px;}
-	@include mobile{
-	}
-}
-
-.table-type{display:flex; gap:20px; overflow:auto;flex-wrap: wrap;
-	li{display:flex; flex-direction: column; width:250px;
+//box
+.box{background:#fff; border-top:1px solid $co-line; border-bottom:1px solid $co-line; padding:20px 0;}
+.caution-txt{text-align:center; padding:100px 0;}
+.form-type{display:flex; gap:20px; overflow:auto;flex-wrap: wrap; padding:0 20px;
+	&.w-1 li{width:90%}
+	&.w-2 li{width:40%}
+	&.w-3 li{width:30%}
+	&.w-4 li{width:20%}
+	&.w-5 li{width:15%}
+	li{display:flex; flex-direction: column; 
 		span{font-size:12px; padding-bottom:10px;}
 	}
 }
 
-.btn-area{padding:20px 0;margin-top:20px; display:flex; justify-content: right; border-top:1px solid #e3e6ed;
+.btn-area{padding:20px; display:flex; justify-content: right; border-top:1px solid #e3e6ed;
 	button{margin:0 5px;}
+}
+
+//헤더 고정 table
+.table-type{position:relative;padding-bottom:10px; overflow:scroll; white-space: nowrap; @include scroll;
+	table{min-width:700px; width:100%;
+		th{border-bottom:1px solid #e3e6ed; height:30px; font-size:12px; font-weight:600;}
+		tbody{
+			tr:hover{background:#f5f7fa}
+		}
+		td{padding:10px; text-align:center;
+			a:hover{color:$co-blue;}
+		}
+	}
+	@include mobile{
+	}
 }
