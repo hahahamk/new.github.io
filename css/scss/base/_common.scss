@@ -208,18 +208,19 @@ select{width:100%; padding:7px 25px 7px 10px; background: #fff url($--image-url+
 	}
 }
 
-.btn-area{padding:20px; display:flex; justify-content: right; border-top:1px solid #e3e6ed;
+.btn-area{padding:20px; display:flex; justify-content: right;
 	button{margin:0 5px;}
 }
 
 //헤더 고정 table
 .table-type{position:relative;padding-bottom:10px; overflow:scroll; white-space: nowrap; @include scroll;
 	table{min-width:700px; width:100%;
-		th{border-bottom:1px solid #e3e6ed; height:30px; font-size:12px; font-weight:600;}
+		th{border-bottom:1px solid $co-line2; height:30px; font-size:12px; font-weight:600;}
 		tbody{
+			// tr:nth-child(odd) td{background:#f5f7fa}
 			tr:hover{background:#f5f7fa}
 		}
-		td{padding:10px; text-align:center;
+		td{padding:12px 10px; text-align:center;
 			a:hover{color:$co-blue;}
 		}
 	}
