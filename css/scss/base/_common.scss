@@ -15,10 +15,9 @@
 
 //form
 input{
-	&:read-only{background-color:#F8F7FB; border-color:#F2F1F7; color:#b5b4b9;
 		&:focus{border-color:#f2f1f7}
 	}
-}
+
 .txt{width:100%;border:1px solid $co-line; height:35px;border-radius:2px; padding:0 10px; font-weight:400; color:#3A3A3E;font-size:rem(14px);
 	&:focus{border-color:$co-bk; }
 	&::placeholder{color:#B5B4B9}
@@ -64,7 +63,6 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 		}
 	}
 	@include mobile{
-		padding:0 rem(10px) 0 rem(28px);
 		.checkmark{width:rem(16px); height:rem(16px);
 			&::after{left:rem(5px); top:rem(1px); width:rem(5px); height:rem(9px)}
 			&.radio{
