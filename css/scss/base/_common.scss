@@ -135,7 +135,7 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 }
 
 //pagination
-.pagination{display:flex; justify-content: center; gap:15px; align-items: center; margin:48px 0;
+.pagination{display:flex; justify-content: center; gap:15px; align-items: center;
 	li{height:32px; min-width:32px; display:flex; justify-content: center; align-items: center;
 		a{font-family: 'messapia'; text-align:center; color:#B5B4B9; height:16px; padding:0 2px; font-size:12px;}
 		&.active{
@@ -167,8 +167,8 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 	}
 
 	@include mobile{
-		padding:0 20px;
-		display:none;
+		gap:8px;
+		li{min-width:25px;}
 	}
 }
 
@@ -232,18 +232,23 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 	button{margin:0 5px;}
 }
 
-//헤더 고정 table
-.table-type{position:relative;padding-bottom:10px; overflow:scroll; white-space: nowrap; @include scroll;
-	table{min-width:700px; width:100%;
+//table
+.table-type{position:relative;padding-bottom:10px; overflow:scroll; @include scroll;
+	table{width:100%;
 		th{border-bottom:1px solid $co-line2; height:30px; font-size:12px; font-weight:600;}
 		tbody{
 			// tr:nth-child(odd) td{background:#f5f7fa}
 			tr:hover{background:#f5f7fa}
 		}
-		td{padding:12px 10px; text-align:center;
+		td{padding:12px 10px; text-align:center; line-height:22px; letter-spacing: -0.05px; color:#6c6c71;
+			a{display:block; height:20px; @include txt-hd}
 			a:hover{color:$co-blue;}
 		}
-	}
-	@include mobile{
+		@include tablet{
+			min-width:1000px; 
+		}
+		@include mobile{
+			min-width:1000px; 
+		}
 	}
 }

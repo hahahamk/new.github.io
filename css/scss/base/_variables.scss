@@ -26,7 +26,7 @@ $tly: translateY(-50%);
 $tla: translate(-50%, -50%);
 
 //미디어쿼리
-$tablet: 989px;
+$tablet: 1200px;
 $desktop: 1280px;
 
 @media screen and (max-width: 340px) { html { font-size:14px; } }
@@ -52,7 +52,7 @@ $desktop: 1280px;
 @mixin txt-blind{text-indent:-9999em; font-size:0; line-height:0;}
 @mixin clear{content:""; display:block; clear:both;}
 @mixin border{border:1px solid #dddddd; border-radius:10px;}
-@mixin txt-hd{overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis;}
+@mixin txt-hd{overflow:hidden; text-overflow: ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis;}
 @mixin txt-hd2{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap:break-word;}
 @mixin scroll{
     padding-right:2px; overflow-y:auto; scrollbar-color:$co-line; scrollbar-width: thin;
