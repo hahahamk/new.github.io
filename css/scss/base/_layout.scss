@@ -9,6 +9,9 @@
     }
 }
 .contents{width:100%; padding:64px 0 0 220px;
+    @include tablet{
+        padding: 55px 0 0; 
+    }
     @include mobile{
         padding: 55px 0 0; 
     }
@@ -28,6 +31,14 @@
         }
     }
     
+    @include tablet{
+        height:55px; justify-content: right;
+        h1{display:none}
+        li{font-size:10px;
+            a{padding:5px;}
+        }
+    }
+
     @include mobile{
         height:55px; justify-content: right;
         h1{display:none}
@@ -38,11 +49,14 @@
 }
 
 .nav-icon {
-    display:none; cursor: pointer; position: fixed; padding: 8px 0; top: 15px; left: 25px; user-select: none; width: auto; margin: 0; z-index:100;
+    display:none; cursor: pointer; position:fixed; padding: 8px 0; top: 15px; left: 25px; user-select: none; width: auto; margin: 0; z-index:100;
     .nav-sticks{background: #333; display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 18px;
         &::before, &::after{background: #333; content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%;}
         &::before{top: 5px;}
         &::after{top: -5px;}
+    }
+    @include tablet{
+        display:block;
     }
     @include mobile{
         display:block;
@@ -85,6 +99,10 @@
             }
             &.noDepth a{ background-image: none; }
         }
+    }
+
+    @include tablet{
+        left:-40%; width:40%;
     }
 
     @include mobile{

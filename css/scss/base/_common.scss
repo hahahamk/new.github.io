@@ -18,7 +18,7 @@ input{
 		&:focus{border-color:#f2f1f7}
 	}
 
-.txt{width:100%;border:1px solid $co-line; height:35px;border-radius:2px; padding:0 10px; font-weight:400; color:#3A3A3E;font-size:rem(14px);
+.txt{width:100%;border:1px solid $co-line; height:35px;border-radius:2px; padding:0 10px; font-weight:400; color:#3A3A3E;font-size:rem(14px); background:$co-w;
 	&:focus{border-color:$co-bk; }
 	&::placeholder{color:#B5B4B9}
 	&:disabled{background-color:#F8F7FB; border-color:#F2F1F7;  color:#b5b4b9;
@@ -247,6 +247,28 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 		}
 		@include mobile{
 			min-width:1000px; 
+		}
+	}
+}
+
+//member
+.login-area{display:flex; justify-content: center; align-items: center; min-height: 100vh;
+	.login-content{width:500px; display:flex; flex-direction: column; 
+		h1 img{width:250px;}
+		.login-box{background:$co-w; border-radius:2px; padding:20px; margin:20px 0;
+			.login-tit{color:#B5B4B9;}
+			strong{font-weight:600; font-size:20px; font-family: messapia;}
+			ul li{line-height:30px; margin-top:15px;}
+			.chk-area{display:flex; justify-content: space-between; padding:10px 0 30px; font-size:12px;
+				.inp{padding-left:20px;}
+				a{color:$co-gr; text-decoration:underline}
+			}
+			.btn{width:100%;}
+		}
+		.login-txt{font-size:11px; color:#B5B4B9; line-height:16px;}
+		@include mobile{
+			width:90%; 
+			h1 img{width:200px;}
 		}
 	}
 }
