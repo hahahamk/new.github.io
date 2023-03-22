@@ -272,3 +272,13 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 		}
 	}
 }
+
+
+//error
+.page-error{display:flex; justify-content: center; align-items: center; padding-top:20%; flex-direction: column; text-align:Center;
+	h2{font-weight:600; font-size:40px; color:$co-gr;}
+	.error-txt{padding:20px 0; line-height:22px;}
+	@include mobile{
+		h2{font-size:30px; }
+	}
+}
