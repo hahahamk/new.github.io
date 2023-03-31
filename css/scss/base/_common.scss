@@ -4,6 +4,7 @@
 	&.btn-white{background:$co-w; color:$co-bk; border:1px solid $co-bk;
 		&:disabled{color:$co-disable; border-color:$co-disable; cursor:default}
 	}
+	&:active{box-shadow:0px 3px 5px rgba(0,0,0,.2);}
 }
 
 //닫기
@@ -19,7 +20,7 @@ input{
 	}
 
 .txt{width:100%;border:1px solid $co-line; height:35px;border-radius:2px; padding:0 10px; font-weight:400; color:#3A3A3E;font-size:rem(14px); background:$co-w;
-	&:focus{border-color:$co-bk; }
+	&:focus{border-color:$co-bk; border-width:2px; }
 	&::placeholder{color:#B5B4B9}
 	&:disabled{background-color:#F8F7FB; border-color:#F2F1F7;  color:#b5b4b9;
 	}
@@ -254,7 +255,12 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 //member
 .login-area{display:flex; justify-content: center; align-items: center; min-height: 100vh;
 	.login-content{width:500px; display:flex; flex-direction: column; 
-		h1 img{width:250px;}
+		h1{
+			img{width:250px;}
+		}
+		h2{font-size:18px;
+			strong{font-weight:600; padding:10px 0;}
+		}
 		.login-box{background:$co-w; border-radius:2px; padding:20px; margin:20px 0;
 			.login-tit{color:#B5B4B9;}
 			strong{font-weight:600; font-size:20px; font-family: messapia;}
@@ -264,11 +270,21 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 				a{color:$co-gr; text-decoration:underline}
 			}
 			.btn{width:100%;}
+			.pw-txt{
+				li{font-size:12px; color:$co-gr; line-height:20px; margin:0; position:relative; padding-left:10px;
+					&::after{content:""; position:absolute; left:2px; top:7px; width:4px; height:4px; background:$co-gr;border-radius:50%;}
+				}
+			}
 		}
 		.login-txt{font-size:11px; color:#B5B4B9; line-height:16px;}
 		@include mobile{
 			width:90%; 
 			h1 img{width:200px;}
+		}
+
+		h2{font-size:18px; padding:10px 0;}
+		.member-list{
+			li{font-size:12px; line-height:18px;}
 		}
 	}
 }
