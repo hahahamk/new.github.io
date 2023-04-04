@@ -14,3 +14,4 @@
 
   + member
     + login.html
+    + reset-pw.html
