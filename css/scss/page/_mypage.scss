@@ -1,0 +1,101 @@
+@include mobile{
+	.mypage{background:#F8F7FB;}
+}
+.mybox{
+	background:#F8F7FB; padding:24px 40px; margin-bottom:72px;
+	.my-info{color:#6C6C71; font-size:24px; line-height:32px; padding-bottom:8px;
+		.login-tit a{font-weight:600; color:#1B1B1F; padding-right:28px; background:url($--image-url+'/common/arrow-right.svg') right no-repeat; background-size:24px}
+		.my-id{
+			strong{font-weight:600; color:#1B1B1F; display:inline-block; max-width:248px; vertical-align:bottom; @include txt-hd;}
+		}
+		.my-level strong{font-family: "messapia"; color:$co-blue;}
+	}
+	.btn-myinfo{color:#6C6C71; font-size:12px; border:1px solid #E9E8EE; border-radius: 2px; line-height:32px; padding:0 12px;}
+	.my-point{background:$co-w; border-radius: 2px; display: flex; margin-top:48px;
+		li{width:50%; padding:12px 20px; font-size:12px; position:relative; color:#6C6C71;
+			a{font-weight:600; font-size:16px; display:block; margin-top:2px; line-height:22px; color:$co-bk}
+			&:first-child::after{content:""; position:absolute; right:0; top:24px; width:1px; height:13px; background:#E9E8EE}
+		}
+	}
+	.staff-point{font-size:12px; padding-top:16px; display:flex;
+		dt{color:#6C6C71}
+		dd{color:#B5B4B9;
+			strong{color:$co-bk; padding:0 2px}
+		}
+	}
+
+	@include mobile{
+		padding:56px 20px 16px; margin-bottom:0;
+		.my-info{padding-bottom:16px; 
+			.login-tit, .my-level{display:block;}
+		}
+		.staff-point{justify-content: center;}
+	}
+}
+
+//pc 주문내역
+.my-order{
+	.my-order-tit{display:flex; justify-content: space-between; line-height:40px;
+		h4{font-size:14px; font-weight:600;
+			span{font-weight:400; font-size:12px; color:#B5B4B9; padding-left:8px}
+		}
+		.order-all{color:#B5B4B9; font-size:12px; padding:1px 20px 0 0; background:url($--image-url+'/common/ico-order-arrow.svg') right no-repeat; background-size:8px 12px}
+	}
+	@include mobile{display:none}
+}
+.my-order-box{display:flex; justify-content:center; gap:24px; align-items: center; border:1px solid #F2F1F7; border-radius:2px; height:104px; margin:16px 0;text-align:center; padding:0 40px;
+	li{width:20%;color:#6C6C71;position:relative; font-size:12px;
+		strong{display:block; font-weight:600; font-size:20px; color:$co-bk; line-height:26px; margin-bottom:4px}
+		&::after{content:""; position:absolute; left:-25px; top:50%; width:24px; height:2px; background:url($--image-url+'/common/bg-dotted.svg') center no-repeat; }
+		&:first-child::after{background:none}
+	}
+	@include tablet{padding:0 10px;}
+	@include mobile{
+		gap:10px; height:76px; margin:0; padding:0 10px;
+		li{font-size:12px;
+			strong{font-size:16px;}
+			&::after{width:10px; left:-10px}
+		}
+	}
+}
+.my-order-detail{width:100%; font-size:12px; 
+	th{background:#F8F7FB; height:40px;}
+	td{text-align:center; padding:16px 0; line-height:18px;
+		.order-num{background:url($--image-url+'/common/arrow-right.svg') right no-repeat; background-size:12px;padding-right:12px}
+		.prod{text-align:left; display:flex; 
+			.thum{width: 96px; flex-shrink: 0; }
+			.info{padding:8px 12px 0;}
+			a{display:block; line-height: 16px;
+				&.brand{font-weight:600; font-size:14px;padding-top:6px; @include txt-hd2}
+				&.brand-info{color:#6C6C71; margin:2px 0 12px; @include txt-hd2}
+			}
+			.brand-size{color:#6C6C71; font-weight:600;}
+		}
+		strong{font-weight:600}
+		.btn-status{color:$co-blue; text-decoration: underline;}
+		.prod-btn{gap:8px;
+			li{margin-top:4px; 
+				&:first-of-type{margin-top:0;}
+				button{font-size:12px; width:80px; height:32px;}
+				.btn-white{color:#6C6C71; border-color:#F2F1F7}
+			}
+			
+		}
+		.no-data{line-height:180px; font-size:14px; color:#B5B4B9; }
+	}
+	.last-item{border-bottom:1px solid #F2F1F7; }
+}
+
+// mo 마이페이지 메뉴
+.mypage-mob{
+	.mypage-nav{padding:24px 20px; border-bottom:1px solid #F2F1F7;
+		&:last-of-type{border-bottom:none}
+	}
+	h4{line-height:56px; font-size:16px; font-weight:600; }
+	@include desktop{display:none}
+	@include tablet{display:none}
+	.mypage-nav-list{
+		a{line-height:48px; display:block; font-size:14px;}
+	}
+	.side-logout{padding:0 20px}
+}
