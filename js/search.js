@@ -25,7 +25,7 @@ let productCol = `
 
         <a href="#" target="_blank">
             <div class="img-area">	
-                <img src="/images/test-thumbnail.png" alt="">
+                <img src="../images/test-thumbnail.png" alt="">
             </div>
 
             <div class="spec-area">
