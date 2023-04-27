@@ -51,11 +51,17 @@
 		.inquiry-box{width:480px; padding-bottom:24px;
 			h5{line-height:40px; font-weight:600;}
 			.custom-select{font-size:14px;
-				.selected{padding:15px 16px 15px 16px}
+				.selected{padding:15px 16px 15px 16px;
+					&.disabled{background:#F8F7FB; color:#D9D8DD; cursor:default;
+						.arrow{opacity:.5}
+					}
+				}
 				.sheet{font-size:12px;}
 				&+.custom-select{ margin-top:12px;}
 			}
-			.btn-select{width:100%; border:1px solid #F2F1F7; border-radius:2px; color:#6C6C71; height:40px; font-size:14px;}
+			.btn-select{width:100%; border:1px solid #F2F1F7; border-radius:2px; color:#6C6C71; height:40px; font-size:14px;
+				&.disabled{color:#D9D8DD; cursor:default;}
+			}
 			input{height:48px; line-height:46px; margin-bottom:12px;}
 			.add-img{border:1px solid #E9E8EE; border-radius:2px; width:96px; height:96px; position:relative; overflow:hidden;
 				.ico-plus{width:18px; height:18px; display: flex; margin-top: -3px; align-items: center; justify-content: center; position:absolute; left:40px; top:40px;
@@ -63,7 +69,7 @@
 					&:after {width:18px;height:2px;}
 					&:before, &:after {content: ""; position: absolute; background-color: #3a3a3e; }
 				}
-				input{width:96px; height:95px; background:transparent; opacity:0;}
+				input{width:96px; height:95px; background:transparent; opacity:0; cursor: pointer;}
 				img{position:absolute; left:0; top:0; width:98px;}
 				.img-del{position:absolute; top:0; right:0; z-index:10; width:25px; height:25px; background:url($--image-url+'/common/ico-img-del.svg') no-repeat 5px; background-size:16px; @include txt-blind}
 			}
@@ -87,6 +93,7 @@
 			.prod-num{font-size:14px; border-bottom:1px solid #3A3A3E; border-top:1px solid #3A3A3E; margin-bottom:20px;padding:12px 0;
 				strong{font-size:16px; }
 			}
+			.modal-body{height:420px;}
 		}
 		.layer-orderList{
 			li{margin-bottom:35px;
@@ -105,12 +112,9 @@
 
 			.modal-layer{
 				.prod-num{padding-left:20px;}
-				.modal-content{width:100%;bottom:0; left:0; transform: none; top: unset; height:100%;
-					&:after{content:""; position:absolute; left:50%; top:6px;width: 36px; height:4px; transform:$tlx; background:#F2F1F7}
-					h2{padding-top:15px}
+				.modal-content{width:100%;bottom:0; left:0; transform: none; top: unset; height:100%; padding-bottom:20px;
 					.btn-close{display:none;}
-					.modal-body{max-height:80%;}
-					.modal-footer{position:fixed; width:100%; left:0; bottom:0; padding:20px;}
+					.modal-body{height:85%;}
 				}
 			}
 		}

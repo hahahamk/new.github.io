@@ -211,6 +211,82 @@
 
 				<div class="btm-area"><button type="button" class="btn">등록</button></div>
 			</div>
+
+
+			<!-- 문의 내용 수정 화면 : 비활성 버튼 > 해당영역 disabled 클래스 추가 / 이하는 동일함 -->
+			<h3>문의 내용 수정</h3>
+
+			<div class="cs-qna">
+				<!--문의 유형 -->
+				<div class="inquiry-box">
+					<h5>문의 유형</h5>
+					<!-- selectbox-->
+					<div class="custom-select">
+						<div class="selected disabled">
+							<div class="selected-value">문의 유형 선택</div>
+							<div class="arrow"></div>
+						</div>
+						<div class="sheet">
+							<div class="lycontents">
+								<div class="dim"></div>
+								<div class="controls">
+									<div class="draggable-area" style="">
+									<div class="draggable-thumb"></div>
+									</div>
+								</div>
+								<h4 class="btm-tit">문의 유형 선택</h4>
+								<ul>
+									<li class="option">배송</li>
+									<li class="option">교환/반품</li>
+									<li class="option">상품</li>
+									<li class="option">주문/결제</li>
+									<li class="option">쿠폰/이벤트</li>
+									<li class="option">화원/마일리지</li>
+									<li class="option">AS</li>
+									<li class="option">사이트</li>
+									<li class="option">기타</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- selectbox-->
+					<div class="custom-select">
+						<div class="selected disabled">
+							<div class="selected-value">상세 문의 유형 선택</div>
+							<div class="arrow"></div>
+						</div>
+						<div class="sheet">
+							<div class="lycontents">
+								<div class="dim"></div>
+								<div class="controls">
+									<div class="draggable-area" style="">
+									<div class="draggable-thumb"></div>
+									</div>
+								</div>
+								<h4 class="btm-tit">상세 문의 유형 선택</h4>
+								<ul>
+									<li class="option">배송</li>
+									<li class="option">교환/반품</li>
+									<li class="option">상품</li>
+									<li class="option">주문/결제</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 문의 유형 -->
+
+				<!--문의 상품 -->
+				<div class="inquiry-box">
+					<h5>문의 상품</h5>
+					<button type="button" class="btn-select open-modal disabled" href="#order-select">주문번호 변경</button>
+					<p class="caution-txt">※ 최근 3개월 내에 주문건만 조회 가능합니다.</p>
+				</div>
+				<!--// 문의 상품 -->
+			</div>
+			<!--// 문의 내용 수정 -->
+
 		</section>
 	</section>
 

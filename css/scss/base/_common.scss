@@ -93,7 +93,7 @@ textarea{
 		to{opacity:1}
 	}
 		h2{font-size:20px; font-weight:600; line-height:32px; margin-bottom:24px;}
-		.modal-body{max-height:420px; overflow:auto;
+		.modal-body{height:390px; overflow:auto;
 			&::-webkit-scrollbar {width: 6px; }
 			&::-webkit-scrollbar-thumb {height:10%; background: #1b1b1f; border-radius: 10px;}
 			&::-webkit-scrollbar-track {background: none;}
@@ -106,10 +106,11 @@ textarea{
 		}
 
 		@include mobile{
-			width:rem(320px); padding:24px;
+			width:100%; padding:30px 20px 100px; left:0; bottom:0; top:auto; transform: none; height:50%;
+			&:after{content:""; position:absolute; left:50%; top:6px;width: 36px; height:4px; transform:$tlx; background:#F2F1F7}
 			h2{line-height:26px; font-size:20px; margin-bottom:16px;}
-			.modal-body{max-height:rem(294px)}
-			.modal-footer{margin-top:16px;}
+			.modal-body{height:90%}
+			.modal-footer{position:fixed; width:100%; left:0; bottom:0; padding:20px;}
 		}
 	}
 }
@@ -290,7 +291,7 @@ textarea{
 /* TAB */
 .tab {
 	.tab-row {display:inline-block; font-size:0;
-		.tab-item {display:inline-block; position:relative; height:40px; padding:0 40px; font-weight:400; font-size:14px; line-height:40px; color:#b5b4b9;
+		.tab-item {display:inline-block; position:relative; height:40px; padding:0 40px; font-weight:400; font-size:14px; line-height:40px; color:#b5b4b9; text-align: center;
 			&.on {color:$co-bk; font-weight:600;
 				&::before, &::after {content:""; position:absolute; top:12px; width:2px; height:16px; background-color:$co-bk;} 
 				&::before {left:-1px;}
