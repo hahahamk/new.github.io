@@ -16,8 +16,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>HANSTYLE Admin</title>
 	<link rel="shortcut icon" href="https://nshop.ihanstyle.com/favicon.png">
-	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css"> <!-- 운영 베포용 -->
-	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> 로컬용 -->
+	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css"><!-- 운영 베포용 -->
+	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
 </head>
 
 <div class="app-wrapper">
@@ -184,6 +184,104 @@
 				<button type="button" class="btn btn-white">등록</button>
 				<button type="button" class="btn btn-white">엑셀다운로드</button>
 			</div>
+			
+			<!-- tab -->
+			<h4 style="color:blue; margin-top:30px;">[tab]</h4>
+			<ul class="tabs" id="tab-type">
+				<li class="tab-menu active">메뉴 01</li>
+				<li class="tab-menu">메뉴 02</li>
+				<li class="tab-menu">메뉴 03</li>
+			</ul>
+
+			<h4 style="color:blue; margin-top:30px;">[영역 분리] 1. 오른쪽 영역 넓은 경우 6:4</h4>
+
+			<div class="box two-type-right">
+				<div class="l-box">
+					<p class="box-inner-tit">* 고객 검색 키워드 (최근 3일 누적)</p>
+					<div class="table-type mt20">
+						<table>
+							<colgroup>
+								<col width="70px">
+								<col width="150px">
+								<col width="*">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">FAQ번호</th>
+									<th scope="col">FAQ유형</th>
+									<th scope="col">질문</th>
+								</tr>
+							</thead>
+							<tbody>
+								<script>
+									for(var f=1; f < 5; f++){
+										document.write('<tr>');
+										document.write("<td>"+ (f) +"</td>"); 
+										document.write("<td class='align-left'>"+ '[70]상품권/기타'+"</td>");
+										document.write("<td class='align-left'>"+ '<a href="#n">list, view, write 세가지 타입 만들어 놓았습니다. 찢어서 쓰시면 되어요.</a>'+"</td>"); 
+										document.write('</tr>');
+									}
+								</script>
+								<!-- 샘플 -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="r-box">
+					<p class="box-inner-tit">* 프론트 노출 키워드 <span class="co-red">삭제 체크 후 저장하시면 데이터가 삭제 됩니다. </span><button type="button" class="btn">행추가</button></p>
+					<div class="table-type mt20">
+						<table>
+							<colgroup>
+								<col width="70px">
+								<col width="150px">
+								<col width="*">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">FAQ번호</th>
+									<th scope="col">FAQ유형</th>
+									<th scope="col">질문</th>
+								</tr>
+							</thead>
+							<tbody>
+								<script>
+									for(var f=1; f < 5; f++){
+										document.write('<tr>');
+										document.write("<td>"+ (f) +"</td>"); 
+										document.write("<td class='align-left'>"+ '[70]상품권/기타'+"</td>");
+										document.write("<td class='align-left'>"+ '<a href="#n">list, view, write 세가지 타입 만들어 놓았습니다. 찢어서 쓰시면 되어요.</a>'+"</td>"); 
+										document.write('</tr>');
+									}
+								</script>
+								<!-- 샘플 -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<h4 style="color:blue; margin-top:30px;">[영역 분리] 2. 영역 50%씩</h4>
+			<p class="box-tit">타이틀 영역</p>
+			<div class="box two-type">
+				<div class="l-box">왼쪽 50%</div>
+				<div class="r-box">오른쪽 50%</div>
+			</div>
+
+			<h4 style="color:blue; margin-top:30px;">[영역 분리] 3. 왼쪽영역 넓은 경우 4:6</h4>
+			<p class="box-tit">타이틀 영역</p>
+			<div class="box two-type-left">
+				<div class="l-box">
+					<p class="box-inner-tit">타이틀 영역</p>
+					왼쪽 넓어요
+				</div>
+				<div class="r-box">
+					<p class="box-inner-tit">타이틀 영역</p>
+					오른쪽 좁아요
+				</div>
+			</div>
+			<!--// 230504 신규타입 -->
+
+			<h4 style="color:blue; margin-top:30px;">[full 영역일 경우]</h4>
 			<div class="box">
 				<div class="table-type mt20">
 					<table>
@@ -357,6 +455,19 @@
 <script type="text/javascript" src="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/js/common.js"></script>
 <script>
 	includeHTML();
+
+	//tab 
+	var tabarea = document.getElementById("tab-type");
+	var tabBtn = tabarea.getElementsByClassName("tab-menu");
+	for (var i = 0; i < tabBtn.length; i++) {
+	tabBtn[i].addEventListener("click", function() {
+	var current = document.getElementsByClassName("active");
+	current[0].className = current[0].className.replace(" active", "");
+	this.className += " active";
+	});
+}
+
+
 </script>
 
 </body>
