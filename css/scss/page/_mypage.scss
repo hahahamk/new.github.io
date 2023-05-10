@@ -182,3 +182,168 @@
 	}
 }
 // html {scroll-behavior: smooth;}
+
+
+/* 마일리지 */
+.mileage-wrap {
+    .div_line {display:block; height:1px; margin:24px 0; border-top:0; border-bottom:1px solid #F2F1F7;}
+
+	@include mobile {
+		& {padding:16px 20px;}
+		.div_line {margin:24px -20px;}
+	}
+
+    // 사용가능 마일리지 영역
+    .my-mileage {
+        .my_use {margin-bottom:48px; text-align:center;
+            .my_use_tit {padding:15px 0 20px; line-height:22px;
+                .tx_tit {display:inline-block; font-size:20px; font-weight:600; color:$co-bk; line-height:26px; vertical-align:middle;}
+				a {display:inline-block; position:relative; top:-3px; width:20px; height:20px; margin-left:6px; font-size:0; background:url($--image-url+'/my/ico-question.svg') no-repeat; background-size:100%;}
+            }
+            .my_use_m {display:block; font-weight:600; font-size:32px; line-height:36px; color:#1b1b1f;
+                &::after {content:"M"}
+            }
+
+			@include mobile {
+				& {margin-bottom:16px; text-align:left;
+					.my_use_tit {padding:0;
+						.tx_tit {font-size:16px; line-height:22px; letter-spacing:-0.2px;}
+						a {margin-left:0;}
+					}
+					.my_use_m {margin-top:8px; font-size:24px; line-height:32px;}
+				}
+			}
+        }
+
+		// 적립예정, 적립누적, 사용누적 마일리지
+		.my_history {background:#F8F7FB; padding:24px 20px; display:flex; justify-content: space-between; flex-wrap: wrap;
+			dl {font-size:14px; color:#6C6C71;}
+			dt,dd{color:#6C6C71; padding-top:20px; line-height:18px;}
+			dt{text-align:left; width:35%; letter-spacing: -0.5px;
+				&:first-of-type{border-bottom:1px solid #F2F1F7; margin-bottom:0; padding:0 0 20px;}
+			}
+			dd{text-align:right; width:65%; font-weight:600;
+				&:first-of-type{border-bottom:1px solid #F2F1F7; margin-bottom:0; padding:0 0 20px;}
+			}
+
+			@include mobile {
+				& {background:#F8F7FB; padding:16px; display:flex; justify-content: space-between; flex-wrap: wrap;
+					dl {font-size:14px; color:#6C6C71;}
+					dt,dd{color:#6C6C71; padding-top:8px; line-height:18px;}
+					dt{text-align:left; width:35%; letter-spacing: -0.5px;
+						&:first-of-type{border-bottom:1px solid #F2F1F7; margin-bottom:8px; padding:0 0 16px;}
+					}
+					dd{text-align:right; font-weight:600; width:65%;
+						&:first-of-type{border-bottom:1px solid #F2F1F7; margin-bottom:8px; padding:0 0 16px;}
+					}
+				}
+			}
+		}
+    }
+
+	// 회원등급 기준안내 레이어
+	.modal-layer{
+		.modal-content {padding:30px 0 0;
+			h2 {padding: 0 32px;}
+			@include mobile {
+				h2 {padding: 0 20px;}
+				.btn-close {display:none;}
+			}
+
+			// TAB @_common.scss 참조 
+			.tab {padding:8px 32px 7px; border-bottom:1px solid #F2F1F7;
+				.tab-row {display:flex; justify-content: space-around; padding: 0 20px;
+					.tab-item {flex:1 0 auto; padding:0; 
+
+						&+.tab-item::before {content:""; position:absolute; top:50%; left:0; z-index:0; width:1px; height:16px; margin-top:-8px; background-color:#F2F1F7;}
+						&.on {
+							&::before, &::after {content:""; position:absolute; top:50%; width:2px; z-index:1; height:16px; margin-top:-8px; background-color:$co-bk;} 
+							&::before {left:-1px;}
+							&::after {right:-1px;}
+						}
+					}
+				}
+
+				@include mobile {
+					& {padding: 8px 20px 7px;
+						.tab-row {padding:0;
+							.tab-item {flex:1 0 auto;}		
+						}
+					}
+				}
+			}
+
+			.modal-body {padding:15px 0 20px; /*transition:all .3s ease-in-out;*/
+				// @include desktop {
+				// 	& {height:420px;}
+				// }
+				.info-group{padding: 0 20px;
+					.tx_tit {padding:17px 0; font-weight:600; font-size:16px; line-height:22px; color:$co-bk;}
+					li{font-size:14px; line-height:22px; padding:0 0 12px 18px; position:relative; letter-spacing:-0.2px; color:#6c6c71;
+						&::after{content:""; width:3px; height:3px; position:absolute; left:5px; top:8px; border-radius:50%; background:#6c6c71}
+					}
+				}
+			}
+
+			@include mobile{
+				& {padding-bottom:20px; height:auto;}
+				.lv-info{
+					li{font-size:14px; line-height:22px;}
+				}
+			}
+		}
+	}
+
+    // 마일리지 히스토리 영역 
+    .my-history {
+        .tx_tit {display:block; height:56px; padding:17px 0; font-size:16px; font-weight:600; color:$co-bk; line-height:22px; letter-spacing:-0.2px;}
+
+        .calendar {
+            .calendar_inner {display:flex; justify-content:flex-end; margin-bottom:16px;
+                >label {position:relative;
+                    input {width:100%; height:40px; padding:0 30px 0 12px; border:1px solid #E9E8EE; font-size:14px; letter-spacing:-.2px; color:$co-bk;}
+                    
+                    &::after {content:""; display:block; position:absolute; top:12px; right:10px; width:16px; height:16px; background:url($--image-url+"/common/ico_cal@16x16.svg") center no-repeat;}
+
+                    &+label::before {content:"-"; position:absolute; top:0; left:-16px; width:16px; line-height:40px; font-size:12px; color:#000; text-align:center;}
+                }
+                >label + label {margin-left:16px;}
+                .btn {margin-left:8px; white-space:nowrap;}
+            }
+
+            .tx_info {display:none;}
+
+
+			@include mobile {
+				.calendar_inner {justify-content:flex-start; margin-bottom:8px;}
+				.tx_info {display:block; font-size:12px; line-height:20px; letter-spacing:-0.2px; color:#b5b4b9;}
+			}
+        }
+        
+        .history {
+            .filter-chip {padding:16px 0;}
+
+            &list {
+                >li {display:flex; justify-content: space-between; align-items:center; padding:18px 0 17px; gap:16px;
+                    &+li {border-top:1px solid #f2f1f7;}
+
+                    .tx_nm {margin-bottom:4px; font-weight:600; font-size:16px; line-height:22px; letter-spacing:-0.2px; color:$co-bk;}
+                    .tx_domain {margin-bottom:6px; font-weight:400; font-size:14px; line-height:18px; letter-spacing:-0.2px; color:#6c6c71;}
+                    .tx_date {font-weight:400; font-size:14px; line-height:16px; letter-spacing:-0.2px; color:#B5B4B9;}
+                    .tx_mile {font-weight:600; font-size:16px; line-height:22px; letter-spacing:-0.2px; color:#b5b4b9; white-space:nowrap;
+                        &::after {content:"M"}
+                        &.minus::before {content:"-"}
+                        &.plus {color:#0000F0;}
+                        &.plus::before {content:"+"}
+                    }
+                }
+
+				@include mobile {
+					>li {
+						.tx_domain {line-height:22px;}
+					}
+				}
+            }
+        }
+    }
+}
