@@ -16,7 +16,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>HANSTYLE Admin</title>
 	<link rel="shortcut icon" href="https://nshop.ihanstyle.com/favicon.png">
-	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css"><!-- 운영 베포용 -->
+	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css"> <!-- 운영 베포용 -->
 	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
 </head>
 
@@ -185,6 +185,17 @@
 				<button type="button" class="btn btn-white">엑셀다운로드</button>
 			</div>
 			
+			<!-- 파일첨부 -->
+			<div class="btn-area">
+				<button type="button" class="btn">조회</button>
+				<button type="button" class="btn btn-white">등록</button>
+				<div class="filebox">
+					<input class="upload-name" value="첨부파일" placeholder="첨부파일">
+					<label for="file">엑셀업로드</label> 
+					<input type="file" id="file">
+				</div>
+			</div>
+
 			<!-- tab -->
 			<h4 style="color:blue; margin-top:30px;">[tab]</h4>
 			<ul class="tabs" id="tab-type">
@@ -464,6 +475,12 @@
 	var current = document.getElementsByClassName("active");
 	current[0].className = current[0].className.replace(" active", "");
 	this.className += " active";
+	});
+
+	//file
+	$("#file").on('change',function(){
+		var fileName = $("#file").val();
+		$(".upload-name").val(fileName);
 	});
 }
 
