@@ -19,6 +19,8 @@
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body class="">
@@ -165,23 +167,26 @@
 							</ul>
 						</div>
 						
-						<!-- 디자이너 이니셜(알파벳) 목록 -->
-						<ul class="initiallist">
-							<li class="active"><button type="button" class="btn_all">ALL</button></li>
-							<li class="active"><button type="button" class="btn_like">❤️</button></li>
-							<li><button type="button">'</button></li><li><button type="button">0</button></li><li><button type="button">1</button></li>
-							<li><button type="button">2</button></li><li><button type="button">3</button></li><li><button type="button">4</button></li>
-							<li><button type="button">5</button></li><li><button type="button">6</button></li>
-							<li><button type="button">A</button></li><li><button type="button">B</button></li><li><button type="button">C</button></li>
-							<li><button type="button">D</button></li><li><button type="button">E</button></li><li><button type="button">F</button></li>
-							<li><button type="button">G</button></li><li><button type="button">H</button></li><li><button type="button">I</button></li>
-							<li><button type="button">J</button></li><li><button type="button">K</button></li><li><button type="button">L</button></li>
-							<li><button type="button">M</button></li><li><button type="button">N</button></li><li><button type="button">O</button></li>
-							<li><button type="button">P</button></li><li><button type="button">Q</button></li><li><button type="button">R</button></li>
-							<li><button type="button">S</button></li><li><button type="button">T</button></li><li><button type="button">U</button></li>
-							<li><button type="button">V</button></li><li><button type="button">W</button></li><li><button type="button">X</button></li>
-							<li><button type="button">Y</button></li><li><button type="button">Z</button></li>
-						</ul>
+						<!-- 상단 고정 : .is-fixed -->
+						<div class="initial">
+							<!-- 디자이너 이니셜(알파벳) 목록 -->
+							<ul class="initiallist">
+								<li class="active"><button type="button" class="btn_all">ALL</button></li>
+								<li class="active"><button type="button" class="btn_like">❤️</button></li>
+								<li><button type="button">'</button></li><li><button type="button">0</button></li><li><button type="button">1</button></li>
+								<li><button type="button">2</button></li><li><button type="button">3</button></li><li><button type="button">4</button></li>
+								<li><button type="button">5</button></li><li><button type="button">6</button></li>
+								<li><button type="button">A</button></li><li><button type="button">B</button></li><li><button type="button">C</button></li>
+								<li><button type="button">D</button></li><li><button type="button">E</button></li><li><button type="button">F</button></li>
+								<li><button type="button">G</button></li><li><button type="button">H</button></li><li><button type="button">I</button></li>
+								<li><button type="button">J</button></li><li><button type="button">K</button></li><li><button type="button">L</button></li>
+								<li><button type="button">M</button></li><li><button type="button">N</button></li><li><button type="button">O</button></li>
+								<li><button type="button">P</button></li><li><button type="button">Q</button></li><li><button type="button">R</button></li>
+								<li><button type="button">S</button></li><li><button type="button">T</button></li><li><button type="button">U</button></li>
+								<li><button type="button">V</button></li><li><button type="button">W</button></li><li><button type="button">X</button></li>
+								<li><button type="button">Y</button></li><li><button type="button">Z</button></li>
+							</ul>
+						</div>
 						
 						<!-- 디자이너 목록 추가 -->
 						<div class="initial-wrap">

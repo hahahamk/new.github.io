@@ -315,7 +315,7 @@
 
 
 			@include mobile {
-				.calendar_inner {justify-content:flex-start; margin-bottom:8px;}
+				.calendar_inner {justify-content:flex-start;}
 				.tx_info {display:block; font-size:12px; line-height:20px; letter-spacing:-0.2px; color:#b5b4b9;}
 			}
         }
@@ -346,4 +346,146 @@
             }
         }
     }
+}
+
+/* 쿠폰 */
+.coupon-wrap {padding:16px 0;
+	.div_line {display:block; height:1px; margin:24px 0; border-top:0; border-bottom:1px solid #F2F1F7;}	
+
+	// 회원등급 기준안내 레이어
+	.modal-layer{
+		.modal-content {padding:30px 0 0;
+			h2 {padding: 0 32px;}
+			@include mobile {
+				h2 {padding: 0 20px;}
+			}
+
+			.modal-body {padding:16px 32px 20px;
+				// 뱃지
+				.badge {padding:0 6px; margin-bottom:8px;
+					&.double {border-color:#ff5449; background-color:#ff5449; font-size:10px; color:#f2f1f7;}
+				}
+
+				// 쿠폰명, 쿠폰 안내
+				.couponbox {
+					.coupon_name {
+						.tx_tit {margin:8px 0; font-weight:600; font-size:16px; line-height:22px; letter-spacing:-0.2px; color:$co-bk;}
+
+						.tx_dday {display:inline; position:relative; margin-right:8px; padding-right:9px; font-weight:600; font-size:12px; line-height:16px; color:#0000F0; letter-spacing:-0.2px;
+							&::before {content:"D-";}
+							&::after {content:""; position:absolute; top:50%; right:0; width:1px; height:8px; transform:translateY(-50%); background-color:#D9D8DD;}
+						}
+						.tx_period {display:inline; font-size:12px; color:#B5B4B9; letter-spacing:0.2px;
+							span:nth-child(2)::before {content:"- "}
+							span:nth-child(2)::after {content:"까지"}
+						}
+					}
+
+					.coupon_info {
+						li {font-size:14px; line-height:22px; letter-spacing:-0.2px; color:#6c6c71;
+							&+li {margin-top:12px;}
+							.sub li {margin-top:0;}
+						}
+					}
+				}
+
+				.info-group{
+					li{font-size:14px; line-height:22px; padding:0 0 12px 18px; position:relative; letter-spacing:-0.2px; color:#6c6c71;
+						&::after{content:""; width:3px; height:3px; position:absolute; left:5px; top:8px; border-radius:50%; background:#6c6c71}
+					}
+				}
+
+				@include mobile {
+					& {padding:16px 20px 20px;}
+				}
+			}
+
+			@include mobile{
+				& {padding-bottom:20px; height:auto;}
+				.lv-info{
+					li{font-size:14px; line-height:22px;}
+				}
+			}
+		}
+	}
+
+	// 쿠폰등록
+	.regist-coupon {padding:0;
+		.tx_tit {padding:17px 0; font-weight:600; font-size:16px; line-height:22px; letter-spacing:-0.2px; color:$co-bk;}
+		.ipt-coupon {display:block; width:100%; max-width:480px; height:48px; margin-bottom:12px; padding:0 16px; border:1px solid #e9e8ee; letter-spacing:-0.2px; color:$co-bk;
+			&::placeholder {color:#b5b4b9;}
+			&:hover, &:focus {border-color:#3A3A3E}
+		}
+		.btn-black {display:block; width:100%; max-width:480px;}
+
+		.tx_info {font-size:12px; line-height:20px; letter-spacing:-0.2px; color:#b5b4b9;}
+
+		@include mobile {
+			& {padding:0 20px;}
+		}
+	}
+
+	// 쿠폰목록
+	.coupon {
+		@include mobile {
+			& {padding:0 20px;}
+		}
+		&-tit {padding:17px 0; line-height:22px;
+			.tx_tit {display:inline-block; font-size:20px; font-weight:600; color:$co-bk; line-height:26px; vertical-align:middle;}
+			a {display:inline-block; position:relative; top:-3px; width:20px; height:20px; margin-left:6px; font-size:0; background:url($--image-url+'/my/ico-question.svg') no-repeat; background-size:100%;}
+		}
+
+		&-filter {padding:16px 0;
+			@include mobile {
+				& {overflow:hidden; overflow-x:auto;
+					.filter-chip {flex-wrap:nowrap;
+						li {flex:0 0 auto;}
+					} 
+				}
+			}
+		}
+
+		&-align {display:flex; margin-bottom:24px; justify-content: space-between;
+			@include mobile {
+				& {margin-bottom:16px;}
+			}
+			// common.scss @custom-select
+			.custom-select {width:auto;
+				.selected {justify-content: flex-end;}
+			}
+		
+			.coupon-count {padding:6px 0; font-size:12px; letter-spacing:-0.2px; color:#959499; line-height:20px;
+				&::after {content:"장";}
+			}
+		}
+
+		&-list {
+			ul {display:flex; gap:24px; flex-wrap:wrap;
+				li {flex:0 1 calc(33.333337% - 16px);
+					> a {display:block; position:relative; width:100%; padding:16px 50px 16px 20px; border:1px solid #E9E8EE; font-size:0; text-align:left;
+						&::after {content:""; position:absolute; top:50%; right:20px; width:20px; height:20px; transform:translateY(-50%); background:url($--image-url+"/common/ico-arrow-right-gray@20x20.svg")}
+						.badge {padding:0 6px; margin-bottom:8px;
+							&.double {border-color:#ff5449; background-color:#ff5449; font-size:10px; color:#f2f1f7;}
+						}
+						.tx_nm {display:block; height:44px; margin-bottom:8px; font-weight:600; font-size:16px; color:$co-bk; line-height:22px; @include txt-hd2;}
+						.tx_dday {display:inline; position:relative; margin-right:8px; padding-right:9px; font-weight:600; font-size:12px; line-height:16px; color:#0000F0; letter-spacing:-0.2px;
+							&::before {content:"D-";}
+							&::after {content:""; position:absolute; top:50%; right:0; width:1px; height:8px; transform:translateY(-50%); background-color:#D9D8DD;}
+						}
+						.tx_period {display:inline; font-size:12px; color:#B5B4B9; letter-spacing:0.2px;
+							span:nth-child(2)::before {content:"- "}
+							span:nth-child(2)::after {content:"까지"}
+						}
+					}
+				}
+				@include tablet {
+					& li {flex-basis:calc(50% - 12px);}
+				}
+				@include mobile {
+					& {gap:16px;}
+					& li {flex-basis:100%;}
+				}
+			}
+		}
+	}
 }

@@ -34,7 +34,7 @@
 }
 .btn-type{position:relative; display:block;
 	input{padding-right:20%;}
-	button{height:32px; position:absolute; right:8px; top:8px; padding:0 12px;}
+	button{position:absolute; right:0; top:0; padding:0 12px;}
 }
 
 .error-msg{color:$co-red; font-size:12px; padding:8px 0;
@@ -292,10 +292,11 @@ textarea{
 .tab {
 	.tab-row {display:inline-block; font-size:0;
 		.tab-item {display:inline-block; position:relative; height:40px; padding:0 40px; font-weight:400; font-size:14px; line-height:40px; color:#b5b4b9; text-align: center;
+			&::before, &::after {content:""; position:absolute; top:12px; z-index:0; width:2px; height:16px; background-color:#F2F1F7;} 
+			&::before {left:-1px;} 
+			&::after {right:-1px;} 
 			&.on {color:$co-bk; font-weight:600;
-				&::before, &::after {content:""; position:absolute; top:12px; width:2px; height:16px; background-color:$co-bk;} 
-				&::before {left:-1px;}
-				&::after {right:-1px;}
+				&::before, &::after {z-index:1; background-color:$co-bk;} 
 			}
 		}
 	}

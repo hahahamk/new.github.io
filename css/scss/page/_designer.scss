@@ -35,7 +35,7 @@
     &-content {}
 
     /* 상품 ROW */
-    &-row {
+    &-row {overflow: hidden;
         &+.bestdesigner-row {margin-top:24px; padding-top:24px; border-top:1px solid #f2f1f7;}
         @include mobile {justify-content:space-between;
             & {padding:0 20px;}
@@ -93,7 +93,7 @@
 .designer-az {margin-top:72px; 
 
     &-head {display:block; width:100%; 
-        h3 {height:56px; margin:0; line-height:56px; font-weight:600; font-size:16px; color:#3A3A3E;}
+        h3 {display:block; height:56px; margin:0; line-height:56px; font-weight:600; font-size:16px; color:#3A3A3E;}
     }
 
     &-body {margin-top: 16px;
@@ -108,27 +108,34 @@
 						&::before {content:""; position:absolute; top:50%; left:0; width:2px; height:16px; margin-top:-8px; background-color:$co-bk;}
 						&::after {content:""; position:absolute; top:50%; right:0; width:2px; height:16px; margin-top:-8px; background-color:$co-bk;}
 					}
+
+                    @include mobile {
+                        & {flex: 1 1 auto;}
+                    }
 				}
 			}
 		}
 
         // 디자이너 > 이니셜 리스트
-        .initiallist {display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;
-            >li {height:32px;
-                button {width:32px; height:32px; border:1px solid #F2F1F7; border-radius:2px; font-size:12px; color:#6C6C71; vertical-align:middle; text-align:center;
-                    &.btn_all {min-width:32px; width:auto; padding:0 16px; white-space:nowrap;}
-                    &.btn_like {font-size:0; 
-                        &::after {content:""; display:block; width:100%; height:100%; background:url($--image-url+"/common/ico-filter-like@12x12.svg") center center no-repeat;}
+        .initial {
+            &.is-fixed {position:fixed; top:0; left:0; right:0; z-index:10; padding:16px 20px 0; background-color:#fff}
+            .initiallist {display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;
+                >li {height:32px;
+                    button {width:32px; height:32px; border:1px solid #F2F1F7; border-radius:2px; font-size:12px; color:#6C6C71; vertical-align:middle; text-align:center;
+                        &.btn_all {min-width:32px; width:auto; padding:0 16px; white-space:nowrap;}
+                        &.btn_like {font-size:0; 
+                            &::after {content:""; display:block; width:100%; height:100%; background:url($--image-url+"/common/ico-filter-like@12x12.svg") center center no-repeat;}
+                        }
+                        &:hover {border-color:#1B1B1F;}
                     }
-                    &:hover {border-color:#1B1B1F;}
+                    &.active button {border-color:#1B1B1F; color:#F8F7FB; background-color:#1B1B1F;
+                        &.btn_like::after {filter:brightness(0) invert(1);}
+                    }
                 }
-                &.active button {border-color:#1B1B1F; color:#F8F7FB; background-color:#1B1B1F;
-                    &.btn_like::after {filter:brightness(0) invert(1);}
-                }
-            }
 
-            @media screen and (max-width: 1023px) {
-                & {flex-wrap:nowrap; overflow:hidden; overflow-x: auto;}
+                @media screen and (max-width: 1023px) {
+                    & {flex-wrap:nowrap; overflow:hidden; overflow-x: auto;}
+                }
             }
         }
     

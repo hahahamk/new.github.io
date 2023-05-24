@@ -53,7 +53,7 @@ function hasScrolled(){
 }
 
 //modal layer
-var openbtn= document.querySelectorAll(".open-modal");
+/* var openbtn= document.querySelectorAll(".open-modal");
 var modals = document.querySelectorAll(".modal-layer");
 var closebtn = document.getElementsByClassName("close-modal");
 
@@ -76,6 +76,29 @@ window.onclick = function (event) {
             if (typeof modals[index].style !== 'undefined') modals[index].style.display = "none";
         }
     }
+} */
+// modal 공통 jquery로 변경
+$(function(){
+  //init 
+  commonModal()
+})
+
+function commonModal(){
+  let btnModal = $(".open-modal")
+  let modalLayer = $(".modal-layer")
+
+  btnModal.on("click", function(e){
+      let target = $(this).attr("href")
+
+      $(target).show()
+  })
+  modalLayer.on("click", function(e){
+      let closeBtn = e.target.classList.contains("close-modal")
+
+      if(e.target == this || closeBtn) {
+          $(this).hide()
+      }
+  })
 }
 
 //search
