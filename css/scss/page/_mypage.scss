@@ -418,10 +418,11 @@
 		}
 		.btn-black {display:block; width:100%; max-width:480px;}
 
-		.tx_info {font-size:12px; line-height:20px; letter-spacing:-0.2px; color:#b5b4b9;}
+		.tx_info {display:none; margin-top:12px; font-size:12px; line-height:20px; letter-spacing:-0.2px; color:#b5b4b9;}
 
 		@include mobile {
 			& {padding:0 20px;}
+			.tx_info {display:block;}
 		}
 	}
 
@@ -485,6 +486,193 @@
 					& {gap:16px;}
 					& li {flex-basis:100%;}
 				}
+			}
+		}
+	}
+}
+
+/* 회원정보 WRAP 공통 */
+.member-wrap {
+	.div_line {display:block; height:1px; margin:40px 0 24px; border-top:0; border-bottom:1px solid #F2F1F7;}
+
+	.div-block {
+		&+.div-block {padding-top:24px;}
+	}
+
+	.member-head {
+		.tx_summary {margin-bottom:40px; font-size:16px; line-height:22px; letter-spacing:-0.2px; color:#6c6c71;}
+	}
+
+	// 비밀번호 찾기
+	.find-pw {display:flex; justify-content:flex-end; margin:24px 0; padding:4px 0; font-size:12px; line-height:16px; color:$co-lgr; text-decoration:underline;}
+
+	// btn 확인
+	.btn-confirm {height:48px; line-height:46px;}
+	.link_secession {display:inline-block; margin:40px 0; padding:4px 0; font-weight:600; font-size:12px; line-height:16px; color:#B5B4B9; letter-spacing:0.5px; text-decoration:underline;}
+
+	@include mobile {
+		& {padding:0 20px 76px;}
+	}
+}
+
+/* 회원정보 수정 */
+.member-modify {max-width:480px;
+	// SNS 연동
+	.join-sns {
+		.tx_tit {display:block; padding:9px 0; font-weight:600; font-size:12px; letter-spacing:-0.2px; color:#6c6c71; line-height:16px;}
+		.snslist {display:flex; gap:16px;
+			>li {
+				.sns-icon {position:relative; width:40px; font-size:10px; line-height:12px; color:#B5B4B9;
+					&::before {content:""; display:block; width:40px; height:40px; margin-bottom:8px; border-radius:40px; background-color:#E9E8EE;}
+					&::after {content:"인증대기";}
+					&.active::after {content:"인증완료";}
+
+					&.kakao.active::before {background-color:#FEE500;}
+					&.naver.active::before {background-color:#03C75A;}
+					&.apple.active::before {background-color:#000000;}
+
+					> img {position:absolute; top:12px; left:12px; width:16px; height:16px;}
+					&.kakao > img {filter:invert(1)}
+					&.kakao.active > img {filter:invert(0)}
+				}
+			}
+		}
+	}
+
+	// 검색 영역 INPUT
+	.txt-input {position:relative;
+		&+.txt-input,
+		&+.rdo-input {margin-top:16px;}
+
+		>label {display:block; padding:9px 0; font-weight:600; font-size:12px; line-height:16px; letter-spacing:-0.2px; color:#6c6c71;
+			>sup {position:relative; top:4px; margin-left:2px;}
+		}
+		.inputbox {position:relative;
+			.ipt-srch {width:100%; height:48px; padding:0 16px; border: 1px solid #E9E8EE; border-radius: 2px; line-height:46px; font-size:14px; color:$co-bk; letter-spacing:-0.2px;
+				&::placeholder {color:$co-lgr;}
+				&:focus {border:2px solid #1b1b1f;}	
+				&:disabled {background-color:#F8F7FB; color:#D9D8DD; border-color:#F2F1F7;}
+			}
+			.btn-mod {position:absolute; top:8px; right:8px; min-width:72px; height:32px; border:1px solid #f2f1f7; border-radius:2px; background-color:#fff; font-size:12px; color:#6c6c71; line-height:30px; transition:all .2s ease-in-out; text-align:center;
+				&:hover {border-color:#6c6c71}
+				&.is-able {border-color:#1B1B1F; color:#F8F7FB; background-color:#1B1B1F;} 
+				&.is-disabled {border-color:#E9E8EE; color:#B5B4B9; background-color:#E9E8EE; pointer-events:none;}
+			}
+			&.is-error .ipt-srch {border:2px solid #DD3730;}
+
+			.resend {position:absolute; top:0; right:86px; padding:0 10px; font-size:12px; color:#B5B4B9; line-height:48px; text-decoration:underline;}
+		
+			.tx_err {display:none; font-size:12px; color:#DD3730; line-height:16px; margin-top:8px;}
+			.tx_info {margin-top:8px; font-size:12px; line-height:16px; color:#b5b4b9;}
+			.ipt-srch[type=text]:disabled + .tx_info {color:#D9D8DD;}
+			.tx_time {font-weight:600; font-size:12px; color:#0000F0; line-height:16px; margin-top:8px; letter-spacing:0.5px;
+				&.is-end {color:#DD3730}
+			}
+		}
+
+		&.is-err {
+			.ipt-srch {border:2px solid #DD3730;}
+			.tx_err {display:block;}
+		}
+	}
+	
+	// 변경 영역
+	.block-modify {display:none; margin-top:8px;
+		&.is-on {display:block;}
+	}
+
+	// 라디오 인풋
+	.rdo-input {
+		&+.rdo-input {margin-top:16px;}
+		&:last-child {margin-bottom:40px;}
+
+		>.tx_label {display:block; padding:9px 0; font-weight:600; font-size:12px; line-height:16px; letter-spacing:-0.2px; color:#6c6c71;}
+		.rdo_group {padding:8px 0;}
+	}
+
+	@include mobile {
+		& {max-width:100%;
+			.member-modify {padding-top:16px;}
+		}
+	}
+}
+
+/* 회원 탈퇴 */
+.member-secession {
+	.div-block+.div-block {padding-top:48px;}
+	.member-head {
+		.tx_summary {margin-bottom:48px; font-size:20px; line-height:26px;}
+	}
+
+	.box-tit {margin-bottom:16px; 
+		.tx_tit {display:block; font-weight:600; font-size:16px; line-height:22px; letter-spacing:-0.5px; color:$co-bk;}
+		.tx_sub {display:block; margin:8px 0;  font-size:14px; line-height:18px; color:#6C6C71; letter-spacing:-0.5px;}
+	}
+	
+	.box-cont {
+		// 혜택 안내
+		&.my-benefit {border:1px solid #1b1b1f; border-radius:2px;
+			>ul {display:flex;
+				li {flex:1 1 40%; position:relative; padding:20px;
+					&+li:before {content:""; display:block; position:absolute; top:20px; bottom:20px; left:0; width:1px; background-color:#E9E8EE;}
+
+					.tx {display:block; margin-bottom:2px; font-size:12px; line-height:16px; color:#6c6c71;}
+					.tx_point {display:block; margin-bottom:16px; font-weight:600; font-size:16px; letter-spacing:-0.5px; color:#0000F0;}
+					.btn {height:32px; padding:0 12px; font-size:12px; line-height:30px;}
+				}
+			}
+		}
+
+		// 체크사항 안내
+		&.check-info {padding:20px 12px; background-color:#F8F7FB;
+			ul {
+				li {position:relative; padding-left:12px; font-size:12px; line-height:20px; color:#6c6c71;
+					&::before {content:"•"; position:absolute; top:0; left:0; font-weight:bold;}
+				}
+				ul.sub {
+					li {padding:0;
+						&::before {display:none;}
+					}
+				}
+			}
+		}
+
+		// 탈퇴 사유
+		&.the-reason {padding-top:8px;
+			.rdo_group {display:flex; flex-wrap:wrap; gap:16px;
+				li {flex: 1 1 40%;
+					.inp {display:block; font-size:12px; color:#6C6C71; line-height:20px;
+						.checkmark {top:2px;}
+					}
+				}
+			}
+
+			.tx_err {font-size:12px; color:#E12524; line-height:16px; margin-top:16px;}
+			.txt_write {margin-top:16px;
+				>textarea {width:100%; height:86px; padding:16px 18px; border-radius:2px; border:1.5px solid #1b1b1f; font-size:14px; line-height:18px; letter-spacing:-0.5px; color:#3A3A3E;
+					&::placeholder {color:#b5b4b9}
+				}
+			}
+
+			.btn-group {display:flex; margin-top:48px; gap:8px;
+				.btn {flex: 1 0 40%; height:48px; line-height:46px;}
+			}
+		}
+	}
+
+	// 회원탈퇴 레이어
+	.modal-layer{
+		.modal-content {height:240px;
+			.modal-body {display:flex; flex-direction:column; width:100%; height:100%; justify-content: space-around;
+				.tx_msg {display:flex; flex-direction:column; justify-content:center; flex: 1 1 calc(100% - 48px); font-weight:600; font-size:16px; line-height:22px; letter-spacing:-0.5px; text-align:center; vertical-align:middle;}
+
+				.btn-group {display:flex; gap:8px;
+					.btn {flex: 1 0 40%; height:48px;}
+				}
+			}
+
+			@include mobile {
+				& {height:280px; padding:56px 20px 20px;}
 			}
 		}
 	}

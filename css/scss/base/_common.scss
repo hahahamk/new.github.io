@@ -1,11 +1,12 @@
 //공통버튼
-.btn{display:inline-block; background:#1B1B1F; border:1px solid #1B1B1F;;color:$co-w; font-size:14px; font-weight:600; padding:0 18px; height:40px; border-radius:2px; line-height:38px;
+.btn{display:inline-block; background:#1B1B1F; border:1px solid #1B1B1F;;color:$co-w; font-size:14px; font-weight:600; padding:0 18px; height:40px; border-radius:2px; line-height:38px; text-align:center;
 	&:disabled{background:$co-disable; color:$co-w; border-color:$co-disable; cursor:default}
 	&.btn-white{background:$co-w; color:$co-bk; border:1px solid $co-bk;
 		&:disabled{color:$co-disable; border-color:$co-disable; cursor:default}
 	}
 	&.btn-link{background:$co-w; color:#6c6c71; border-color:#F2F1F7;}
 	&.btn-bdnone{height:32px; padding:0 12px; font-weight:400; font-size:12px; color:#959499; background:#fff; border:0; line-height:32px;}
+	&.btn-full {display:block; width:100%;}
 }
 
 //닫기
@@ -306,6 +307,18 @@ textarea{
 			.tab-row {display:flex; justify-content: space-around; padding:0 20px; border:0;
 				.tab-item {flex:1 0 50%; padding:0;}		
 			}
+		}
+	}
+
+	// 페이지 상단 > 탭 상단 고정 시 클래스 추가
+	// .tab 클래스는 공통 사용되는 부분이기 때문에, 페이지 상단 탭일 때만 is-fixed 클래스 사용 그 외에는 별도의 클래스 생성할 예정입니다.
+	&.is-fixed {position:fixed; top:0; left:0; right:0; z-index:100; width:100%; padding:16px 0 0; background-color:#fff;
+		.tab-row {width:100%; max-width:1200px; margin:0 auto;}
+		@media screen and (max-width: 1200px) {
+			& {padding:16px 20px 0;}
+		}
+		@media screen and (min-width:768px){
+			.tab-row {display:block;}
 		}
 	}
 }
