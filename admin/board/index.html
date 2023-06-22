@@ -16,8 +16,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>HANSTYLE Admin</title>
 	<link rel="shortcut icon" href="https://nshop.ihanstyle.com/favicon.png">
-	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css">  <!-- 운영 베포용 -->
-	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> 운영 베포용 -->
 </head>
 
 <div class="app-wrapper">
@@ -177,6 +177,63 @@
 				</ul>
 			</div>
 			<!--// 정렬 -->
+
+			<!-- 정렬 2 -->
+			<div class="box">
+				<ul class="form-type">
+					<li><label>FAQ유형</label>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[20] 취소,교환,반품,AS</option>
+							<option>[30] 주문/결제</option>
+							<option>[55] 멤버십</option>
+							<option>[60] 포인트/쿠폰</option>
+							<option>[70] 상품권/기타</option>
+						</select>
+					</li>
+					<li><label>질문</label><input type="text" class="txt" placeholder="질문을 입력하세요" /></li>
+					<li><label>사용여부</label>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+					</li>
+					<li><label>사용여부</label>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+					</li>
+					<li><label>업체코드</label>
+						<input list="code" name="code" class="txt detail" placeholder="업체코드 입력" />
+						<datalist id="code">
+							<option value="[20] 취소,교환,반품,AS">
+							<option value="[30] 주문/결제">
+							<option value="[55] 멤버십">
+							<option value="[60] 포인트/쿠폰">
+							<option value="[70] 상품권/기타">
+						</datalist>
+					</li>
+				</ul>
+			</div>
+			<!--// 정렬 2 -->
 
 			<!-- list -->
 			<div class="btn-area">
@@ -437,7 +494,7 @@
 </div>
 
 <!-- 비밀번호 변경 레이어 -->
-<div id="reset-pw" class="modal-layer">
+<div id="reset-pw" class="modal-layer large-type">
 	<div class="modal-content">
 		<h2>비밀번호 변경</h2>
 		<button class="btn-close close-modal">닫기</button>
