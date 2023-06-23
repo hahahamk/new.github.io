@@ -16,8 +16,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>HANSTYLE Admin</title>
 	<link rel="shortcut icon" href="https://nshop.ihanstyle.com/favicon.png">
-	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css">
-	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> 운영 베포용 -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css">  -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css"> 
 </head>
 
 <div class="app-wrapper">
@@ -151,7 +151,7 @@
 			<h3>FAQ</h3>
 			<!-- 텍스트 샘플 -->
 			<p class="caution-txt">조회되지 않을 경우 샘플 텍스트 영역입니다.</p> 
-			
+			  
 			<!-- 정렬 -->
 			<div class="box">
 				<ul class="form-type flex-between">
@@ -231,6 +231,11 @@
 							<option value="[70] 상품권/기타">
 						</datalist>
 					</li>
+					<li>
+						<input type="date" id="startDate" name="startDate" class="txt" value="2023-06-23">
+						<button type="button" onclick="" class="btn-date">1D</button>
+						<button type="button" onclick="" class="btn-date">1W</button>
+					</li>
 				</ul>
 			</div>
 			<!--// 정렬 2 -->
@@ -304,7 +309,7 @@
 				<div class="r-box">
 					<p class="box-inner-tit">* 프론트 노출 키워드 <span class="co-red">삭제 체크 후 저장하시면 데이터가 삭제 됩니다. </span><button type="button" class="btn">행추가</button></p>
 					<div class="table-type mt20">
-						<table>
+						<table class="userListTable">
 							<colgroup>
 								<col width="70px">
 								<col width="150px">
@@ -319,7 +324,7 @@
 							</thead>
 							<tbody>
 								<script>
-									for(var f=1; f < 5; f++){
+									for(var f=1; f < 20; f++){
 										document.write('<tr>');
 										document.write("<td>"+ (f) +"</td>"); 
 										document.write("<td class='align-left'>"+ '[70]상품권/기타'+"</td>");
@@ -358,7 +363,7 @@
 			<h4 style="color:blue; margin-top:30px;">[full 영역일 경우]</h4>
 			<div class="box">
 				<div class="table-type mt20">
-					<table>
+					<table class="userListTable">
 						<colgroup>
 							<col width="70px">
 							<col width="150px">
@@ -385,7 +390,7 @@
 						</thead>
 						<tbody>
 							<script>
-								for(var f=1; f < 10; f++){
+								for(var f=1; f < 20; f++){
 									document.write('<tr>');
 									document.write("<td>"+ (f) +"</td>"); 
 									document.write("<td class='align-left'>"+ '[70]상품권/기타'+"</td>");
@@ -562,21 +567,19 @@
 	//tab 
 	var tabarea = document.getElementById("tab-type");
 	var tabBtn = tabarea.getElementsByClassName("tab-menu");
-	for (var i = 0; i < tabBtn.length; i++) {
-	tabBtn[i].addEventListener("click", function() {
-	var current = document.getElementsByClassName("active");
-	current[0].className = current[0].className.replace(" active", "");
-	this.className += " active";
-	});
+		for (var i = 0; i < tabBtn.length; i++) {
+			tabBtn[i].addEventListener("click", function() {
+			var current = document.getElementsByClassName("active");
+			current[0].className = current[0].className.replace(" active", "");
+			this.className += " active";
+		});
+	}
 
 	//file
 	$("#file").on('change',function(){
 		var fileName = $("#file").val();
 		$(".upload-name").val(fileName);
 	});
-}
-
-
 </script>
 
 </body>
