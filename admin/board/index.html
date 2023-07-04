@@ -222,7 +222,7 @@
 						</select>
 					</li>
 					<li><label>업체코드</label>
-						<input list="code" name="code" class="txt detail" placeholder="업체코드 입력" />
+						<input list="code" name="code" class="txt" placeholder="업체코드 입력" />
 						<datalist id="code">
 							<option value="[20] 취소,교환,반품,AS">
 							<option value="[30] 주문/결제">
@@ -236,9 +236,61 @@
 						<button type="button" onclick="" class="btn-date">1D</button>
 						<button type="button" onclick="" class="btn-date">1W</button>
 					</li>
+					<li><label>질문</label><input type="text" class="txt" placeholder="질문을 입력하세요" /></li>
+					<li><label>사용여부</label>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+					</li>
 				</ul>
 			</div>
 			<!--// 정렬 2 -->
+
+			<!-- 정렬 3 -->
+			<div class="box">
+				<ul class="list-type">
+					<li><label>반품교환</label>
+						<div><label class="inp"><input type="checkbox"><span class="checkmark"></span>반품불가</label></div>
+						<div><label class="inp"><input type="checkbox"><span class="checkmark"></span>교환불가</label></div>
+						<div><label class="inp"><input type="checkbox"><span class="checkmark"></span>무료반품</label></div>
+					</li>
+					<li><label>질문</label><input type="text" class="txt" placeholder="질문을 입력하세요" /></li>
+					<li><label>사용여부</label>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+					</li>
+					<li><label>반품교환</label>
+						<div><label class="inp"><input type="checkbox"><span class="checkmark"></span>반품불가</label></div>
+						<div><label class="inp"><input type="checkbox"><span class="checkmark"></span>교환불가</label></div>
+						<div><label class="inp"><input type="checkbox"><span class="checkmark"></span>무료반품</label></div>
+					</li>
+					<li><label>질문</label><input type="text" class="txt" placeholder="질문을 입력하세요" /></li>
+					<li><label>사용여부</label>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+						<input type="text" class="txt" placeholder="질문을 입력하세요" />
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+						<input type="text" class="txt" placeholder="질문을 입력하세요" />
+					</li>
+				</ul>
+			</div>
 
 			<!-- list -->
 			<div class="btn-area">
@@ -278,7 +330,7 @@
 				<div class="l-box">
 					<p class="box-inner-tit">* 고객 검색 키워드 (최근 3일 누적)</p>
 					<div class="table-type mt20">
-						<table>
+						<table class="userListTable">
 							<colgroup>
 								<col width="70px">
 								<col width="150px">
@@ -293,7 +345,7 @@
 							</thead>
 							<tbody>
 								<script>
-									for(var f=1; f < 5; f++){
+									for(var f=1; f < 20; f++){
 										document.write('<tr>');
 										document.write("<td>"+ (f) +"</td>"); 
 										document.write("<td class='align-left'>"+ '[70]상품권/기타'+"</td>");
