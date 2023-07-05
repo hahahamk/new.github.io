@@ -233,7 +233,7 @@ textarea{
 }
 
 //상품뱃지
-.badge{line-height:16px; display:inline-block; font-size:10px; padding:0 6px; border:1px solid $co-bk;
+.badge{height:16px; line-height:14px; display:inline-block; font-size:10px; padding:0 6px; border:1px solid $co-bk;
 	&.bk{background:$co-bk; color:$co-w}
 	&.blue{background:#F0EFFF; border-color:$co-blue; color:$co-blue}
 	&+.badge{margin-left:-1px;}
@@ -241,7 +241,7 @@ textarea{
 
 //스크롤바 커스텀 (PC만 적용)
 @media screen and (min-width: ($tablet + 1)){
-	.scroll-bk {padding-right:2px; overflow-y:auto; scrollbar-color: #1B1B1F; scrollbar-width: thin;
+	.scroll-bk {padding-right:2px; overflow:hidden; overflow-y:auto; scrollbar-color: #1B1B1F; scrollbar-width: thin;
 		&::-webkit-scrollbar,
 		*::-webkit-scrollbar {width: 6px;}
 		&::-webkit-scrollbar-track,
@@ -280,7 +280,7 @@ textarea{
 /* 체크박스 - 개별 */
 .checkitem {position:relative;
 	label {display:block; position:relative; padding-left:22px; justify-content:space-between; font-weight:400; font-size:14px; color:$co-lgr; cursor: pointer;
-		&::after {content:""; position:absolute; top:1px; left:0; width:16px; height:16px; background:url($--image-url+"/common/ico-check@16x16.svg") center center no-repeat; opacity:0.3;}
+		&::after {content:""; position:absolute; top:1px; left:0; width:16px; height:16px; background:url($--image-url+"/common/ico-check@16x16.svg") center center no-repeat; opacity:0.3; background-size: 100%;}
 		&.right::after {left:auto; right:0;}
 	}
 	.ipt-chk {position:absolute; width:0; height:0; visibility: hidden;
