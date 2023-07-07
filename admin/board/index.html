@@ -16,9 +16,12 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<title>HANSTYLE Admin</title>
 	<link rel="shortcut icon" href="https://nshop.ihanstyle.com/favicon.png">
-	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css"> 
-	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css">  -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css">  -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css"> 
 </head>
+
+<!-- loading -->
+<div class="loading-area" style="display: none;"><img src="https://mshop.ihanstyle.com/images/hsmob/common/loading_bar_new.svg" /></div>
 
 <div class="app-wrapper">
 	<!-- 상단 공통 영역 -->
@@ -154,7 +157,28 @@
 			  
 			<!-- 정렬 -->
 			<div class="box">
-				<ul class="form-type flex-between">
+				<ul class="form-type">
+					<li class="w20"><label>FAQ유형</label>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[10] 배송</option>
+							<option>[20] 취소,교환,반품,AS</option>
+							<option>[30] 주문/결제</option>
+							<option>[55] 멤버십</option>
+							<option>[60] 포인트/쿠폰</option>
+							<option>[70] 상품권/기타</option>
+						</select>
+					</li>
+					<li class="w50"><label>질문</label><input type="text" class="txt" placeholder="질문을 입력하세요" /></li>
+					<li class="w20"><label>사용여부</label>
+						<select class="custom-select">
+							<option>전체</option>
+							<option>[Y]Yes</option>
+							<option>[N]No</option>
+						</select>
+					</li>
+				</ul>
+				<ul class="form-type">
 					<li class="w20"><label>FAQ유형</label>
 						<select class="custom-select">
 							<option>전체</option>
@@ -291,16 +315,29 @@
 					</li>
 				</ul>
 			</div>
-
-			<!-- list -->
+			
+			<h4 style="color:blue; margin-top:30px;">[버튼 정렬] 기본 우측정렬, 클래스 추가하여 사용. btn-both, btn-left, btn-center </h4>
+			<!-- 버튼  -->
 			<div class="btn-area">
 				<button type="button" class="btn">조회</button>
 				<button type="button" class="btn btn-white">등록</button>
 				<button type="button" class="btn btn-white">엑셀다운로드</button>
 			</div>
+
+			<!-- 버튼 양쪽정렬 -->
+			<div class="btn-area btn-both">
+				<div>
+					<button type="button" class="btn">조회</button>
+					<button type="button" class="btn btn-white">등록</button>
+					<button type="button" class="btn btn-white">엑셀다운로드</button>
+				</div>
+				<div>
+					<button type="button" class="btn">조회</button>
+				</div>
+			</div>
 			
 			<!-- 파일첨부 -->
-			<div class="btn-area">
+			<div class="btn-area btn-center">
 				<button type="button" class="btn">조회</button>
 				<button type="button" class="btn btn-white">등록</button>
 				<div class="filebox">
@@ -338,7 +375,9 @@
 							</colgroup>
 							<thead>
 								<tr>
-									<th scope="col">FAQ번호</th>
+									<th scope="col">FAQ번호
+										<p class="tip-msg">이미 존재하는 자체 상품코드입니다.</p>
+									</th>
 									<th scope="col">FAQ유형</th>
 									<th scope="col">질문</th>
 								</tr>
