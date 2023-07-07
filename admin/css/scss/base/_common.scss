@@ -318,7 +318,7 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 //table
 .table-type{position:relative;padding-bottom:10px; overflow:scroll; @include scroll; height:500px;
 	table{width:100%;
-		th{border-bottom:1px solid $co-line2; height:30px; font-size:12px; font-weight:600; background:#f5f7fa; position:relative}
+		th{border-bottom:1px solid $co-line2; height:30px; font-size:12px; font-weight:600; background:#f5f7fa;}
 		tbody{
 			// tr:nth-child(odd) td{background:#f5f7fa}
 			tr:hover{background:#f5f7fa}
@@ -349,7 +349,7 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 			a:hover{color:$co-blue;}
 			.input-box{position:relative;
 				.info-txt{font-size:11px; letter-spacing:-0.5px; padding-left:10px;}
-				.btn-search{background: url(https://d2zjlxn1rmjreq.cloudfront.net/assets/images/common/ico-search.svg) no-repeat center; margin-left:-35px; text-indent:-9999em; background-size:24px; padding:10px 18px;}
+				.btn-search{background: url($--image-url+'/common/ico-search.svg') no-repeat center; margin-left:-35px; text-indent:-9999em; background-size:24px; padding:10px 18px;}
 			}
 		}
 		i{font-weight:400; color:#d63384}
@@ -362,7 +362,9 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 	}
 }
 
-.tip-msg{position:absolute; left:0; bottom:-25px; border:1px solid #96d9ff; background:#c7ebff; border-radius:2px; font-size:12px; padding:5px 10px; color:#005585;}
+.tip-msg{position:absolute; left:0; top:40px; z-index: 100; text-align:left; background:#323dff; border-radius:2px; font-size:12px; padding:5px 10px; color:$co-w; line-height:16px; font-weight: 200; letter-spacing:-0.05rem;
+	&:after{content:""; position:absolute; left:15px; top:-4px; width:8px; height:8px; background:#323dff;transform:rotate(-135deg)}
+}
 
 //member
 .login-area{display:flex; justify-content: center; align-items: center; min-height: 100vh;}
@@ -426,4 +428,12 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 //loading
 .loading-area{position:fixed; z-index:110; left:0; top:0; width:100%; height:100%; overflow:auto; background:rgba(0,0,0,0.4);display:flex; justify-content: center;
 	img{width:56px;}
+}
+
+.tooltip-area{
+	.tip-msg{display:none; min-width:320px; top:30px; left:52%}
+	button{border-radius:50%; color:$co-bk; border:1px solid $co-bk; font-size:12px; width:14px; height:14px; cursor:pointer; vertical-align: top;}
+	&:hover{
+		.tip-msg{display:block;}
+	}
 }
