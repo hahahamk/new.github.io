@@ -432,7 +432,7 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 
 .tooltip-area{
 	.tip-msg{display:none; min-width:320px; top:30px; left:52%}
-	button{border-radius:50%; color:$co-bk; border:1px solid $co-bk; font-size:12px; width:14px; height:14px; cursor:pointer; vertical-align: top;}
+	button{border-radius:50%; color:$co-bk; border:1px solid $co-bk; font-size:12px; width:14px; height:14px; cursor:pointer; vertical-align: top; font-family: sans-serif;}
 	&:hover{
 		.tip-msg{display:block;}
 	}
