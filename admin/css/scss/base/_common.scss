@@ -437,6 +437,8 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 
 //popup
 .popup-area{
-	h1{background:#fff; @include gr-line; padding:15px; font-weight: 600; font-size: 18px; letter-spacing: -0.5px;}
+	padding:52px 0 76px;
+	h1{background:#fff; @include gr-line; padding:15px; font-weight: 600; font-size: 18px; letter-spacing: -0.5px; position:fixed; left:0; top:0; width:100%; z-index:100;}
 	.table-type{height:200px;}
+	.last-btn{position:fixed; right:0; bottom:0; width:100%; background:#f5f7fa; border-top:1px solid $co-line}
 }
