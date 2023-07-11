@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/bi/256.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>HANSTYLE Admin</title>
+	<link rel="shortcut icon" href="https://nshop.ihanstyle.com/favicon.png">
+	<!-- <link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css">  -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css"> 
+</head>
+
+<section class="popup-area">
+	<h1>상품 검색</h1>
+	<div class="box">
+		<ul class="form-type">
+			<li class="w40"><label>상품코드</label><input type="text" class="txt" placeholder="" value="SE077_892362662" /></li>
+			<li class="w40"><label>자체 상품코드</label><input type="text" class="txt" placeholder="" value="" /></li>
+			<li class="w40"><label>상품명</label><input type="text" class="txt" placeholder="" value="" /></li>
+			<li class="w40"><label>브랜드</label><input type="text" class="txt" placeholder="" value="" /><button type="button" class="btn-search">검색</button></li>
+			<li class="w100"><label>등록일</label>
+				<input type="date" id="startDate" name="startDate" class="txt w30" value="2023-06-23"><span class="ico-wave">~</span><input type="date" id="startDate" name="startDate" class="txt w30" value="2023-06-23">
+				<div>
+					<button type="button" onclick="" class="btn-date">어제</button>
+					<button type="button" onclick="" class="btn-date">오늘</button>
+					<button type="button" onclick="" class="btn-date">최근 7일</button>
+					<button type="button" onclick="" class="btn-date">최근 30일</button>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="btn-area">
+		<button type="button" class="btn btn-white">조회</button>
+		<button type="button" class="btn">선택</button>
+	</div>
+	
+	<div class="box">
+		<div class="table-type">
+			<table class="userListTable">
+				<colgroup>
+					<col width="70px">
+					<col width="150px">
+					<col width="*">
+					<col width="70px">
+					<col width="60px">
+					<col width="70px">
+					<col width="150px">
+					<col width="70px">
+					<col width="150px">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">FAQ번호
+						<span class="tooltip-area">
+							<button type="button">!</button>
+							<p class="tip-msg">해당 값이 N인 경우, 현재 한스타일 셀러 판매 대상 브랜드가 아닙니다.<br />추후 정책 변경에 따라 승인 절차가 진행될 수 있습니다. </p>
+						</span>
+					</th>
+						<th scope="col">FAQ유형</th>
+						<th scope="col">질문</th>
+						<th scope="col">조회수</th>
+						<th scope="col">사용여부</th>
+						<th scope="col">등록자</th>
+						<th scope="col">등록일시</th>
+						<th scope="col">수정자</th>
+						<th scope="col">수정일시</th>
+					</tr>
+				</thead>
+				<tbody>
+					<script>
+						for(var f=1; f < 5; f++){
+							document.write('<tr>');
+							document.write("<td>"+ (f) +"</td>"); 
+							document.write("<td class='align-left'>"+ '[70]상품권/기타'+"</td>");
+							document.write("<td class='align-left'>"+ '<a href="#n">list, view, write 세가지 타입 만들어 놓았습니다. 찢어서 쓰시면 되어요.</a>'+"</td>"); 
+							document.write("<td>"+ '0' +"</td>"); 
+							document.write("<td>"+ '<label class="inp"><input type="checkbox"><span class="checkmark"></span></label>'+"</td>");
+							document.write("<td>"+ '최민경'+"</td>");
+							document.write("<td>"+ '2023-03-16 14:31'+"</td>");
+							document.write("<td>"+ '최민경'+"</td>");
+							document.write("<td>"+ '2023-03-17 14:31'+"</td>");
+							document.write('</tr>');
+						}
+					</script>
+				</tbody>
+			</table>
+		</div>
+		<ul class="pagination mt20">
+			<li class="first"><a href="javascript:;">처음으로</a></li>
+			<li class="prev"><a href="javascript:;">이전</a></li>
+			<li><a href="javascript:;">1</a></li>
+			<li class="active"><a href="javascript:;">2</a></li>
+			<li><a href="javascript:;">3</a></li>
+			<li><a href="javascript:;">4</a></li>
+			<li><a href="javascript:;">5</a></li>
+			<li><a href="javascript:;">6</a></li>
+			<li><a href="javascript:;">7</a></li>
+			<li class="next"><a href="javascript:;">다음</a></li>
+			<li class="last"><a href="javascript:;">마지막</a></li>
+		</ul>
+	</div>
+</section>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/js/jquery.min_3.6.0.js"></script>
+<script type="text/javascript" src="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/js/includeHTML.js"></script>
+<script type="text/javascript" src="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/js/common.js"></script>
+<script>
+</script>
+
+</body>
+</html>

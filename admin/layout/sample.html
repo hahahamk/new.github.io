@@ -15,7 +15,8 @@
 	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
-	<link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css"> 
+	<!-- <link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css">  운영 베포용 -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<style>
 		h2.sample{padding:50px 0 20px; font-weight:600; font-size:16px; border-top:1px solid #000; margin-top:50px;}
 		h2.sample02{padding:20px; font-weight:600; font-size:16px; border-bottom:1px solid #ddd}
@@ -141,6 +142,24 @@
 				<li class="next disable"><a href="javascript:;">다음</a></li>
 				<li class="last disable"><a href="javascript:;">마지막</a></li>
 			</ul>
+
+			<h2 class="sample">검색 영역</h2>
+			<!-- 검색 영역 -->
+			<div class="search-input">
+				<label for="SEARCHID">돋보기 아이콘</label>
+				<input type="text" id="SEARCHID" class="ipt-srch" placeholder="검색어를 입력해주세요.">
+				<button type="button" class="btn-del" onclick="">X</button>
+			</div>
+
+			<h2 class="sample">검색결과 없을 때 텍스트</h2>
+			<!-- 검색결과 없을 때 노출 -->
+			<div class="result-none">
+				<p class="tx_msg">검색한 디자이너 브랜드가 없습니다.<br>디자이너명을 변경해보세요.</p>
+			</div>
+			<!-- 관심브랜드 없을 때 노출 -->
+			<div class="result-none brand-none">
+				<p class="tx_msg">관심 브랜드를 추가해주세요.</p>
+			</div>
 		</section>
 	</section>
 

@@ -1,5 +1,5 @@
 //공통버튼
-.btn-date{border:1px solid #323dff;color:#323DFF; background:#fff; min-width:30px; padding:0 5px; font-weight:600; margin:0 2px; border-radius:2px; font-size:11px;}
+.btn-date{border:1px solid #323dff;color:#323DFF; height:100%; background:#fff; min-width:30px; padding:0 7px; font-weight:600; margin:0 2px; border-radius:2px; font-size:11px;}
 .btn{background:#1B1B1F; border:1px solid #1B1B1F;;color:$co-w; font-size:14px; font-weight:600; padding:0 18px; height:35px; border-radius:2px;
 	&:disabled{background:$co-disable; color:$co-w; border-color:$co-disable; cursor:default}
 	&.btn-white{background:$co-w; color:$co-bk; border:1px solid $co-bk;
@@ -19,9 +19,8 @@
 input{
 	&:focus{border-color:#f2f1f7}
 	}
-input[type='date'], input[type='month']{border: 1px solid $co-line; border-radius: 2px; height: 35px; padding: 0 10px; 
-	&+input{margin-left:10px;}
-}
+input[type='date'], input[type='month']{border: 1px solid $co-line; border-radius: 2px; height: 35px; padding: 0 10px; }
+.ico-wave{padding:0 10px}
 
 .txt{width:100%;border:1px solid $co-line; height:35px;border-radius:2px; padding:0 10px; font-weight:400; color:#3A3A3E;font-size:rem(14px); background:$co-w;
 	&:focus{border-color:$co-bk; border-width:2px; }
@@ -230,7 +229,7 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 }
 
 //box
-.box-tit{font-weight:600; font-size:16px; padding:20px;}
+.box-tit{font-weight:600; font-size:16px; padding:0 20px 20px;}
 .box-input{padding:20px 0;border-top:1px solid $co-line;}
 .box{background:#fff; border-top:1px solid $co-line; border-bottom:1px solid $co-line; padding:20px 0;
 	.l-box, .r-box{padding:0 20px;
@@ -268,7 +267,7 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 	}
 }
 .caution-txt{text-align:center; padding:100px 0;}
-.form-type{display:flex; gap:30px; overflow:auto;flex-wrap: wrap; padding:0 20px; flex-wrap: wrap;
+.form-type{display:flex; gap:20px; overflow:auto;flex-wrap: wrap; padding:0 20px; flex-wrap: wrap;
 	li{display:flex; position:relative; line-height:20px; padding-top:25px;
 		label{font-size:12px; position: absolute; left:0; top: 0; font-weight:600; padding-left:7px;
 			&:after{content:""; position:absolute; left:0; top:7px; width:3px; height:3px; border-radius:50%; background:#323dff}
@@ -276,12 +275,10 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 		.s-tit{font-size:12px; color:#6C6C71; padding-right:10px;}
 		select{
 			&+select{margin-left:10px;}
+			&+input{margin:0 10px;}
 		}
 	}
 	+.form-type{margin-top:20px;}
-	@include mobile{
-		gap:5px;
-	}
 }
 .form-type-txt{background:#f5f7fa; padding:20px; line-height:22px;}
 
@@ -349,7 +346,6 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 			a:hover{color:$co-blue;}
 			.input-box{position:relative;
 				.info-txt{font-size:11px; letter-spacing:-0.5px; padding-left:10px;}
-				.btn-search{background: url($--image-url+'/common/ico-search.svg') no-repeat center; margin-left:-35px; text-indent:-9999em; background-size:24px; padding:10px 18px;}
 			}
 		}
 		i{font-weight:400; color:#d63384}
@@ -361,6 +357,7 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 		}
 	}
 }
+.btn-search{background: url($--image-url+'/common/ico-search.svg') no-repeat center; margin-left:-35px; text-indent:-9999em; background-size:24px; padding:10px 18px; height:35px;}
 
 .tip-msg{position:absolute; left:0; top:40px; z-index: 100; text-align:left; background:#323dff; border-radius:2px; font-size:12px; padding:5px 10px; color:$co-w; line-height:16px; font-weight: 200; letter-spacing:-0.05rem;
 	&:after{content:""; position:absolute; left:15px; top:-4px; width:8px; height:8px; background:#323dff;transform:rotate(-135deg)}
@@ -436,4 +433,10 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 	&:hover{
 		.tip-msg{display:block;}
 	}
+}
+
+//popup
+.popup-area{
+	h1{background:#fff; @include gr-line; padding:15px; font-weight: 600; font-size: 18px; letter-spacing: -0.5px;}
+	.table-type{height:200px;}
 }

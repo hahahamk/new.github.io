@@ -255,11 +255,6 @@
 							<option value="[70] 상품권/기타">
 						</datalist>
 					</li>
-					<li>
-						<input type="date" id="startDate" name="startDate" class="txt" value="2023-06-23">
-						<button type="button" onclick="" class="btn-date">1D</button>
-						<button type="button" onclick="" class="btn-date">1W</button>
-					</li>
 					<li><label>질문</label><input type="text" class="txt" placeholder="질문을 입력하세요" /></li>
 					<li><label>사용여부</label>
 						<select class="custom-select">
@@ -267,6 +262,15 @@
 							<option>[Y]Yes</option>
 							<option>[N]No</option>
 						</select>
+					</li>
+					<li class="w100"><label>등록일</label>
+						<input type="date" id="startDate" name="startDate" class="txt w30" value="2023-06-23"><span class="ico-wave">~</span><input type="date" id="startDate" name="startDate" class="txt w30" value="2023-06-23">
+						<div>
+							<button type="button" onclick="" class="btn-date">어제</button>
+							<button type="button" onclick="" class="btn-date">오늘</button>
+							<button type="button" onclick="" class="btn-date">최근 7일</button>
+							<button type="button" onclick="" class="btn-date">최근 30일</button>
+						</div>
 					</li>
 				</ul>
 			</div>
