@@ -151,7 +151,7 @@
 			<h3>상품등록</h3>
 
 			<div class="btn-area">
-				<button type="button" class="btn btn-white">상품 복사하기</button>
+				<button type="button" class="btn btn-white"  onclick="window.open('../popup/search.html','new','scrollbars=yes,resizable=no width=1300 height=700');return false">상품 복사하기</button>
 			</div>
 			
 			<!-- 기본정보 -->
@@ -186,7 +186,7 @@
 							<th>브랜드<i>*</i></th>
 							<td colspan="3">
 								<div class="input-box">
-									<input class="txt w30"/><button type="button" class="btn-search" onclick="window.open('../popup/search.html','new','scrollbars=yes,resizable=no width=700 height=700');return false">검색</button>
+									<input class="txt w30"/><button type="button" class="btn-search">검색</button>
 									<span class="info-txt">* 등록한 브랜드에 한하여 상품 등록이 가능합니다. 브랜드 추가 등록은 담당 MD에게 문의해주시기 바랍니다.</span>
 								</div>
 							</td>
@@ -284,7 +284,7 @@
 
 			<!-- 가격/재고 -->
 			<p class="box-tit">가격/재고</p>
-			<div class="table-input-type">
+			<div class="table-input-type mb50">
 				<table>
 					<colgroup>
 						<col width="10%">
@@ -294,21 +294,144 @@
 					</colgroup>
 					<tbody>
 						<tr>
-							<th>자체 상품코드</th>
-							<td colspan="3">
+							<th>정상가<i>*</i></th>
+							<td>
 								<div class="input-box">
-									<input class="txt w40" placeholder="*미입력 시 임의로 부여되며, 한글/공백/특수문자(-,_제외) 사용이 불가합니다." />
-									<p class="tip-msg">이미 존재하는 자체 상품코드입니다.</p>
+									<input class="txt" placeholder="*판매가보다 낮을 수 없습니다." />
+								</div>
+							</td>
+							<th>판매가<i>*</i></th>
+							<td>
+								<div class="input-box">
+									<input class="txt" placeholder="*정상가보다 높을 수 없습니다." />
 								</div>
 							</td>
 						</tr>
 						<tr>
-							<th>상품명<i>*</i></th>
+							<th>재고<i>*</i></th>
 							<td colspan="3">
 								<div class="input-box">
-									<input class="txt" placeholder="*출시년도 및 시즌 정보가 맨 앞에 자동으로 부착됩니다. ex)[24 S/S]" />
+									<div class="add-box">
+										<input type="text" name="txt" class="txt txt-first" placeholder="옵션명"><input type="text" name="txt" class="txt" placeholder="재고">
+									</div>
+									<button type="button" class="btnAdd btn" value="Add">+ 옵션 추가</button> 
+									<span class="info-txt">* 한스타일 옵션명은 사이즈명에 최적화되어있습니다.</span>
 								</div>
 							</td>
+						</tr>
+						<tr>
+							<th>최대주문갯수</th>
+							<td colspan="3">
+								<div class="input-box">
+									<input class="txt w40" placeholder="*미입력 시 10으로 설정됩니다." /><span class="info-txt">* 최소주문갯수 설정 기능은 지원하지 않습니다.</span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- 배송/클레임 -->
+			<p class="box-tit">배송/클레임</p>
+			<div class="table-input-type mb50">
+				<table>
+					<colgroup>
+						<col width="10%">
+						<col width="40%">
+						<col width="10%">
+						<col width="40%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>배송유형<i>*</i></th>
+							<td colspan="3">
+								<div class="input-box">
+									<select class="custom-select w40">
+										<option>전체</option>
+										<option>[Y]Yes</option>
+										<option>[N]No</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>반품가능여부</th>
+							<td>
+								<div class="input-box">
+									<label class="inp">Y
+										<input type="radio" name="radio" checked>
+										<span class="checkmark radio"></span>
+									</label>
+									<label class="inp">N
+										<input type="radio" name="radio">
+										<span class="checkmark radio"></span>
+									</label>
+								</div>
+							</td>
+							<th>교환가능여부</th>
+							<td>
+								<div class="input-box">
+									<label class="inp">Y
+										<input type="radio" name="radio" checked>
+										<span class="checkmark radio"></span>
+									</label>
+									<label class="inp">N
+										<input type="radio" name="radio">
+										<span class="checkmark radio"></span>
+									</label>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- 대표 이미지/상세 설명 -->
+			<p class="box-tit">대표 이미지/상세 설명</p>
+			<div class="table-input-type mb50">
+				<table>
+					<colgroup>
+						<col width="10%">
+						<col width="*">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>대표이미지 1<i>*</i></th>
+							<td>
+								<div class="input-box">
+									<input type="text" name="txt" class="txt" placeholder="* 이미지 URL을 입력하거나 하기 영역을 클릭하여 직접 이미지를 업로드하시기 바랍니다. (확장자 jpg 가능, 이미지 업로드와 중복 등록 시 URL 기준 처리)">
+								</div>
+								<p class="mt10"><button type="button" class="btn">이미지 업로드</button>
+									<span class="info-txt">* 상품 단건 등록에 한하여, 대표 이미지 1 이미지 업로드 기능을 제공합니다. (확장자 jpg 가능, 타 대표 이미지 및 일괄 등록은 URL 입력)</span></p>
+							</td>
+						</tr>
+						<tr>
+							<th>대표이미지 2</th>
+							<td>
+								<div class="input-box">
+									<input type="text" name="txt" class="txt" placeholder="* 이미지 URL을 입력하시기 바랍니다." >
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>대표이미지 3</th>
+							<td>
+								<div class="input-box">
+									<input type="text" name="txt" class="txt" placeholder="* 이미지 URL을 입력하시기 바랍니다.">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>상위 콘텐츠 html(본문)</th>
+							<td><textarea class="txt" placeholder="내용을 입력하세요"></textarea></td>
+						</tr>
+						<tr>
+							<th>하위 콘텐츠 html(본문)</th>
+							<td><textarea class="txt" placeholder="내용을 입력하세요"></textarea></td>
+						</tr>
+						<tr>
+							<th>상세설명(탭)</th>
+							<td><textarea class="txt" placeholder="내용을 입력하세요"></textarea></td>
 						</tr>
 					</tbody>
 				</table>
@@ -353,6 +476,18 @@
 <script>
 	includeHTML();
 
+	$(document).ready (function () {                
+		$('.btnAdd').click (function () {                                        
+			$('.add-box').append (                        
+				'<span><input type="text" name="txt" class="txt txt-first" placeholder="옵션명"><input type="text" name="txt" class="txt" placeholder="재고"></span><button type="button" class="btnRemove" value="Remove">삭제</button>'                    
+			); // end append                            
+			$('.btnRemove').on('click', function () { 
+				$(this).prev().remove ();
+				$(this).remove ();
+			});
+		});                                      
+	});
+
 	//tab 
 	var tabarea = document.getElementById("tab-type");
 	var tabBtn = tabarea.getElementsByClassName("tab-menu");
@@ -363,6 +498,8 @@
 			this.className += " active";
 		});
 	}
+
+	
 </script>
 
 </body>

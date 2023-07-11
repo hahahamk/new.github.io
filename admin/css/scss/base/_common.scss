@@ -194,6 +194,7 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 
 //여백
 .mb50{margin-bottom:50px;}
+.mt10{margin-top:10px;}
 .mt20{margin-top:20px;}
 
 //width
@@ -349,6 +350,13 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 			}
 		}
 		i{font-weight:400; color:#d63384}
+		.add-box{line-height:45px;
+			.txt-first{width:35%; margin-right:10px;}
+			input{width:30%}
+			.btnRemove{background:url($--image-url+'/common/ico-img-del.svg') no-repeat; background-size:100%; width:20px; height:20px; text-indent:-9999em; margin-left:10px;}
+		}
+		.btnAdd.btn{font-size:12px; padding:0 10px; height:30px;}
+		
 		@include tablet{
 			min-width:1000px; 
 		}
@@ -433,12 +441,11 @@ select{width:100%; padding:0 25px 0 10px; background: #fff url($--image-url+'/co
 	&:hover{
 		.tip-msg{display:block;}
 	}
-}
+} 
 
 //popup
 .popup-area{
-	padding:52px 0 76px;
-	h1{background:#fff; @include gr-line; padding:15px; font-weight: 600; font-size: 18px; letter-spacing: -0.5px; position:fixed; left:0; top:0; width:100%; z-index:100;}
+	padding-top:52px;
+	h1{background:#f5f7fa; box-shadow: 0px 2px 5px rgba(0,0,0,.2); border-bottom:1px solid $co-line; padding:15px; font-weight: 600; font-size: 18px; letter-spacing: -0.5px; position:fixed; left:0; top:0; width:100%; z-index:100;}
 	.table-type{height:200px;}
-	.last-btn{position:fixed; right:0; bottom:0; width:100%; background:#f5f7fa; border-top:1px solid $co-line}
 }
