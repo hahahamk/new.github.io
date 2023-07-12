@@ -37,6 +37,11 @@ input[type='date'], input[type='month']{border: 1px solid $co-line; border-radiu
 	}
 }
 
+.img-file{
+	label{font-size:14px; font-weight:600; padding-bottom:10px; display:block;}
+	input{height:50px; line-height:45px;}
+}
+
 textarea{width:100%; @include scroll;
 	&.txt{min-height:150px; padding:10px; }
 }
