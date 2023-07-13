@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/bi/256.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>HANSTYLE Admin</title>
+	<link rel="shortcut icon" href="https://nshop.ihanstyle.com/favicon.png">
+	<!-- <link rel="stylesheet" type="text/css" href="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/css/style.css">  -->
+	<link rel="stylesheet" type="text/css" href="../css/style.css"> 
+</head>
+
+<section class="popup-area">
+	<h1>주문정보상세</h1>
+	<h2>주문자정보</h2>
+	<dl class="order-info">
+		<dt>주문자</dt>
+		<dd>최승호</dd>
+		<dt>주문번호</dt>
+		<dd>3877155</dd>
+		<dt>전화번호</dt>
+		<dd>-</dd>
+		<dt>핸드폰번호</dt>
+		<dd>010-1111-1111</dd>
+	</dl>
+
+	<ul class="tabs" id="tab-type">
+		<li class="tab-menu active" onclick="orderTab(event, 'tab01')">주문내역</li>
+		<li class="tab-menu" onclick="orderTab(event, 'tab02')">변경내역</li>
+		<li class="tab-menu" onclick="orderTab(event, 'tab03')">결제내역</li>
+		<li class="tab-menu" onclick="orderTab(event, 'tab04')">옵션명변경</li>
+		<li class="tab-menu" onclick="orderTab(event, 'tab05')">배송</li>
+		<li class="tab-menu" onclick="orderTab(event, 'tab06')">반품/교환</li>
+	</ul>
+
+	<!-- 주문내역 -->
+	<section id="tab01" class="tabcontent" style="display:block">
+		<div class="box">
+			<!-- -->
+			<div class="table-type">
+				<table class="userListTable">
+					<colgroup>
+						<col width="*">
+						<col width="9%">
+						<col width="9%">
+						<col width="9%">
+						<col width="9%">
+						<col width="9%">
+						<col width="9%">
+						<col width="9%">
+						<col width="9%">
+						<col width="9%">
+						<col width="9%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">주문번호</th>
+							<th scope="col">웹구분</th>
+							<th scope="col">주문구분</th>
+							<th scope="col">몰코드</th>
+							<th scope="col">몰이름</th>
+							<th scope="col">주문일시</th>
+							<th scope="col">주문상태</th>
+							<th scope="col">결제수단</th>
+							<th scope="col">결제형태</th>
+							<th scope="col">실결제금액</th>
+							<th scope="col">제휴몰</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3877155</td>
+							<td>mobile</td>
+							<td>일반주문</td>
+							<td>E4052</td>
+							<td>자사몰(H)</td>
+							<td>2023-05-12 16:54:11 </td>
+							<td>결제완료</td>
+							<td>신용카드</td>
+							<td></td>
+							<td>191,060</td>
+							<td>APP</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="btn-area">
+				<button type="button" class="btn">저장</button>
+			</div>
+
+			<!-- -->
+			<div class="table-type">
+				<table class="userListTable">
+					<colgroup>
+						<col width="*">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+						<col width="7%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">상품코드</th>
+							<th scope="col">옵션명</th>
+							<th scope="col">칼라</th>
+							<th scope="col">주문수량</th>
+							<th scope="col">취소수량</th>
+							<th scope="col">재결제</th>
+							<th scope="col">상품명</th>
+							<th scope="col">상태</th>
+							<th scope="col">결품</th>
+							<th scope="col">배송유형</th>
+							<th scope="col">개인고유통관번호</th>
+							<th scope="col">물류비고</th>
+							<th scope="col">결품 제외요청 여부</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>SE0125_2023_46231 1990 </td>
+							<td>L</td>
+							<td>멀티</td>
+							<td>1</td>
+							<td>0</td>
+							<td>N</td>
+							<td>AAA</td>
+							<td>결제완료</td>
+							<td>N</td>
+							<td>일반배송</td>
+							<td></td>
+							<td></td>
+							<td><label class="inp"><input type="checkbox"><span class="checkmark"></span></label></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- 변경내역 -->
+	<section id="tab02" class="tabcontent">
+		<div class="box">
+			<h3>주문변경 요청내역</h3>
+			<!-- -->
+			<div class="table-type">
+				<table class="userListTable">
+					<thead>
+						<colgroup>
+							<col width="*">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="20%">
+						</colgroup>
+						<tr>
+							<th scope="col">상품코드</th>
+							<th scope="col">옵션명</th>
+							<th scope="col">요청구분</th>
+							<th scope="col">처리상태</th>
+							<th scope="col">요청일자</th>
+							<th scope="col">변경사유</th>
+							<th scope="col">요청메모</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>SE0125_2023_462311990</td>
+							<td>L</td>
+							<td>취소요청</td>
+							<td>취소완료</td>
+							<td>2023-05-08</td>
+							<td>품절</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h3>송장/출고처</h3>
+			<div class="table-type">
+				<table class="userListTable">
+					<thead>
+						<colgroup>
+							<col width="*">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="20%">
+						</colgroup>
+						<tr>
+							<th scope="col">상품코드</th>
+							<th scope="col">옵션명</th>
+							<th scope="col">상품명</th>
+							<th scope="col">상태</th>
+							<th scope="col">송장번호</th>
+							<th scope="col">출고처</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>SE0125_2023_462311990</td>
+							<td>L</td>
+							<td>AAA</td>
+							<td>배송완료</td>
+							<td>1548879444</td>
+							<td>비버글로벌</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- 결제내역 -->
+	<section id="tab03" class="tabcontent">
+		<div class="box">
+			<h3>결제 상세정보</h3>
+			<div class="btn-area">
+				<button type="button" class="btn btn-white">취소요청</button>
+				<button type="button" class="btn btn-white">반품요청</button>
+				<button type="button" class="btn btn-white">교환요청</button>
+			</div>
+			<!-- -->
+			<div class="table-type">
+				<table class="userListTable">
+					<thead>
+						<colgroup>
+							<col width="*">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="20%">
+						</colgroup>
+						<tr>
+							<th scope="col">상품코드</th>
+							<th scope="col">옵션명</th>
+							<th scope="col">요청구분</th>
+							<th scope="col">처리상태</th>
+							<th scope="col">요청일자</th>
+							<th scope="col">변경사유</th>
+							<th scope="col">요청메모</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>SE0125_2023_462311990</td>
+							<td>L</td>
+							<td>취소요청</td>
+							<td>취소완료</td>
+							<td>2023-05-08</td>
+							<td>품절</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- 옵션명변경 -->
+	<section id="tab04" class="tabcontent">
+		<div class="box">
+			<h3>옵션명변경 목록</h3>
+			<div class="btn-area">
+				<button type="button" class="btn btn-white">옵션명변경</button>
+			</div>
+			<!-- -->
+			<div class="table-type">
+				<table class="userListTable">
+					<thead>
+						<colgroup>
+							<col width="*">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="10%">
+							<col width="20%">
+						</colgroup>
+						<tr>
+							<th scope="col">상품코드</th>
+							<th scope="col">옵션명</th>
+							<th scope="col">요청구분</th>
+							<th scope="col">처리상태</th>
+							<th scope="col">요청일자</th>
+							<th scope="col">변경사유</th>
+							<th scope="col">요청메모</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>SE0125_2023_462311990</td>
+							<td>L</td>
+							<td>취소요청</td>
+							<td>취소완료</td>
+							<td>2023-05-08</td>
+							<td>품절</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- 배송 -->
+	<section id="tab05" class="tabcontent">
+		<div class="box">
+			<h3>배송지 정보<span>주문상품상태가 ‘상품준비중' 상태 이후일 경우 물류 확인 바랍니다.</span></h3>
+			<div class="btn-area">
+				<button type="button" class="btn btn-white">배송 정보 수정</button>
+			</div>
+
+			<div class="table-input-type">
+				<table>
+					<colgroup>
+						<col width="150px">
+						<col width="*">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>수령인</th>
+							<td>
+								<div class="input-box">
+									<input type="text" class="txt" />
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>수령지 주소</th>
+							<td>
+								<div class="input-box">
+									<input type="text" class="txt" />
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- 반품/교환 -->
+	<section id="tab06" class="tabcontent">
+		<div class="box">
+			<h3>반품/교환 정보</h3>
+			<div class="btn-area">
+				<button type="button" class="btn btn-white">배송 정보 수정</button>
+			</div>
+
+			<div class="table-type">
+				<table class="userListTable">
+					<thead>
+						<colgroup>
+							<col width="34%">
+							<col width="33%">
+							<col width="33%">
+						</colgroup>
+						<tr>
+							<th colspan="3">회수송장변경(회수등록 전)</th>
+						</tr>
+						<tr>
+							<th scope="col">운송업체</th>
+							<th scope="col">변경회수송장</th>
+							<th scope="col">수정</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<select class="custom-select">
+									<option>전체</option>
+									<option>[Y]Yes</option>
+									<option>[N]No</option>
+								</select>
+							</td>
+							<td></td>
+							<td><a href="#n">[송장수정]</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</section>
+	
+</section>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/js/jquery.min_3.6.0.js"></script>
+<script type="text/javascript" src="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/js/includeHTML.js"></script>
+<script type="text/javascript" src="https://d2zjlxn1rmjreq.cloudfront.net/assets/admin/js/common.js"></script>
+<script>
+	//tabs
+	function orderTab(evt, cityName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tab-menu");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>
+
+</body>
+</html>
