@@ -1,0 +1,20 @@
+@import "base/variables";
+@import "base/reset";
+@import "base/layout";
+@import "base/font";
+@import "base/common"; //common button, form
+@import "base/productlist";
+
+@import "page/search";
+@import "page/MobileCategory";
+@import "page/mypage";
+@import "page/recently";
+@import "page/like";
+@import "page/designer";
+@import "page/cart";
+@import "page/home";
+@import "page/list";
+
+@import "cs/faq";
+@import "cs/map";
+@import "cs/qna";

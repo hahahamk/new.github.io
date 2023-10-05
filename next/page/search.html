@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css?cVer=20221209">
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<div class="wrap">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+
+	<section class="search-area">
+		<div class="search-back">
+			<div class="search-box">
+				<button class="btn-close" onclick="closeSearch()">닫기</button>
+
+				<header class="header-sub">
+					<h2 class="sub">
+						<button type="button" class="btn-back" onclick="closeSearch()">이전</button>
+						<input type="text" class="txt search" placeholder="브랜드,상품명,카테고리" id="searchKeyword">
+						<button type="button" class="btn-delet" id="deleteInput">삭제</button>
+					</h2>
+					<ul class="side-menu">
+						<li><a href="javascript:;" class="cart">장바구니<em>99+</em></a></li>
+					</ul>
+				</header>
+
+				<!-- 검색 중 -->
+				<div class="search-autocomplete" id="autocomplete">
+					<ul>
+						<li>
+							<a href="javascript:;" class="keyword"><strong><em class="mark">A</em>GOLDE</strong></a>
+							<span class="more"><a href="javascript:;">브랜드</a></span>
+						</li>
+						<li>
+							<a href="javascript:;" class="keyword"><strong><em class="mark">A</em>GL(ATTILIO GIUSTI LEOMBRUNI)</strong></a>
+							<span class="more"><a href="javascript:;">브랜드</a></span>
+						</li>
+						<li>
+							<a href="javascript:;" class="keyword"><strong><em class="mark">A</em>GNONA</strong></a>
+							<span class="more"><a href="javascript:;">브랜드</a></span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="javascript:;" class="keyword"><em class="mark">A</em>GL(ATTILIO GIUSTI LEOMBRUNI)</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="keyword"><em class="mark">A</em>GNONA</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="keyword"><em class="mark">A</em>GNONA 신발</a>
+						</li>
+					</ul>
+				</div>
+				<!--// 검색 중 -->
+
+				<div class="tit">
+					<h3>실시간</h3>
+					<span>YYYY.MM.DD HH:SS 기준<em class="rank-more" onclick="searchRank()">더보기</em></span>
+				</div>
+				<ol class="ranking">
+					<li><em>1</em><a href="javascript:;">발렌시아가 발렌시아가 발렌시아가 발렌시아가</a><span class="up">1</span></li>
+					<li><em>2</em><a href="javascript:;">MSGM MSGM MSGM MSGM MSGM MSGM MSGM</a><span class="down">1</span></li>
+					<li><em>3</em><a href="javascript:;">발렌시아가</a><span class="same">변동없음</span></li>
+					<li><em>4</em><a href="javascript:;">발렌시아가</a><span class="new">N</span></li>
+					<li><em>5</em><a href="javascript:;">발렌시아가</a><span class="down">1</span></li>
+					<li><em>6</em><a href="javascript:;">발렌시아가</a><span class="same">1</span></li>
+					<li><em>7</em><a href="javascript:;">발렌시아가</a><span class="up">1</span></li>
+					<li><em>8</em><a href="javascript:;">발렌시아가</a><span class="down">1</span></li>
+					<li><em>9</em><a href="javascript:;">발렌시아가</a><span class="same">1</span></li>
+					<li><em>10</em><a href="javascript:;">발렌시아가</a><span class="same">1</span></li>
+				</ol>
+
+				<div class="tit">
+					<h3>최근검색</h3>
+					<a href="javascript:;">전체삭제</a>
+				</div>
+				<p class="no-msg">검색 내역이 없습니다.</p>
+				<ul class="chip-list recent">
+					<li><a href="javascript:;">LABEL</a><button class="btn-close">닫기</button></li>
+					<li><a href="javascript:;">검색어가 뭐가 있나</a><button class="btn-close">닫기</button></li>
+					<li><a href="javascript:;">비싼거 사고싶어</a><button class="btn-close">닫기</button></li>
+					<li><a href="javascript:;">검색어는 몇자까지하고 말줄임일까?</a><button class="btn-close">닫기</button></li>
+					<li><a href="javascript:;">검색어는 몇자까지하고 말줄임일까? 검색어는 몇자까지하고 말줄임일까? 검색어는 몇자까지하고 말줄임일까? 검색어는 몇자까지하고 말줄임일까?</a><button class="btn-close">닫기</button></li>
+				</ul>
+
+				<div class="tit">
+					<h3>트렌드</h3>
+				</div>
+				<ul class="chip-list">
+					<li><a href="javascript:;">폰케이스</a></li>
+					<li><a href="javascript:;">스포티앤리치 맨투맨</a></li>
+					<li><a href="javascript:;">오트리 고트스킨 스니커즈</a></li>
+					<li><a href="javascript:;">JW Anderson x 달려라하니</a></li>
+					<li><a href="javascript:;">메종키츠네 에코백</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="search-dim" onclick="closeSearch()"></div>
+	</section>
+
+	<section class="contents" style="min-height:700px">
+	검색영역
+	</section>	
+
+	<!-- 하단 공통 영역 -->
+	<section include-html="../layout/footer.html"></section>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript">
+	window.onload = function(){ 
+		var searchKeyword = document.getElementById("searchKeyword");
+		var autocomplete = document.getElementById("autocomplete");
+		var deleteInput = document.getElementById("deleteInput");
+		var keyword = "";
+	   
+		searchKeyword.onkeydown = function(e) {
+			searchKeyword.onkeyup(e);
+		};
+		searchKeyword.onkeyup = function(e){		  
+		{
+			keyword = searchKeyword.value;
+		}
+			if ( keyword == "" ) {
+				autocomplete.style.display = "none";
+				deleteInput.style.display = "none";
+			}
+			else {
+				autocomplete.style.display = "block";
+				deleteInput.style.display = "block";
+			}
+		};
+	};
+</script>
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+	includeHTML();
+</script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<div class="wrap">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+	<header class="header-sub" id="mypage-scroll">
+		<h2>MY</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="search">검색</a></li>
+			<li><a href="javascript:;" class="cart">장바구니</a></li>
+		</ul>
+	</header>
+
+	<section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+		<section class="content-area">
+
+            <h3>쿠폰</h3>
+			<!-- 쿠폰 마크업 -->
+			<div class="coupon-wrap">
+
+                <!-- 내 마일리지 내역 -->
+                <div class="regist-coupon">
+                    <p class="tx_tit">쿠폰 직접 등록</p>
+                    <form method="" name="">
+                        <input type="text" class="ipt-coupon" placeholder="쿠폰번호 입력">
+
+                        <button type="button" class="btn btn-black">쿠폰 등록</button>
+                    </form>
+
+                    <p class="tx_info">쿠폰 번호를 등록하시면 ‘사용가능 쿠폰’에 추가됩니다.</p>
+                </div>
+
+                <!-- 구분선 -->
+                <hr class="div_line">
+
+                <!-- 쿠폰 리스트 -->
+                <div class="coupon">
+
+                    <div class="coupon-tit">
+                        <p class="tx_tit">사용가능 쿠폰</p>
+                        <a href="#layer-coupon2" class="open-modal">?</a>
+                    </div>
+
+                    <div class="coupon-filter">
+                        <ul class="filter-chip">
+                            <li class="active"><a href="javascript:;">전체</a></li>
+                            <li><a href="javascript:;">상품쿠폰</a></li>
+                            <li><a href="javascript:;">장바구니 쿠폰</a></li>
+                            <li><a href="javascript:;">더블 쿠폰</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- 상품 목록 정렬 -->
+                    <div class="coupon-align"><!-- 검색결과 없을 때 미노출 .product-align -->
+                        <div class="coupon-count">
+                            <span class="tx">77</span>
+                        </div>
+
+                        <!-- common.scss @custom-select -->
+                        <div class="custom-select">
+                            <div class="selected aligned">
+                                <div class="selected-value">최근발급 순</div>
+                                <div class="align"></div>
+                            </div>
+                            
+                            <div class="sheet">
+                                <div class="lycontents">
+                                    <div class="dim"></div>
+                                    <div class="controls">
+                                        <div class="draggable-area">
+                                            <div class="draggable-thumb"></div>
+                                        </div>
+                                    </div>
+                                    <h4 class="btm-tit">정렬</h4>
+                                    <ul>
+                                        <li class="option active">최근발급 순</li>
+                                        <li class="option">소멸임박 순</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="coupon-list">
+                        <ul>
+                            <li>
+                                <a href="#layer-coupon1" class="open-modal">
+                                    <!-- 더블쿠폰 클래스 : badge double -->
+                                    <span class="badge double">더블쿠폰</span>
+                                    <p class="tx_nm">[22SS 히든쿠폰] MSGM/N21 1ST DROP ㅇㅇㅇㄹ</p>
+                                    
+                                    <p class="tx_dday">31</p>
+                                    <p class="tx_period">
+                                        <span>2022.01.24</span>
+                                        <span>2023.04.21</span><!-- - 까지-->
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#layer-coupon1" class="open-modal">
+                                    <span class="badge">상품 쿠폰</span>
+                                    <p class="tx_nm">[22SS 히든쿠폰] MSGM/N21 1ST DROP 두 줄 이상 말줄임 처리 이렇게 가능함.</p>
+                                    
+                                    <p class="tx_dday">13</p>
+                                    <p class="tx_period">
+                                        <span>2022.01.24</span>
+                                        <span>2023.04.21</span><!-- -, 까지-->
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#layer-coupon1" class="open-modal">
+                                    <span class="badge">장바구니 쿠폰</span>
+                                    <p class="tx_nm">[22SS 히든쿠폰] MSGM/N21 1ST DROP ㅇㅇㅇㄹ</p>
+                                    
+                                    <p class="tx_dday">1</p>
+                                    <p class="tx_period">
+                                        <span>2022.01.24</span>
+                                        <span>2023.04.21</span><!-- -, 까지-->
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#layer-coupon1" class="open-modal">
+                                    <span class="badge double">더블쿠폰</span>
+                                    <p class="tx_nm">[22SS 히든쿠폰] MSGM/N21 1ST DROP ㅇㅇㅇㄹ</p>
+                                    
+                                    <p class="tx_dday">14</p>
+                                    <p class="tx_period">
+                                        <span>2022.01.24</span>
+                                        <span>2023.04.21</span><!-- -, 까지-->
+                                    </p>
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- 쿠폰상세 레이어 -->
+                <!-- MUI 모달 넣어주세요 -->
+                <div id="layer-coupon1" class="modal-layer">
+                    <div class="modal-content">
+                        <h2>쿠폰상세</h2>
+                        <button class="btn-close close-modal">닫기</button>
+
+                        <div class="modal-body">
+                            <div class="couponbox">
+                                <div class="coupon_name">
+                                    <!-- 더블쿠폰 클래스 : badge double -->
+                                    <span class="badge double">더블쿠폰</span>
+                                    <!-- 기본형 뱃지
+                                        <span class="badge">상품 쿠폰</span>
+                                        <span class="badge">장바구니 쿠폰</span> 
+                                    -->
+
+                                    <p class="tx_tit">[23SS 히든쿠폰] MSGM/N21 1ST DROP 긴 쿠폰명도 가능 그럴리 없겠지만 쿠폰상세에서는 두줄이상 긴 쿠폰명은 모두 노출합니다. 3줄, 4줄 상관없이 노출</p>
+
+                                    <!-- D- 단위는 ::before 에 넣었습니다 -->
+                                    <p class="tx_dday">26094</p>
+                                    <p class="tx_period">
+                                        <span>2022.01.24 09:00:00</span>
+                                        <span>2023.04.21 23:59:59</span><!-- -, 까지 -->
+                                    </p>
+                                </div>
+
+                                <hr class="div_line">
+
+                                <div class="coupon_info">
+                                    <ul>
+                                        <li>혜택 : 10,000원</li>
+                                        <li>구분 : 쇼핑백 : 판매반영</li>
+                                        <li>이용조건 :
+                                            <ul class="sub">
+                                                <li>- 20만 원 이상 구매 시 사용 가능 </li>
+                                                <li>- 빈티지, 리미티드, 병행수입 상품 적용 불가</li>
+                                                <li>- 그 외 특정 브랜드 및 일부 상품에 적용 불가할 수 있습니다.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--// 쿠폰상세 레이어 -->
+
+                <!-- 쿠폰사용주의사항 레이어 -->
+                <!-- MUI 모달 넣어주세요 -->
+                <div id="layer-coupon2" class="modal-layer">
+                    <div class="modal-content">
+                        <h2>쿠폰사용시 주의사항</h2>
+                        <button class="btn-close close-modal">닫기</button>
+
+                        <div class="modal-body">
+                            <div class="info-group">
+                                <ul class="info">
+                                    <li>상품별 1개의 상품 쿠폰을 적용하실 수 있습니다.</li>
+                                    <li>상품 더블쿠폰의 경우 일반쿠폰과 중복 사용 가능합니다.<br>(장바구니 쿠폰 제외)</li>
+                                    <li>장바구니 쿠폰의 경우 상품별로 중복적용이 가능하며, 불가한 상품의 경우 주문서에서 확인해주시기 바랍니다.</li>
+                                    <li>고객님의 변심으로 인한 취소, 반품은 쿠폰이 재발급 되지 않습니다.</li>
+                                    <li>발급된 쿠폰의 유효기간은 조기 종료/마감 될 수 있습니다.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--// 쿠폰사용주의사항 레이어 -->
+
+			</div>
+
+
+		</section>
+	</section>
+
+	<!-- 모바일용 하단 -->
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+
+	<!-- 하단 공통 영역 -->
+	<section include-html="../layout/footer.html"></section>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+</body>
+</html>

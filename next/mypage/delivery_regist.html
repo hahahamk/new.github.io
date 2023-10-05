@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body class="">
+
+<div class="wrap designerWrap">
+
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+
+    <!--모바일용 헤더 Q&A -->
+	<header class="header-sub">
+		<h2 class="sub"><button type="button" class="btn-back">이전</button>배송지 등록</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="home">홈</a></li>
+		</ul>
+	</header>
+
+    <!-- 컨텐츠 영역 -->
+    <section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+        <div class="content-area">
+			<h3>배송지 등록</h3>
+
+            <!-- 배송지 등록 WRAPPER -->
+            <div class="delivery-wrap">
+				
+				<!-- local 확인 method="get" -->
+				<form method="get" action="./delivery.html">
+					<!-- 배송지 등록 화면 -->
+					<div class="delivery-regist">
+						<!-- 배송지 입력란 -->
+						<div class="div-block">
+							<div class="txt-input">
+								<label for="INPUT1">배송지 명칭<sup>*</sup></label>
+
+								<div class="inputbox">
+									<input type="text" id="INPUT1" class="ipt-srch" required="required" placeholder="배송지 명칭을 입력하세요. ( ex 회사, 본가 등)" />
+								</div>
+							</div>
+						</div>
+
+						<!-- 받는사람 입력란 -->
+						<div class="div-block">
+							<div class="txt-input">
+								<label for="INPUT2">받는 사람<sup>*</sup></label>
+
+								<div class="inputbox">
+									<input type="text" id="INPUT2" class="ipt-srch" required="required" placeholder="성함을 입력하세요." />
+								</div>
+							</div>
+						</div>
+
+						<!-- 연락처 입력란 -->
+						<div class="div-block">
+							<div class="txt-input">
+								<label for="INPUT3">연락처<sup>*</sup></label>
+
+								<div class="inputbox">
+									<input type="text" id="INPUT3" class="ipt-srch" required="required" placeholder="-없이 숫자만 입력하세요  ( ex 01012345678 )" />
+								</div>
+							</div>
+						</div>
+
+						<!-- 배송지주소 입력란 -->
+						<div class="div-block">
+							<div class="txt-input">
+								<label for="INPUT4">배송지 주소<sup>*</sup></label>
+
+								<div class="inputbox">
+									<input type="text" id="INPUT4" class="ipt-srch noninput" placeholder="우편번호를 입력하세요" disabled="disabled" />
+									
+									<!-- 우편번호 찾기 완료 후 value, disabled 속성 추가 -->
+									<input type="text" id="INPUT4" class="ipt-srch" placeholder="우편번호를 입력하세요" value="05654" disabled="disabled" />
+									<a href="#" class="btn btn-mod">우편번호 찾기</a>
+								</div>
+								<div class="inputbox">
+									<input type="text" id="INPUT4-2" class="ipt-srch noninput" placeholder="주소를 입력하세요" disabled="disabled" />
+
+									<!-- 우편번호 찾기 완료 후 value, disabled 속성 추가 -->
+									<input type="text" id="INPUT4-2" class="ipt-srch" placeholder="주소를 입력하세요" value="서울특별시 용산구 장문로 32" disabled="disabled" />
+								</div>
+								<div class="inputbox">
+									<input type="text" id="INPUT4-3" class="ipt-srch" required="required" placeholder="상세주소를 입력하세요">
+								</div>
+							</div>
+						</div>
+
+						<!-- 이름/생년월일/성별/정보수신 입력란 -->
+						<div class="div-block">
+							<div class="rdo-input">
+								<p class="tx_label">배송 희망 장소<sup>*</sup></p>
+
+								<div class="rdo_group">
+									<label class="inp">문 앞
+										<input type="radio" name="DAREA" checked="checked">
+										<span class="checkmark radio"></span>
+									</label>
+									<label class="inp">경비실
+										<input type="radio" name="DAREA">
+										<span class="checkmark radio"></span>
+										
+										<div class="inputbox">
+											<input type="text" id="" class="ipt-srch" placeholder="특이사항 있는경우 입력해 주세요." />
+										</div>
+									</label>
+									<label class="inp">택배함
+										<input type="radio" name="DAREA">
+										<span class="checkmark radio"></span>
+										
+										<div class="inputbox">
+											<input type="text" id="" class="ipt-srch" placeholder="위치 및 비밀번호를 작성해 주세요." />
+										</div>
+									</label>
+									<label class="inp">기타
+										<input type="radio" name="DAREA">
+										<span class="checkmark radio"></span>
+										
+										<div class="inputbox">
+											<input type="text" id="" class="ipt-srch" placeholder="소화전, EPS등은 제외하고 입력해 주세요." />
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="rdo-input">
+								<p class="tx_label">공동현관 비밀번호<sup>*</sup></p>
+
+								<div class="rdo_group">
+									<label class="inp">비밀번호 입력
+										<input type="radio" name="DPASS" checked="checked">
+										<span class="checkmark radio"></span>
+										
+										<div class="inputbox">
+											<input type="text" id="" class="ipt-srch" placeholder="비밀번호를 입력하세요 ( ex 종1234# )" />
+										</div>
+									</label>
+									<label class="inp">자유 출입 가능
+										<input type="radio" name="DPASS">
+										<span class="checkmark radio"></span>
+									</label>
+								</div>
+
+								<div class="notice">
+									<dl>
+										<dt>확인해주세요!</dt>
+										<dd>공동현관 비밀번호 미입력 시 정확한 배송이 되지 않으며,사고 발생 시 보상이 어려울 수 있습니다.</dd>
+										<dd>새벽 출입이 어려운 물건은, ‘문 앞'이 아닌 안전한 장소를 선택해 주세요</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+
+						<div class="confirm">
+							<label class="inp">이 주소를 기본 배송지로 설정합니다.
+								<input type="checkbox" name="checkbox" />
+								<span class="checkmark checkbox"></span>
+							</label>
+		
+							<button type="submit" class="btn btn-full">등록</button>
+						</div>
+					</div>
+					<!-- //배송지 등록 화면 -->
+				</form>
+
+            </div>
+
+		</div>
+    </section>
+
+	<!-- MY>배송지관리 앱바 없음. -->
+	<!-- <nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!- - 페이지 활성화 시 active - ->
+			<li><a href="javascript:;" class="btm-designer">designer</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav> -->
+
+	<!-- 하단 공통 영역 -->
+	<!-- MY>배송지관리 풋터 없음. -->
+	<!-- <section include-html="../layout/footer.html"></section> -->
+</div>
+
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+
+<script>
+	includeHTML();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+@include mobile{
+    // 장바구니만 적용 : 하단 여백 제거
+    .content-area {padding-bottom:0;}
+
+    // 장바구니만 적용 : 모바일 풋터 없음
+    .page-footer {display:none;}
+}
+
+/* CART */
+.cart-wrap {display:flex; gap:40px;
+    .cart-left {
+        flex: 0 1 calc(100% - 368px);
+    }
+    .cart-right {
+        flex: 1 0 368px;
+    }
+    @media screen and (max-width:1279px) {
+        & {flex-direction: column; gap:0;
+            .cart-left {flex:1 0 100%;}
+            .cart-right {flex:1 0 100%;}
+        }
+    }
+    @include mobile {
+        & {padding:0 20px;}
+    }
+
+    .cart-head {display:flex; justify-content:right; margin-bottom:16px;
+        .btn-group {font-size:0;
+            .btn {height:32px; margin:0 4px; padding:0 12px; border:none; font-weight:600; font-size:12px; color:$co-lgr; line-height:32px; background-color:#fff;}
+        }
+    }
+
+    // 장바구니 목록
+    .cart-list {
+        .checkitem { 
+            label {padding-left:28px; font-weight:600; font-size:16px; color:$co-bk; line-height:22px;
+                &::after {width:20px; height:20px; opacity:1;}
+            }
+        }
+
+        .cart-item {border:1px solid #F2F1F7; border-radius:2px;
+            &+.cart-item {margin-top:48px;}
+
+            .delivery {display:flex; align-items:center; justify-content: space-between; height:54px; padding:0 20px; border-bottom:1px solid #F2F1F7;
+                &-badge {font-size:0;}
+            }
+            .product {margin:0 20px; padding:22px 0 24px;
+                &-control {display:flex; justify-content: space-between; margin-bottom:16px;
+                    .btn-del {width:20px; height:20px; font-size:0; background:url($--image-url+"/common/ico-close@20x20.svg") no-repeat; background-size:100%;}
+                }
+
+                &+.product {padding-top:24px; border-top:1px solid #F2F1F7;}
+
+                //soldout
+                &.soldout .img-area {
+                    &::after {content:""; display:block; position:absolute; top:0; left:0; right:0; bottom:0; z-index:1; background:url($--image-url+"/common/product_soldout@96x128.svg") no-repeat; background-size:100%;}
+                }
+
+                &-detail {display:flex; position:relative;
+                    .img-area {position:relative; width:96px; height:128px; margin-right:12px;}
+
+                    .spec-area {display:flex; justify-content: space-between; width:calc(100% - 96px - 12px);
+                        .spec-col {display:flex; align-items:center;
+                            &.wid-fixed {display:block; width:100%; max-width:296px;}
+
+                            .btn {min-width:80px; height:32px; padding:0; line-height:30px; font-size:12px;}
+                        }
+
+                        .spec_name {display:block; max-height:36px; margin:10px 0 8px; font-weight:600; font-size:14px; line-height:18px; color:$co-bk; @include txt-hd2;}
+                        .spec_badge {font-size:0;}
+
+                        .spec_price {font-weight:600; font-size:12px; letter-spacing:-0.2px; color:$co-bk; line-height:16px;
+                            .tx_per {color:#0000F0;
+                                &::after {content:"%";}
+                            }
+                            .tx_price {color:inherit;
+                                &::after {content:"원";}
+                            }
+                        }
+
+                        .btn-option {position:absolute; bottom:10px; left:108px; width:calc(100% - 108px); max-width:296px;
+                            .select-opt {display:block; position:relative; width:100%; height:32px; padding:0 40px 0 16px; border:1px solid #E9E8EE; border-radius:2px; text-align:left; line-height:30px;
+                                >span {font-size:12px; color:#6c6c71;
+                                    &+span::before {content:", "}
+                                }
+                                &::after {content:""; position:absolute; top:8px; right:12px; width:16px; height:16px; background:url($--image-url+("/common/arrow_down.svg")) no-repeat; background-size:100%;}
+
+                                // 품절
+                                &.is-soldout {border-color:#F2F1F7; background-color:#F8F7FB; pointer-events: none;
+                                    >span {font-size:14px; color:#D9D8DD;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .total-price {display:flex; align-items:center; justify-content:center; height:54px; text-align:center; background-color:#F8F7FB;
+                >p {font-size:0;
+                    >span {font-size:14px; line-height:16px; color:$co-bk; letter-spacing:-0.35px;
+                        &::after {content:"원"}
+
+                        &.tx_delivery {
+                            &::before {content:"배송비"; margin-right:4px;}
+                        }
+                        &.tx_total {font-weight:600;
+                            &::before {content:"="; margin:0 4px;}
+                        }
+                    }
+                    >i {display:inline-block; margin:0 4px; font-size:14px; line-height:16px; color:$co-bk; letter-spacing:-0.35px;}
+                }
+            }
+        }
+
+        // .cart-list : 장바구니 목록 모바일 
+        @include mobile {
+            & { 
+                .cart-item {
+                    .product {
+                        &-detail {padding-bottom:48px; 
+                            .spec-area {flex-direction:column; justify-content:flex-start;
+                                .spec-col {display:block; flex: 0 1 auto;
+                                    &.wid-fixed {max-width:100%;}
+
+                                    &--buy {position:absolute; bottom:0; left:0; right:0; 
+                                        .btn {width:100%;}
+                                    }
+                                }
+                
+                                .spec_name {margin:12px 0 4px;}
+                                .spec_badge {display:none;}
+                
+                                .btn-option {bottom:60px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 가격 및 안내
+    .price-info {position:sticky; top:0; padding-top: 48px;
+        .tagprice {
+            li {display:flex; justify-content: space-between; position:relative;
+                &+li {margin-top:13px;}
+                
+                .tx_th {font-size:14px; font-weight:400; color:#6c6c71; letter-spacing:-0.35px; line-height:18px;}
+                .tx_td {font-size:14px; font-weight:600; color:$co-bk; letter-spacing:-0.35px; line-height:18px;
+                    &::after {content:"원"; margin-left:4px;}
+                }
+
+                &.total {margin-top:16px; padding-top:17px;
+                    &::before {content:""; position:absolute; top:0; left:0; right:0; width:100%; height:1px; background-color:#F2F1F7;}
+
+                    .tx_th {font-size:16px; font-weight:600; color:$co-bk; letter-spacing:-0.4px; line-height:22px;}
+                    .tx_td {font-size:16px; letter-spacing:-0.4px; line-height:22px;}
+                }
+            }
+        }
+
+        .btn-order {display:block; width:100%; max-width:480px; height:56px; margin:48px auto 0; font-weight:600; font-size:16px; letter-spacing:0.3px; color:#B5B4B9; background-color:#E9E8EE; border:0;
+            &.active {color:#F8F7FB; background-color:#0000F0;}
+        }
+
+        .notice {margin-top:48px;
+            li {position:relative; padding-left:20px; font-size:12px; line-height:20px; letter-spacing:-0.3px; color:#6C6C71;
+                &+li {margin-top:12px;}
+
+                &::before {content:"•"; position:absolute; top:-1px; left:0; width:20px; height:20px; font-weight:400; text-align:center;}
+
+                .sub {padding-left:14px;
+                    li {list-style-type:lower-alpha; margin-top:0; padding-left:0;
+                        &::before {display:none;}
+
+                        >strong {font-weight:600;}
+                    }
+                }
+            }
+        }
+
+        // .price-info : 가격안내 모바일
+        @include mobile {
+            & {position:relative; padding-bottom:104px; 
+                .btn-order {position:absolute; bottom:0; left:-20px; right:-20px; width:calc(100% + 40px); max-width:calc(100% + 40px); height:56px; margin:0;}
+            }
+        }
+    }
+}

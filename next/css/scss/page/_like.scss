@@ -1,0 +1,149 @@
+/* COMMON */
+// 좋아요
+.toggle-like {overflow:hidden; position:absolute; top:5px; right:4px; width:36px; height:36px; background-image: url($--image-url + "/common/ico-like@20x20.svg"); background-position: center; background-repeat:no-repeat; background-size:24px; font-size:0; text-indent:-9999px; z-index:1; transition:filter .15s ease-in-out;
+    &:hover {filter: brightness(0.3) invert(0.5)}
+    &.on {background-image:url($--image-url + "/common/ico-like@20x20-active.svg");}
+
+    @media (max-width: ($desktop - 1)){
+        & {top:4px; background-size:20px;}
+    } 
+}
+// 품절 상품 제외
+.product-soldout {display:flex; justify-content: end; margin-bottom:24px; padding:8px 0;
+    @include mobile {
+        & {margin-bottom:0; padding:16px 20px;}
+    }
+}
+
+/* LIKE */
+.like-wrap {
+    /* LIKE 목록 컨테이너 */
+    .like-container {width:100%;
+        
+        /* LIKE ROW */
+        .like-row {display:flex; flex-wrap:wrap; justify-content:flex-start; gap:48px 24px; padding:0 20px;
+            @include mobile {justify-content:space-between;
+                & {padding:0; gap:48px 4px;}
+            }
+            @media (min-width: ($tablet + 1)){
+                padding:0;
+            } 
+        }        
+
+        /* LIKE 카드 COL */
+        .like-col {position:relative; flex-basis:calc(50% - 8px);
+                
+            >a {display:block; position:relative;
+                .img-area {overflow:hidden; position:relative; width:100%; height:auto; margin-bottom:12px; border-radius:2px;
+                    >img {width:100%; height:auto; vertical-align:top; transition:all .2s ease-in-out;}
+                    &:hover img {-webkit-transform:scale(1.03); -moz-transform:scale(1.03); transform:scale(1.03);}            
+                } 
+                .spec-area {height:58px; margin-bottom:12px;
+                    .spec_name{display:block; max-height:36px; margin-bottom:4px; font-size:14px; line-height:18px; font-weight:600; opacity:0.9; color:$co-bk; @include txt-hd2;}
+                    .spec_price{margin-bottom:16px; font-size:0; line-height:16px;
+                        * {font-size:12px;}
+                        .tx_per{margin-right:6px; color:$co-blue;
+                            &::after {content:"%";}
+                        }
+                        .tx_price{color:$co-bk;
+                            &::before {content:"₩";}
+                        }
+                        .tx_cost{margin-left:4px; color:$co-lgr; text-decoration:line-through;
+                            &::before {content:"₩";}
+                        }
+                    }
+                }
+            }
+            // 장바구니 담기
+            >a.addcart {display:inline-block; position:relative; height:32px; line-height:30px; padding:0 12px 0 26px; border:1px solid #f2f1f7; font-weight:600; font-size:12px; color:#6c6c71;
+                &:hover {border-color:$co-gr}
+                &::before {content:""; position:absolute; top:9px; left:7px; width:12px; height:12px; background:url($--image-url + "/common/ico-cart@12x12.svg") no-repeat;}
+            }
+
+            // 품절 상품
+            &.soldout {
+                .img-area::before {content:""; position:absolute; top:0; bottom:0; left:0; right:0; z-index:1; background-color:rgba(255, 255, 255, 0.6);}
+                .img-area::after {content:""; position:absolute; top:50%; left:50%; z-index:2; transform:translate(-50%, -50%); width:59.7%; height:19px; font-size:0; background:url($--image-url + "/common/product_soldout@108x12.svg") center no-repeat; background-size:contain; filter: brightness(0.6);}
+                
+                >a.addcart {display:none;}
+            }
+
+            @include mobile {
+                & {flex-basis:calc(50% - 2px);}
+                & .spec-area {padding:0 16px;}
+
+                >a.addcart {margin-left:15px;}
+            }
+            @media (max-width: 319px){
+                & {flex-basis:100% !important;}
+            }
+            @media (min-width: ($tablet + 1)){
+                & {flex-basis:calc(25% - 18px);}
+            } 
+        }
+    }
+}
+
+/* 디자이너 */
+.designer-wrap {margin-top:48px;
+    @include mobile {
+        & {margin-top:16px;}
+    }
+
+    /* LIKE 목록 컨테이너 */
+    .designer-container {
+        /* 상품 ROW */
+        .designer-row {
+            @include mobile {justify-content:space-between;
+                & {padding:0 20px;}
+            }
+        }
+
+        .designer-col {position:relative; display:block;
+            &+.designer-col {margin-top:24px; padding-top:24px; border-top:1px solid #f2f1f7;}
+            
+            // 좋아요
+            .toggle-like {top:18px; right:-7px;}
+
+            .col-head {position:relative;
+                >a {display:inline-block; padding:18px 0;
+                    .tx_eng {display:block; font-weight:600; font-size:14px; color:$co-bk; line-height:18px;}
+                    .tx_kor {display:block; margin-top:3px; font-size:12px; color:#6c6c71; line-height:16px;}
+                }
+            }
+
+            .col-body {display:block; position:relative; width:100%;
+                .designerlist {position:relative;
+                    .swiper-slide {width:156px;
+                        @include mobile {width:90px;}
+                    }
+                    .img-area {overflow:hidden; 
+                        >img {transition:all .2s ease-in-out;}
+                        &:hover img {-webkit-transform:scale(1.05); -moz-transform:scale(1.05); transform:scale(1.05);}
+                    }
+
+                    .swiper-button-prev {position:absolute;top:0;bottom:0;left:0;margin-top:0;width:80px;height:100%; background:linear-gradient(90deg, #FFFFFF 51.04%, rgba(255, 255, 255, 0) 100%);
+                        &::after {content:"";position:absolute;top:50%;left:50%;margin-right:5px;transform:translate(-50%, -50%);width:28px;height:28px;background:url($--image-url + "/common/ico-paging-prev@24x24.svg") no-repeat; background-size:28px;}
+                    }
+
+                    .swiper-button-next {position:absolute;top:0;bottom:0;right:0;margin-top:0;width:80px;height:100%; background:linear-gradient(270deg, #FFFFFF 51.04%, rgba(255, 255, 255, 0) 100%);
+                        &::after {content:"";position:absolute;top:50%;left:50%;margin-left:5px;transform:translate(-50%, -50%);width:28px;height:28px;background:url($--image-url + "/common/ico-paging-next@24x24.svg") no-repeat; background-size:28px;}
+                    }
+                    .swiper-button-disabled {display:none;}
+                }                
+            }
+
+            @media screen and (min-width: $tablet){
+                .col-body {overflow:hidden;}
+            }
+            @include mobile{
+                &+.designer-col {margin-top:16px; padding-top:16px;}
+                .toggle-like {right:-9px;}
+                .col-body {
+                    .swiper-button-prev, .swiper-button-next {display:none;}
+                }
+            } 
+        }
+    }
+}
+

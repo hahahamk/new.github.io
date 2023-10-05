@@ -1,0 +1,301 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<div class="wrap">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+    <!--모바일용 헤더 Q&A -->
+	<header class="header-sub">
+		<h2 class="sub"><button type="button" class="btn-back">이전</button>회원정보수정</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="home">홈</a></li>
+		</ul>
+	</header>
+
+	<section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+		<section class="content-area">
+
+            <h3>회원정보수정</h3>
+			
+			<!-- 멤버 WRAPPER 공통 -->
+			<div class="member-wrap">
+
+				<!-- 회원정보수정 -->
+                <div class="member-modify">
+
+					<!-- DIV HEAD -->
+					<div class="div-head">
+						<p class="tx_tit">계정정보</p>
+					</div>
+
+                    <div class="div-block join-sns">
+						<p class="tx_tit">SNS 연결</p>
+						<ul class="snslist">
+							<!-- ::after 인증대기, .active::after 인증완료 -->
+							<li><button type="button" class="sns-icon kakao" onclick="$(this).toggleClass('active')"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/common/ico-kakao@16x16.svg" alt="kakaotalk"></button></li>
+							<li><button type="button" class="sns-icon naver" onclick="$(this).toggleClass('active')"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/common/ico-naver@16x16.svg" alt="kakaotalk"></button></li>
+							<li><button type="button" class="sns-icon apple" onclick="$(this).toggleClass('active')"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/common/ico-apple@16x16.svg" alt="kakaotalk"></button></li>
+						</ul>
+					</div>
+
+					<!-- 휴대폰 번호 입력란 -->
+					<!-- 본인인증 도입으로 사용하지 않음. -->
+					<!-- <div class="div-block">
+						<div class="txt-input">
+							<label for="PNUM">휴대폰번호<sup>*</sup></label>
+
+							<div class="inputbox">
+								<input type="text" id="PNUM" class="ipt-srch" placeholder="01011112222" disabled="disabled">
+								<a href="#" class="btn btn-mod">휴대폰 번호 변경</a>
+							</div>
+						</div>
+
+						<!- - 변경 영역 : block-modify, 노출 클래스 : is-on - ->
+						<div class="block-modify is-on">
+							<!- - INPUT 에러케이스 : is-err 클래스- ->
+							<div class="txt-input is-err">
+								<div class="inputbox">
+									<input type="text" id="PNUM" class="ipt-srch" placeholder="변경할 휴대폰번호">
+									<a href="#" class="btn btn-mod is-disabled">인증번호 전송</a> <!- -비활성:is-disabled- ->
+									<!- - <a href="#" class="btn btn-mod is-able">인증번호 전송</a> - -> <!- -활성:is-able- ->
+									<p class="tx_err">휴대폰 번호를 올바르게 입력해주세요.</p>
+								</div>
+							</div>
+						</div>
+						<div class="block-modify is-on">
+							<div class="txt-input">
+								<div class="inputbox">
+									<input type="number" id="PNUM" class="ipt-srch" placeholder="인증번호" maxlength="6">
+									<a href="#" class="resend">재전송</a>
+									<a href="#" class="btn btn-mod is-able">인증</a>
+									<p class="tx_time">02:59</p>
+									<!- -<p class="tx_time is-end">00:00</p>- -> <!- -마감:is-end- ->
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- 이메일 입력란 -->
+					<div class="div-block">
+						<div class="txt-input">
+							<label for="EMAIL">이메일<sup>*</sup></label>
+
+							<div class="inputbox">
+								<input type="text" id="EMAIL" class="ipt-srch" placeholder="email@email.com" disabled="disabled">
+								<a href="#" class="btn btn-mod">이메일 변경</a>
+							</div>
+						</div>
+						<!-- 변경 영역 : block-modify, 노출 클래스 : is-on -->
+						<div class="block-modify is-on">
+							<!-- INPUT 에러케이스 : is-err 클래스-->
+							<div class="txt-input is-err">
+								<div class="inputbox">
+									<input type="text" id="PNUM" class="ipt-srch" placeholder="변경할 이메일">
+									<a href="#" class="btn btn-mod is-disabled">인증번호 전송</a> <!--비활성:is-disabled-->
+									<!--<a href="#" class="btn btn-mod is-able">인증번호 전송</a>--> <!--활성:is-able-->
+									<p class="tx_err">이메일 양식을 확인해주세요.</p>
+								</div>
+							</div>
+						</div>
+						<div class="block-modify is-on">
+							<div class="txt-input">
+								<div class="inputbox">
+									<input type="number" id="PNUM" class="ipt-srch" placeholder="인증번호" maxlength="6">
+									<a href="#" class="resend">재전송</a>
+									<a href="#" class="btn btn-mod is-able">인증</a>
+									<p class="tx_time is-end">00:00</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 비밀번호 입력란 -->
+					<div class="div-block">
+						<div class="txt-input">
+							<label for="PASSWORD">비밀번호<sup>*</sup></label>
+
+							<div class="inputbox">
+								<input type="password" id="PASSWORD" class="ipt-srch" placeholder="비밀번호" disabled="disabled">
+								<a href="#" class="btn btn-mod">비밀번호 변경</a>
+							</div>
+						</div>
+
+						<!-- 변경 영역 : block-modify, 노출 클래스 : is-on -->
+						<div class="block-modify is-on">
+							<!-- INPUT 에러케이스 : is-err 클래스-->
+							<div class="txt-input is-err">
+
+								<div class="inputbox">
+									<input type="text" id="PNUM" class="ipt-srch" placeholder="변경할 비밀번호">
+									<a href="#" class="btn btn-mod">변경 취소</a>
+									<p class="tx_err">10~16자 영문 대/소문자, 숫자, 특수문자 중 2가지 이상을 입력해 주세요.</p>
+								</div>
+							</div>
+						</div>
+						<div class="block-modify is-on">
+							<!-- INPUT 에러케이스 : is-err 클래스-->
+							<div class="txt-input is-err">
+								<div class="inputbox">
+									<input type="text" id="PNUM" class="ipt-srch" placeholder="비밀번호 확인">
+									<a href="#" class="btn btn-mod is-disabled">변경 완료</a><!--비활성:is-disabled-->
+									<!--<a href="#" class="btn btn-mod is-able">변경 완료</a>--><!--활성:is-able-->
+									<p class="tx_err">비밀번호가 일치하지 않습니다.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr class="div_line" />
+
+					<!-- DIV HEAD -->
+					<div class="div-head">
+						<p class="tx_tit">회원정보</p>
+					</div>
+
+					<!-- 회원정보 -->
+					<div class="div-block">
+						<div class="user-info">
+							<ul>
+								<li>
+									<p class="tx_th">이름</p>
+									<p class="tx_td">리앤한</p>
+								</li>
+								<li>
+									<p class="tx_th">휴대폰번호</p>
+									<p class="tx_td">01012345678</p>
+								</li>
+								<li>
+									<p class="tx_th">생년월일</p>
+									<p class="tx_td">1990.06.05</p>
+								</li>
+							</ul>
+						</div>
+
+						<button type="button" class="btn btn-link btn-full">본인인증으로 정보 수정</button>
+					</div>
+
+					<hr class="div_line" />
+
+					<!-- DIV HEAD -->
+					<div class="div-head">
+						<p class="tx_tit">정보 수신 동의</p>
+					</div>
+
+					<!-- 회원정보 -->
+					<div class="div-block">
+						<div class="rdo-input">
+							<div class="rdo_group">
+								<label class="inp">SMS
+									<input type="checkbox" checked="checked">
+									<span class="checkmark"></span>
+								</label>
+								<label class="inp">이메일
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- 이름/생년월일/성별/정보수신 입력란 -->
+					<!-- 본인인증 도입으로 사용하지 않음. -->
+					<!-- <div class="div-block">
+						<div class="txt-input">
+							<label for="NAME">이름<sup>*</sup></label>
+
+							<div class="inputbox">
+								<input type="text" id="NAME" class="ipt-srch" placeholder="이름 입력">
+							</div>
+						</div>
+						<div class="txt-input">
+							<label for="BIRTHDAY">생년월일</label>
+
+							<div class="inputbox">
+								<input type="text" id="BIRTHDAY" class="ipt-srch" placeholder="예) 19880831"> <!- -등록 전- ->
+								<input type="text" id="BIRTHDAY" class="ipt-srch" placeholder="예) 19880831" value="1988.08.31" disabled="disabled"><!- -등록 후- ->
+								<p class="tx_info">입력하신 생년월일은 변경이 불가합니다.</p>
+							</div>
+						</div>
+						<div class="rdo-input">
+							<p class="tx_label">성별</p>
+
+							<div class="rdo_group">
+								<label class="inp">남자
+									<input type="radio" name="radio" checked="checked">
+									<span class="checkmark radio"></span>
+								</label>
+								<label class="inp">여자
+									<input type="radio" name="radio">
+									<span class="checkmark radio"></span>
+								</label>
+							</div>
+						</div>
+						<div class="rdo-input">
+							<p class="tx_label">정보 수신 동의</p>
+
+							<div class="rdo_group">
+								<label class="inp">SMS
+									<input type="checkbox" checked="checked">
+									<span class="checkmark"></span>
+								</label>
+								<label class="inp">이메일
+									<input type="checkbox">
+									<span class="checkmark"></span>
+								</label>
+							</div>
+						</div>
+					</div> -->
+
+                    <button type="button" class="btn btn-full">정보변경 완료</button>
+
+					<a href="#회원탈퇴" class="link_secession">회원탈퇴</a>
+                </div>
+				<!-- //회원정보수정 -->
+
+			</div>
+			<!-- //멤버 WRAPPER 공통 -->
+
+
+		</section>
+	</section>
+
+	<!-- 모바일용 하단 -->
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+</body>
+</html>

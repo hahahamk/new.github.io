@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<div class="wrap">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+	<header class="header-sub" id="mypage-scroll">
+		<h2>MY</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="search">검색</a></li>
+			<li><a href="javascript:;" class="cart">장바구니</a></li>
+		</ul>
+	</header>
+
+	<section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+		<section class="content-area">
+			<h3>최근 본 상품</h3>
+
+			<!-- 최근본상품 마크업 -->
+			<div class="recent-wrap">
+					
+				<!-- 전체 삭제 -->
+				<div class="product-remove">
+					<button type="button" class="btn btn-bdnone">전체 삭제</button>
+				</div>
+
+				<!-- [공통] 상품 목록 -->
+				<div class="recentlist">
+
+					<!-- 최근본상품 컨테이너 클래스 추가 : recent-container -->
+					<div class="recent-container">
+						<div class="recent-row">
+
+							<!-- 반복 : 아이템 -->
+							<div class="recent-col">
+								<!--LIKE -->
+								<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+
+								<a href="#" target="_blank">
+									<div class="img-area">										
+										<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt="">
+									</div>
+
+									<div class="spec-area">
+										<div class="spec_name">BRAND NAME</div>
+										<div class="spec_price">
+											<span class="tx_per">30</span>
+											<span class="tx_price">1,234,500</span>
+										</div>
+										<div class="spec_badge">
+											<span class="badge bk">새벽도착</span><span class="badge">해외배송</span>              
+										</div>
+									</div>
+								</a>
+							</div>
+
+							<!-- 품절 -->
+							<div class="recent-col soldout"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAMEBRAND NAMEBRAND NAMEBRAND NAMBRAND NAMEBRAND NAMEBRAND NAMEBRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+							<div class="recent-col"><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button><a href="#" target="_blank"><div class="img-area"><img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt=""></div><div class="spec-area"><div class="spec_name">BRAND NAME</div><div class="spec_price"><span class="tx_per">30</span><span class="tx_price">1,234,500</span><span class="tx_cost">1,456,300</span></div><div class="spec_badge"><span class="badge bk">새벽도착</span><span class="badge">해외배송</span></div></div></a></div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+	</section>
+
+	<!-- 모바일용 하단 -->
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+
+	<!-- 하단 공통 영역 -->
+	<section include-html="../layout/footer.html"></section>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+</body>
+</html>

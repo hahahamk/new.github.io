@@ -147,7 +147,7 @@
 
 		<!-- content-->
 		<span class="nav-category">상픔&#47;재고 &gt;<strong>상품등록</strong></span>
-		<section class="content-area">
+		<section class="content-area w1200">
 			<h3>상품등록</h3>
 
 			<div class="btn-area">
@@ -169,16 +169,8 @@
 							<th>자체 상품코드</th>
 							<td colspan="3">
 								<div class="input-box">
-									<input type="text" class="txt wrong w40" placeholder="*미입력 시 임의로 부여되며, 한글/공백/특수문자(-,_제외) 사용이 불가합니다." />
+									<input type="text" class="txt wrong w40" placeholder="* 한글/공백/특수문자(-,_제외) 사용이 불가합니다." />
 									<p class="tip-msg">이미 존재하는 자체 상품코드입니다.</p>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<th>상품명<i>*</i></th>
-							<td colspan="3">
-								<div class="input-box">
-									<input type="text" class="txt" placeholder="*출시년도 및 시즌 정보가 맨 앞에 자동으로 부착됩니다. ex)[24 S/S]" />
 								</div>
 							</td>
 						</tr>
@@ -399,10 +391,14 @@
 							<th>대표이미지 1<i>*</i></th>
 							<td>
 								<div class="input-box">
-									<input type="text" name="txt" class="txt" placeholder="* 이미지 URL을 입력하거나 하기 영역을 클릭하여 직접 이미지를 업로드하시기 바랍니다. (확장자 jpg 가능, 이미지 업로드와 중복 등록 시 URL 기준 처리)">
+									<input type="text" name="txt" class="txt" placeholder="* 이미지 URL을 입력하거나 하기 영역을 클릭하여 직접 이미지를 업로드하시기 바랍니다. (이미지 업로드와 중복 등록 시 URL 기준 처리)">
 								</div>
-								<p class="mt10"><button type="button" class="btn open-modal" href="#layer-imgUpload">이미지 업로드</button>
-								<span class="info-txt">* 상품 단건 등록에 한하여, 대표 이미지 1 이미지 업로드 기능을 제공합니다. (확장자 jpg 가능, 타 대표 이미지 및 일괄 등록은 URL 입력)</span></p>
+								<input type="file" name="imgFile" id="imgFile" accept="image/jpg" style="display:none;" onchange="fileChange(this)">
+								<div id="img_view" class="img-view-box"></div>
+								<p style="padding-top:45px">
+									<button type="button" class="btn open-modal" href="#layer-imgUpload" id="fileBtn">이미지 업로드</button>
+									<div class="mt10">*권장 사이즈: 1200*600 / 확장자: JPG, JPEG, PNG,GIF, BMP / 이미지 용량: 최대 3MB 이하 등록 가능</div>
+								</p>
 							</td>
 						</tr>
 						<tr>
@@ -518,19 +514,6 @@
 			});
 		});                                      
 	});
-
-	//tab 
-	var tabarea = document.getElementById("tab-type");
-	var tabBtn = tabarea.getElementsByClassName("tab-menu");
-		for (var i = 0; i < tabBtn.length; i++) {
-			tabBtn[i].addEventListener("click", function() {
-			var current = document.getElementsByClassName("active");
-			current[0].className = current[0].className.replace(" active", "");
-			this.className += " active";
-		});
-	}
-
-	
 </script>
 
 </body>

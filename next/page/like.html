@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css?cVer=2023020816">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body class="">
+<div class="wrap">
+
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+
+	<header class="header-sub" style="position:static">
+		<h2>LIKE</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="search">검색</a></li>
+			<li><a href="javascript:;" class="cart">장바구니</a></li>
+		</ul>
+	</header>
+
+    <!-- 컨텐츠 영역 -->
+    <section class="contents">
+        <div class="content-area">
+			
+			<!--
+				탭은 공통으로 사용합니다.
+				구조는 아래와 같고, MUI 로 대체하셔도 됩니다.
+				-----------------------------------
+				@_common.scss
+				.tab 
+					⌞.tab-row
+						⌞.tab-item.on
+						⌞.tab-item
+
+				.tab-container
+					⌞.tab-content.shown
+					⌞.tab-content
+				-----------------------------------
+			-->
+			<!-- [공통] 탭 -->
+			<div class="tab">
+				<div class="tab-row">
+					<button type="button" class="tab-item on" onclick="tabOnoff(0)">상품</button>
+					<button type="button" class="tab-item" onclick="tabOnoff(1)">디자이너</button>
+				</div>
+			</div>
+
+			<!-- [공통] 탭 컨테이너 -->
+			<div class="tab-container">
+
+				<!-- [공통] 탭 컨텐츠 : 상품 탭 -->
+				<div class="tab-content shown">
+					
+					<!-- LIKE WRAPPER -->
+					<div class="like-wrap">
+
+						<!-- 품절 상품 제외 -->
+						<div class="product-soldout">
+							<div class="checkitem">
+								<input type="checkbox" id="SOLDOUT" class="ipt-chk">
+								<label for="SOLDOUT">품절 제외</label>
+							</div>
+						</div>
+						
+						<!-- [공통] 상품 목록 -->
+						<div class="likelist">
+
+							<!-- 상품 목록 컨테이너 -->
+							<div class="like-container">
+								<div id="productList" class="like-row">
+									<!-- 반복 : 아이템 -->
+									<div class="like-col soldout">
+										<!--LIKE -->
+										<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+
+										<a href="#" target="_blank">
+											<div class="img-area">										
+												<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt="">
+											</div>
+
+											<div class="spec-area">
+												<div class="spec_name">ACNE STUDIOS ACNE STUDIOS ACNE STUDIOS ACNE STUDIOS ACNE STUDIOS</div>
+												<div class="spec_price">
+													<span class="tx_per">30</span>
+													<span class="tx_price">1,234,500</span>
+													<span class="tx_cost">1,234,500</span>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="addcart">장바구니 담기</a>
+									</div>
+									<!-- //아이템 -->
+
+									<!-- /js/search.js : .like-col insertAdjacentHTML -->
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<!-- //[공통] 탭  : 상품 탭 -->
+
+				<!-- [공통] 탭  : 디자이너 탭 -->
+				<div class="tab-content">
+					<!-- 디자이너 목록 -->
+					<div class="designer-wrap">
+
+						<!-- 디자이너 목록 컨테이너 -->
+						<div class="designer-container">
+							<div class="designer-row">
+
+								<!-- 반복 -->
+								<div class="designer-col">
+
+									<div class="col-head">
+										<a href="#">
+											<span class="tx_eng">Brand Name Eng</span>
+											<span class="tx_kor">브랜드네임</span>
+										</a>
+
+										<!--LIKE -->
+										<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+									</div>
+
+									<div class="col-body">
+										
+										<!-- [공통] 상품 목록 -->
+										<div class="designerlist">
+
+											<!-- 스와이프 프리모드, 이미지 너비 css지정했어요 -->
+											<div class="swiper-container brand-swiper">
+												<div class="swiper-wrapper">
+
+													<div class="swiper-slide">
+														<a href="#" target="_blank"><div class="img-area"><img src="https://img.ihanstyle.com/prod/S/SE/SE01/SE014_2022_460754572/SE014_2022_460754572_01.jpg?RS=720x720&AR=0" alt=""></div></a>
+													</div>
+
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2112FRJK084BKBK/N2112FRJK084BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2113FRPN027BKBK/N2113FRPN027BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2113FRDR045BKBK/N2113FRDR045BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N218/N2182PN203BIBI/N2182PN203BIBI_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRSW902MUMU/MGM12FRSW902MUMU_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRSW902PPPP/MGM12FRSW902PPPP_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRTS904YEYE/MGM12FRTS904YEYE_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/Q/QM/QMM2/QMM22FROT001BRBR/QMM22FROT001BRBR_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/H/HK/HKN2/HKN23FRTO803IVIV/HKN23FRTO803IVIV_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+												</div>
+
+												<div class="swiper-button-prev"></div>
+												<div class="swiper-button-next"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- 디자이너 목록 없을 때 col-body div 숨김 -->
+								<div class="designer-col">
+									<div class="col-head">
+										<a href="#">
+											<span class="tx_eng">Brand Name Eng</span>
+											<span class="tx_kor">브랜드네임</span>
+										</a>
+
+										<!--LIKE -->
+										<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+									</div>
+
+									<!-- <div class="col-body"></div> -->
+								</div>
+
+								<div class="designer-col"><div class="col-head"><a href="#"><span class="tx_eng">Brand Name Eng</span><span class="tx_kor">브랜드네임</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></div><div class="col-body"><div class="designerlist"><div class="swiper-container brand-swiper"><div class="swiper-wrapper"><div class="swiper-slide">	<a href="#" target="_blank"><div class="img-area"><img src="https://img.ihanstyle.com/prod/S/SE/SE01/SE014_2022_460754572/SE014_2022_460754572_01.jpg?RS=720x720&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2112FRJK084BKBK/N2112FRJK084BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2113FRPN027BKBK/N2113FRPN027BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2113FRDR045BKBK/N2113FRDR045BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N218/N2182PN203BIBI/N2182PN203BIBI_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRSW902MUMU/MGM12FRSW902MUMU_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRSW902PPPP/MGM12FRSW902PPPP_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRTS904YEYE/MGM12FRTS904YEYE_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/Q/QM/QMM2/QMM22FROT001BRBR/QMM22FROT001BRBR_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/H/HK/HKN2/HKN23FRTO803IVIV/HKN23FRTO803IVIV_01.jpg?RS=570x570&AR=0" alt=""></div></a></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div></div></div></div>
+								
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- //[공통] 탭  : 디자이너 탭 -->
+
+			</div>				
+		</div>
+    </section>
+
+	<script>
+		const swiperBrand = new Swiper('.brand-swiper', {
+			slidesPerView: "auto",
+			spaceBetween: 8,
+			freeMode: true,
+			// Navigation arrows
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			breakpoints: {
+				768: { spaceBetween: 24 }
+			}
+		})
+	</script>
+
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+
+	<section class="search-area" style="display:none;">
+		<div class="search-back">
+			<div class="search-box">
+				<button class="btn-close" onclick="closeSearch()">닫기</button>
+
+				<header class="header-sub">
+					<h2 class="sub">
+						<button type="button" class="btn-back" onclick="closeSearch()">이전</button>
+						<input type="text" class="txt search" placeholder="브랜드,상품명,카테고리" id="searchKeyword">
+						<button type="button" class="btn-delet" id="deleteInput">삭제</button>
+					</h2>
+					<ul class="side-menu">
+						<li><a href="javascript:;" class="cart">장바구니<em>99+</em></a></li>
+					</ul>
+				</header>
+
+				<!-- 검색 중 -->
+				<div class="search-autocomplete" id="autocomplete">
+					<ul>
+						<li>
+							<a href="javascript:;" class="keyword"><strong><em class="mark">A</em>GOLDE</strong></a>
+							<span class="more"><a href="javascript:;">브랜드</a></span>
+						</li>
+						<li>
+							<a href="javascript:;" class="keyword"><strong><em class="mark">A</em>GL(ATTILIO GIUSTI LEOMBRUNI)</strong></a>
+							<span class="more"><a href="javascript:;">브랜드</a></span>
+						</li>
+						<li>
+							<a href="javascript:;" class="keyword"><strong><em class="mark">A</em>GNONA</strong></a>
+							<span class="more"><a href="javascript:;">브랜드</a></span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="javascript:;" class="keyword"><em class="mark">A</em>GL(ATTILIO GIUSTI LEOMBRUNI)</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="keyword"><em class="mark">A</em>GNONA</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="keyword"><em class="mark">A</em>GNONA 신발</a>
+						</li>
+					</ul>
+				</div>
+				<!--// 검색 중 -->
+
+				<div class="tit">
+					<h3>실시간</h3>
+					<span>YYYY.MM.DD HH:SS 기준<em class="rank-more" onclick="searchRank()">더보기</em></span>
+				</div>
+				<ol class="ranking">
+					<li><em>1</em><a href="javascript:;">발렌시아가 발렌시아가 발렌시아가 발렌시아가</a><span class="up">1</span></li>
+					<li><em>2</em><a href="javascript:;">MSGM MSGM MSGM MSGM MSGM MSGM MSGM</a><span class="down">1</span></li>
+					<li><em>3</em><a href="javascript:;">발렌시아가</a><span class="same">변동없음</span></li>
+					<li><em>4</em><a href="javascript:;">발렌시아가</a><span class="new">N</span></li>
+					<li><em>5</em><a href="javascript:;">발렌시아가</a><span class="down">1</span></li>
+					<li><em>6</em><a href="javascript:;">발렌시아가</a><span class="same">1</span></li>
+					<li><em>7</em><a href="javascript:;">발렌시아가</a><span class="up">1</span></li>
+					<li><em>8</em><a href="javascript:;">발렌시아가</a><span class="down">1</span></li>
+					<li><em>9</em><a href="javascript:;">발렌시아가</a><span class="same">1</span></li>
+					<li><em>10</em><a href="javascript:;">발렌시아가</a><span class="same">1</span></li>
+				</ol>
+
+				<div class="tit">
+					<h3>최근검색</h3>
+					<a href="javascript:;">전체삭제</a>
+				</div>
+				<p class="no-msg">검색 내역이 없습니다.</p>
+				<ul class="chip-list recent">
+					<li><a href="javascript:;">LABEL</a><button class="btn-close">닫기</button></li>
+					<li><a href="javascript:;">검색어가 뭐가 있나</a><button class="btn-close">닫기</button></li>
+					<li><a href="javascript:;">비싼거 사고싶어</a><button class="btn-close">닫기</button></li>
+					<li><a href="javascript:;">검색어는 몇자까지하고 말줄임일까?</a><button class="btn-close">닫기</button></li>
+					<li><a href="javascript:;">검색어는 몇자까지하고 말줄임일까? 검색어는 몇자까지하고 말줄임일까? 검색어는 몇자까지하고 말줄임일까? 검색어는 몇자까지하고 말줄임일까?</a><button class="btn-close">닫기</button></li>
+				</ul>
+
+				<div class="tit">
+					<h3>트렌드</h3>
+				</div>
+				<ul class="chip-list">
+					<li><a href="javascript:;">폰케이스</a></li>
+					<li><a href="javascript:;">스포티앤리치 맨투맨</a></li>
+					<li><a href="javascript:;">오트리 고트스킨 스니커즈</a></li>
+					<li><a href="javascript:;">JW Anderson x 달려라하니</a></li>
+					<li><a href="javascript:;">메종키츠네 에코백</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="search-dim" onclick="closeSearch()"></div>
+	</section>
+
+	<!-- 하단 공통 영역 -->
+	<section include-html="../layout/footer.html"></section>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript">
+	window.onload = function(){ 
+		var searchKeyword = document.getElementById("searchKeyword");
+		var autocomplete = document.getElementById("autocomplete");
+		var deleteInput = document.getElementById("deleteInput");
+		var keyword = "";
+	   
+		searchKeyword.onkeydown = function(e) {
+			searchKeyword.onkeyup(e);
+		};
+		searchKeyword.onkeyup = function(e){		  
+		{
+			keyword = searchKeyword.value;
+		}
+			if ( keyword == "" ) {
+				autocomplete.style.display = "none";
+				deleteInput.style.display = "none";
+			}
+			else {
+				autocomplete.style.display = "block";
+				deleteInput.style.display = "block";
+			}
+		};
+	};
+</script>
+
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+
+<script>
+	includeHTML();
+
+	// 상품 목록 APPEND
+	let productCol = `
+		<div class="like-col">
+			<!--LIKE -->
+			<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+
+			<a href="#" target="_blank">
+				<div class="img-area">	
+					<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-thumbnail.png" alt="">
+				</div>
+
+				<div class="spec-area">
+					<div class="spec_name">BRAND NAME</div>
+					<div class="spec_price">
+						<span class="tx_per">30</span>
+						<span class="tx_price">1,234,500</span>
+						<span class="tx_cost">1,234,500</span>
+					</div>
+				</div>
+			</a>
+			<a href="#" class="addcart">장바구니 담기</a>
+		</div>
+	`
+	if(document.querySelector("#productList")){
+		for(let i=0; i<10; i++) {
+			document.querySelector("#productList").insertAdjacentHTML("beforeend", productCol)
+		}
+	}
+</script>
+
+
+</body>
+</html>

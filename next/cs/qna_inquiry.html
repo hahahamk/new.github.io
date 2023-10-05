@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+	
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<div class="wrap">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+	<!--모바일용 헤더 Q&A
+	<header class="header-sub">
+		<h2 class="sub"><button type="button" class="btn-back">이전</button>문의 등록</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="home">홈</a></li>
+		</ul>
+	</header>
+	-->
+
+	<section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+		<section class="content-area page-cs-qna">
+			<h3>문의 등록</h3>
+
+			<div class="cs-qna">
+				<!--문의 유형 -->
+				<div class="inquiry-box">
+					<h5>문의 유형</h5>
+					<!-- selectbox-->
+					<div class="custom-select">
+						<div class="selected">
+							<div class="selected-value">문의 유형 선택</div>
+							<div class="arrow"></div>
+						</div>
+						<div class="sheet">
+							<div class="lycontents">
+								<div class="dim"></div>
+								<div class="controls">
+									<div class="draggable-area" style="">
+									<div class="draggable-thumb"></div>
+									</div>
+								</div>
+								<h4 class="btm-tit">문의 유형 선택</h4>
+								<ul>
+									<li class="option">배송</li>
+									<li class="option">교환/반품</li>
+									<li class="option">상품</li>
+									<li class="option">주문/결제</li>
+									<li class="option">쿠폰/이벤트</li>
+									<li class="option">화원/마일리지</li>
+									<li class="option">AS</li>
+									<li class="option">사이트</li>
+									<li class="option">기타</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- selectbox-->
+					<div class="custom-select">
+						<div class="selected">
+							<div class="selected-value">상세 문의 유형 선택</div>
+							<div class="arrow"></div>
+						</div>
+						<div class="sheet">
+							<div class="lycontents">
+								<div class="dim"></div>
+								<div class="controls">
+									<div class="draggable-area" style="">
+									<div class="draggable-thumb"></div>
+									</div>
+								</div>
+								<h4 class="btm-tit">상세 문의 유형 선택</h4>
+								<ul>
+									<li class="option">배송</li>
+									<li class="option">교환/반품</li>
+									<li class="option">상품</li>
+									<li class="option">주문/결제</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 문의 유형 -->
+
+				<!--문의 상품 -->
+				<div class="inquiry-box">
+					<h5>문의 상품</h5>
+					<button type="button" class="btn-select open-modal" href="#order-select">주문번호 선택</button>
+					<p class="caution-txt">※ 최근 3개월 내에 주문건만 조회 가능합니다.</p>
+
+					<!-- 주문번호 선택 후 -->
+					<p class="prod-num"><strong>주문번호 20855211</strong>(2022.05.10)</p>
+					<div class="prod">
+						<p class="thum"><img src="https://prd.ihanstyle.com/prod/H/HA/HAR2/HAR22FSSD001BLBL/HAR22FSSD001BLBL_01.jpg?RS=96x128&AR=0" /></p>
+						<div class="info">
+							<span class="badge bk">새벽도칙</span>
+							<span class="brand">SPORTY & RICH</span>
+							<span class="brand-info">[22F/W NEW] 프라다 에나멜 트라이앵글 로고 리나일론 세미롱 다운자켓 블랙 남성</span>
+						</div>
+					</div>
+					<!--// 주문번호 선택 후 -->
+
+					<!-- 주문내역 layer -->
+					<div id="order-select" class="modal-layer">
+						<div class="modal-content">
+							<h2>주문번호 선택</h2>
+							<button class="btn-close close-modal">닫기</button>
+							<div class="modal-body">
+								<p class="caution-txt">※ 최근 3개월 내에 주문건만 조회 가능합니다.</p>
+								<p class="prod-num"><strong>주문번호 20855211</strong>(2022.05.10)</p>
+
+								<ul class="layer-orderList">
+									<li>
+										<span class="chk-area">
+											<label class="inp">배송완료
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</span>
+										<div class="prod">
+											<p class="thum"><img src="https://prd.ihanstyle.com/prod/H/HA/HAR2/HAR22FSSD001BLBL/HAR22FSSD001BLBL_01.jpg?RS=96x128&AR=0" /></p>
+											<div class="info">
+												<span class="badge bk">새벽도칙</span>
+												<span class="brand">SPORTY & RICH</span>
+												<span class="brand-info">[22F/W NEW] 프라다 에나멜 트라이앵글 로고 리나일론 세미롱 다운자켓 블랙 남성</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<span class="chk-area">
+											<label class="inp">배송완료
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</span>
+										<div class="prod">
+											<p class="thum"><img src="https://img.ihanstyle.com/prod/S/SE/SE04/SE046_2022_460751799/SE046_2022_460751799_01.jpg?RS=96x128&AR=0" /></p>
+											<div class="info">
+												<span class="badge bk">새벽도칙</span>
+												<span class="brand">SPORTY & RICH</span>
+												<span class="brand-info">[22F/W NEW] 프라다 에나멜 트라이앵글 로고 리나일론 세미롱 다운자켓 블랙 남성 프라다 에나멜 트라이앵글 로고 리나일론 세미롱 다운자켓 블랙 남성</span>
+											</div>
+										</div>
+									</li>
+									<li>
+										<span class="chk-area">    
+											<label class="inp">배송완료
+												<input type="checkbox" />
+												<span class="checkmark"></span>
+											</label>
+										</span>
+										<div class="prod">
+											<p class="thum"><img src="https://prd.ihanstyle.com/prod/H/HA/HAR2/HAR22FSSD001BLBL/HAR22FSSD001BLBL_01.jpg?RS=96x128&AR=0" /></p>
+											<div class="info">
+												<span class="badge bk">새벽도칙</span>
+												<span class="brand">SPORTY & RICH</span>
+												<span href="javascript:;" class="brand-info">[22F/W NEW] 프라다 에나멜 트라이앵글 로고 리나일론 세미롱 다운자켓 블랙 남성</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn close-modal">등록</button>
+							</div>
+						</div>
+					</div>
+					<!--// 주문내역 layer -->
+				</div>
+				<!--// 문의 상품 -->
+
+				<!--문의 내용 -->
+				<div class="inquiry-box">
+					<h5>문의 내용</h5>
+					<input type="text" class="txt" placeholder="제목을 입력하세요" />
+					<textarea class="txt scroll-bk" placeholder="내용을 입력하세요"></textarea>
+				</div>
+				<!--// 문의 내용 -->
+
+				<!-- 이미지첨부 -->
+				<div class="inquiry-box">
+					<h5>이미지 첨부</h5>
+
+					<!-- sample : mui 사용 시 무시하셔도 됩니다 아이콘 위치만 맞춰놨어요 -->
+					<div class="add-img">
+						<i class="ico-plus"></i>
+						<input type="file" accept="image/*" onchange="loadFile(event)">
+						<i class="img-del">삭제</i>
+						<img id="output"/>
+					</div>
+					<p class="caution-txt">※ 이미지는 최대1장 첨부 가능합니다.</p>
+				</div>
+				<!--// 이미지첨부 -->
+
+				<div class="btm-area"><button type="button" class="btn">등록</button></div>
+			</div>
+
+
+			<!-- 문의 내용 수정 화면 : 비활성 버튼 > 해당영역 disabled 클래스 추가 / 이하는 동일함 -->
+			<h3>문의 내용 수정</h3>
+
+			<div class="cs-qna">
+				<!--문의 유형 -->
+				<div class="inquiry-box">
+					<h5>문의 유형</h5>
+					<!-- selectbox-->
+					<div class="custom-select">
+						<div class="selected disabled">
+							<div class="selected-value">문의 유형 선택</div>
+							<div class="arrow"></div>
+						</div>
+						<div class="sheet">
+							<div class="lycontents">
+								<div class="dim"></div>
+								<div class="controls">
+									<div class="draggable-area" style="">
+									<div class="draggable-thumb"></div>
+									</div>
+								</div>
+								<h4 class="btm-tit">문의 유형 선택</h4>
+								<ul>
+									<li class="option">배송</li>
+									<li class="option">교환/반품</li>
+									<li class="option">상품</li>
+									<li class="option">주문/결제</li>
+									<li class="option">쿠폰/이벤트</li>
+									<li class="option">화원/마일리지</li>
+									<li class="option">AS</li>
+									<li class="option">사이트</li>
+									<li class="option">기타</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- selectbox-->
+					<div class="custom-select">
+						<div class="selected disabled">
+							<div class="selected-value">상세 문의 유형 선택</div>
+							<div class="arrow"></div>
+						</div>
+						<div class="sheet">
+							<div class="lycontents">
+								<div class="dim"></div>
+								<div class="controls">
+									<div class="draggable-area" style="">
+									<div class="draggable-thumb"></div>
+									</div>
+								</div>
+								<h4 class="btm-tit">상세 문의 유형 선택</h4>
+								<ul>
+									<li class="option">배송</li>
+									<li class="option">교환/반품</li>
+									<li class="option">상품</li>
+									<li class="option">주문/결제</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--// 문의 유형 -->
+
+				<!--문의 상품 -->
+				<div class="inquiry-box">
+					<h5>문의 상품</h5>
+					<button type="button" class="btn-select open-modal disabled" href="#order-select">주문번호 변경</button>
+					<p class="caution-txt">※ 최근 3개월 내에 주문건만 조회 가능합니다.</p>
+				</div>
+				<!--// 문의 상품 -->
+			</div>
+			<!--// 문의 내용 수정 -->
+
+		</section>
+	</section>
+
+	<!-- 모바일용 하단 -->
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+	includeHTML();
+</script>
+</body>
+</html>

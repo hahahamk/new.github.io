@@ -1,0 +1,192 @@
+/* 디자이너 페이지 헤더 : 모바일 숨김 */
+@include mobile {
+    .designerWrap .page-header {display:none;}
+    .designerWrap .contents {padding-top:0;}
+}
+
+/* COMMON */
+// 좋아요
+.toggle-designer {overflow:hidden; position:absolute; top:5px; right:4px; width:36px; height:36px; background-image: url($--image-url + "/common/ico-designer@20x20.svg"); background-position: center; background-repeat:no-repeat; background-size:24px; font-size:0; text-indent:-9999px; z-index:1; transition:filter .15s ease-in-out;
+    &:hover {filter: brightness(0.3) invert(0.5)}
+    &.on {background-image:url($--image-url + "/common/ico-designer@20x20-active.svg");}
+
+    @media (max-width: ($desktop - 1)){
+        & {top:4px; background-size:20px;}
+    } 
+}
+// 품절 상품 제외
+.product-soldout {display:flex; justify-content: end; margin-bottom:24px; padding:8px 0;
+    @include mobile {
+        & {margin-bottom:0; padding:16px 20px;}
+    }
+}
+
+/* BEST 디자이너 */
+.bestdesigner {margin-top:48px;
+    @include mobile {
+        & {margin-top:16px;}
+    }
+
+    &-head {display:block; width:100%; 
+        h3 {height:56px; margin:0; line-height:56px; font-weight:600; font-size:16px; color:#3A3A3E;}
+    }
+
+    /* 상품 ROW */
+    &-row {overflow: hidden;
+        &+.bestdesigner-row {margin-top:24px; padding-top:24px; border-top:1px solid #f2f1f7;}
+        @include mobile {justify-content:space-between;
+            & {padding:0 20px;}
+        }
+    }
+
+    &-col {position:relative; display:block;            
+        // 좋아요
+        .toggle-designer {top:18px; right:-7px;}
+
+        .col-head {position:relative;
+            >a {display:inline-block; padding:18px 0;
+                .tx_eng {display:block; font-weight:600; font-size:14px; color:$co-bk; line-height:18px;}
+                .tx_kor {display:block; margin-top:3px; font-size:12px; color:#6c6c71; line-height:16px;}
+            }
+
+            .toggle-like {top:50%; transform:translateY(-50%); background-size:20px;}
+        }
+
+        .col-body {display:block; position:relative; width:100%;
+            .bestdesignerlist {position:relative;
+                .swiper-slide {width:156px;
+                    @include mobile {width:90px;}
+                }
+                .img-area {overflow:hidden; 
+                    >img {transition:all .2s ease-in-out;}
+                    &:hover img {-webkit-transform:scale(1.05); -moz-transform:scale(1.05); transform:scale(1.05);}
+                }
+
+                .swiper-button-prev {position:absolute;top:0;bottom:0;left:0;margin-top:0;width:80px;height:100%; background:linear-gradient(90deg, #FFFFFF 51.04%, rgba(255, 255, 255, 0) 100%);
+                    &::after {content:"";position:absolute;top:50%;left:50%;margin-right:5px;transform:translate(-50%, -50%);width:28px;height:28px;background:url($--image-url + "/common/ico-paging-prev@24x24.svg") no-repeat; background-size:28px;}
+                }
+
+                .swiper-button-next {position:absolute;top:0;bottom:0;right:0;margin-top:0;width:80px;height:100%; background:linear-gradient(270deg, #FFFFFF 51.04%, rgba(255, 255, 255, 0) 100%);
+                    &::after {content:"";position:absolute;top:50%;left:50%;margin-left:5px;transform:translate(-50%, -50%);width:28px;height:28px;background:url($--image-url + "/common/ico-paging-next@24x24.svg") no-repeat; background-size:28px;}
+                }
+                .swiper-button-disabled {display:none;}
+            }                
+        }
+
+        @media screen and (min-width: $tablet){
+            .col-body {overflow:hidden;}
+        }
+        @include mobile{
+            &+.bestdesigner-col {margin-top:16px; padding-top:16px;}
+            .toggle-designer {right:-9px;}
+            .col-body {
+                .swiper-button-prev, .swiper-button-next {display:none;}
+            }
+        } 
+    }
+}
+
+/* 디자이너 A-Z */
+.designer-az {margin-top:72px; 
+
+    &-head {display:block; width:100%; 
+        h3 {display:block; height:56px; margin:0; line-height:56px; font-weight:600; font-size:16px; color:#3A3A3E;}
+    }
+
+    &-body {margin-top: 16px;
+
+        // 바텀시트 네비게이션
+		.navlist {overflow:hidden; overflow-x:auto; -webkit-overflow-scrolling: touch; margin:16px 0; padding-bottom:2px; border-bottom:1px solid #F2F1F7;
+			ul {display:flex; flex-wrap:nowrap; padding:8px 0; justify-content: flex-start;
+				>li {position:relative; flex: 0 1 auto; width:auto; border-radius:0; height:40px; opacity:1; background:transparent;
+					.tab {width:100%; padding:0 16px; line-height:40px; font-size:14px; color:$co-lgr; line-height:40px; border:0; white-space:nowrap;}
+                    
+					&.active {
+						.tab {font-weight:600; color:#1b1b1f;}
+						&::after {content:""; position:absolute; bottom:-10px; left:16px; right:16px; height:2px; background-color:$co-bk;}
+					}
+
+                    &:first-child .tab {padding-left:0;}
+                    &:first-child.active {
+                        &::after {left:0;}
+                    }
+				}
+			}
+        }
+
+        // 디자이너 > 이니셜 리스트
+        .initial {
+            .initiallist {display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px;
+                >li {height:32px;
+                    button {width:32px; height:32px; border:1px solid #F2F1F7; border-radius:2px; font-size:12px; color:#6C6C71; vertical-align:middle; text-align:center;
+                        &.btn_all {min-width:32px; width:auto; padding:0 16px; white-space:nowrap;}
+                        &.btn_like {font-size:0; 
+                            &::after {content:""; display:block; width:100%; height:100%; background:url($--image-url + "/common/ico-filter-like@12x12.svg") center center no-repeat;}
+                        }
+                        &:hover {border-color:#1B1B1F;}
+                    }
+                    &.active button {border-color:#1B1B1F; color:#F8F7FB; background-color:#1B1B1F;
+                        &.btn_like::after {filter:brightness(0) invert(1);}
+                    }
+                }
+
+                @media screen and (max-width: 1023px) {
+                    & {flex-wrap:nowrap; overflow:hidden; overflow-x: auto;}
+                }
+            }
+
+            // A-Z 상단 고정
+            &.is-fixed {position:fixed; top:56px; left:0; right:0; z-index:100; width:100%; padding:16px 0; background-color:#fff;
+                .initiallist {width:100%; max-width:1200px; margin:0 auto;}
+                @media screen and (max-width: 1200px) {
+                    & {padding:16px 20px 0;}
+                }
+            }
+        }
+    
+        // 디자이너 브랜드 리스트 
+        .brandlist {display:flex; gap:0 24px; flex-wrap:wrap; justify-content: flex-start;
+            >li {position:relative; flex:0 1 calc(33.33333% - 16px); max-width:calc(33.33333% - 16px); padding-right:36px;
+                >a {display:block; padding:17px 0 18px;
+                    > span {@include txt-hd;}
+                    .tx_eng {display:block; font-weight:600; font-size:14px; color:$co-bk; line-height:18px;}
+                    .tx_kor {display:block; margin-top:3px; font-size:12px; color:#6c6c71; line-height:16px;}
+                }
+
+                .toggle-like {top:50%; right:-8px; transform:translateY(-50%);}
+            }
+
+            @include tablet {
+                & {padding:0 20px;}
+                >li {flex-basis: calc(50% - 12px); max-width: calc(50% - 12px)}
+            }
+            @include mobile {
+                >li {flex-basis: 100%; max-width: 100%}
+            }
+        }
+
+        // 디자이너 > 찜한디자이너, 이니셜별 그룹
+        .initial-wrap {
+            .my-designer {
+                .tx_tit {position:relative; height:42px; padding-left:22px; line-height:42px; font-weight:600; font-size:14px; color:$co-bk;
+                    &::before {content:""; display:inline-block; position:absolute; top:13px; left:0; width:16px; height:16px; background:url($--image-url + "/common/ico-like@16x16.svg") center no-repeat;}
+                }
+            }
+
+            .initial-group {margin-top:24px;
+                .initialbox {
+                    &+.initialbox {margin-top:48px;}
+                    .tx_tit {height:38px; line-height:38px; font-weight:700; font-family: $--font-messapia; color:#1B1B1F; font-size:32px;}
+                }
+            }
+
+            @include mobile{
+                & {max-height:100%;}
+            }
+        }
+    }
+
+    @include mobile {
+        & {padding:0 20px;}
+    }
+}

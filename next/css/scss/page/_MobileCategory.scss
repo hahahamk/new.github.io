@@ -1,0 +1,129 @@
+//모바일 카테고리
+.mw-cate{padding:rem(56px) 0 rem(40px);
+    .mw-cateList{border-bottom:1px solid #F2F1F7; padding:rem(16px) 0 rem(24px);
+		li{line-height:rem(56px); position:relative;
+			.summary{display:block; margin:0 20px;font-size:rem(16px); 
+				.expandIcon{right:rem(20px);}
+				&.active{
+					.expandIcon:before{transform: rotate(90deg);}
+				}
+			}
+			.sub-menu{background:#F8F7FB; padding:rem(16px) rem(22px) rem(16px) rem(43px); display:flex;gap:0 rem(8px); flex-wrap:wrap; border-bottom:none;
+				li{flex:1 1 40%; line-height:rem(34px); 
+					a{line-height:rem(34px); color:#6C6C71; font-size:rem(14px);}
+				}
+			}
+		}
+		&:first-child{
+			.summary{font-weight:600; }
+		}
+		&:last-child{border-bottom:none;}
+	}
+}
+
+/* 카테고리 페이지 (태블릿) 일 때, 여성/남성/키즈/라이프/ 빈티지/아울렛/기획전 히든처리 */
+.wrap.categoryWrap .page-header .gnb {visibility: hidden;;}
+
+// 모바일 카테고리 
+.category-wrap {max-width:768px; margin:0 auto;
+
+	// 상단 스페셜 메뉴
+	.special-menu {position:fixed; top:56px; left:0; right:0; z-index: 100; height:152px; padding:12px 20px; border-bottom:1px solid #F2F1F7; background-color:#fff; overflow:hidden; overflow-x:auto; 
+		>ul {display:flex; align-items:center; justify-content: flex-start; flex-wrap:nowrap;
+			>li {flex:0 1 80px; width:80px;
+				.special-item {display:block; overflow:hidden; width:80px; padding:0 4px;
+					> img {width:72px; height:96px;}
+					.tx_nm {display:block; padding:8px; font-weight:600; font-size:12px; letter-spacing:-.25px; line-height:16px; color:#3A3A3E; text-align:center;}
+				}
+			}
+
+			@media screen and (min-width: 768px){
+				& {justify-content:center;}
+			}
+		}
+	}
+
+	// 카테고리 목록
+	.category-list {position:absolute; left:0; right:0; bottom:0; top:calc(56px + 152px); /*top:(헤더h + 스페셜메뉴h)*/
+		.cate-flex {display:flex; overflow:hidden; height:100%;
+
+			// 대대메뉴
+			.cate-parents {overflow:hidden; overflow-y:auto; flex:0 1 106px; height:100%; padding-bottom:57px; background-color:#F8F7FB;
+				.cate-tit {display:block; width:100%; padding:15px 0 15px 20px; font-weight:600; font-size:16px; line-height:18px; letter-spacing:-0.4px;color:#B5B4B9;
+					&:first-child {padding-top:23px;}
+					&.active {color:#0000F0; background-color:#fff;}
+				}
+			}
+
+			// 하위뎁스메뉴 1~3뎁스
+			.cate-childs {overflow:hidden; overflow-y:auto; flex:0 1 calc(100% - 106px); padding-bottom:57px;
+				.childs-container {padding-top:8px;
+					ul.depth1 {position:relative; width:100%;
+						li {position:relative; 
+							&::after {content:""; position:absolute; left:0; right:0; bottom:-1px; z-index:11; border-bottom: 1px solid #F2F1F7;}
+
+							.cate-tit {display:block; position:sticky; top:0; z-index:10; width:calc(100% - 20px); margin-left:20px; padding:15px 0; font-weight:400; font-size:14px; line-height:18px; letter-spacing:-0.35px; color:#6C6C71; background-color:#fff;}
+
+							// 하위 메뉴
+							ul.sub-menu {position:relative; z-index:1; margin-left:20px;
+
+								// 뎁스 2
+								&.depth2 {padding-bottom:12px;
+									li {margin-left:20px;
+										.cate-tit {margin-left:0; width:100%; padding:12px 0; line-height:18px}
+									
+										// 뎁스 2 하위 보더 좌측 12
+										&.is-expanded::after {left:20px;} 
+										&:last-child::after {display:none;}
+									}
+								}
+
+								// 뎁스 3
+								&.depth3 {margin-left:0; margin-bottom:12px;
+									li::after {display:none;} // 3뎁스 border :none
+								}
+							}
+
+							// 하위메뉴 폴딩
+							&.has-submenu {
+								// 기본 : 접힌 상태
+								>ul.sub-menu {display:none;}
+								
+								// 하위뎁스 있을 때 타이틀 우측 -,+ 아이콘
+								> .cate-tit {
+									&::after {content:""; position:absolute; top:50%; right:20px; width:16px; height:16px; margin-top:-8px; background:url($--image-url + "/common/icon-plus@16x16.svg") center no-repeat; opacity:0.2;}
+								}
+
+								// 확장
+								&.is-expanded {
+									> .cate-tit {font-weight:600; color:#1B1B1F;
+										&::after {background:url($--image-url + "/common/icon-minus@16x16.svg") center no-repeat; opacity:1;}
+									}
+								}
+
+								
+
+								// depth2 오픈시, 우측 "+" 활성화
+								.depth2 {
+									li.has-submenu {
+										.cate-tit::after {opacity:1;}
+									}
+								}
+							}
+						}
+
+						>li:last-child::after {border-bottom:0;}
+					}
+				}
+			}
+		}
+	}
+
+	// 태블릿 대응
+	@media screen and (min-width: ($tablet + 1px)) {
+		& {
+			.special-menu {position:relative; top:auto; margin-top:-40px;}
+			.category-list {top:calc(96px + 152px); bottom:0; left: 50%; right:auto; width:768px; margin-left:calc(768px / 2 * -1);}
+		}
+	}
+}

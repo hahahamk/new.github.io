@@ -1,0 +1,39 @@
+.map-area{
+	display:flex; justify-content: space-between; gap:24px;
+	&>div{width:478px; height:580px;}
+	.mapbox{background:#F8F7FB; padding:20px;}
+	.shopbox{
+		.shop-choice{display:flex; gap:8px; padding-bottom:18px;
+			.custom-select{width:156px; }
+		}
+	}
+
+	.shop-list{overflow:auto; max-height:532px;
+		li{padding:18px 20px 18px 0; font-size:14px; color:#6C6C71; display:flex; flex-direction: column; 
+			&:hover{background:#F8F7FB}
+			strong{font-weight:600; font-size:14px; line-height:18px; padding-bottom:4px; color:#3A3A3E;}
+			a{color:#B5B4B9; padding-top:6px; cursor: default; text-decoration: underline;}
+			.btn-copy{text-decoration: none; font-size:14px; padding:0 0 0 24px; background:url($--image-url + '/common/ico-copy.svg') 8px 1px no-repeat; background-size:16px; cursor:pointer}
+		}
+		&::-webkit-scrollbar {width:6px;}
+		&::-webkit-scrollbar-thumb {height:30%;background: #3A3A3E; border-radius: 10px;}
+		&::-webkit-scrollbar-track {background:none}
+	}
+
+	@include mobile{
+		gap:0; flex-wrap: wrap; position:relative;
+		&>div{flex:1 1 80%; width:100%; height:auto;}
+		.mapbox{height:rem(200px); position:fixed}
+		.shopbox{padding:266px 0px 0;
+			.shop-choice{padding:16px 20px 0px; width:100%; position:fixed; left:0; top:256px; background:#fff;
+				.custom-select{width:50%; }
+			}
+		}
+		.shop-list{
+			max-height:100%;
+			li{font-size:14px; padding-left:20px;
+				strong{font-size:16px;}
+			}
+		}
+	}
+}

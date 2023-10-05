@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body class="">
+
+<!-- 
+	디자이너 페이지 모바일 헤더 숨기느라 클래스 추가했습니다. .designerWrap 혹시 필요없으면 지워주세요 
+-->
+<div class="wrap designerWrap">
+
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+
+	<header class="header-sub" style="position:static">
+		<h2>DESIGNER</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="search">검색</a></li>
+			<li><a href="javascript:;" class="cart">장바구니</a></li>
+		</ul>
+	</header>
+
+    <!-- 컨텐츠 영역 -->
+    <section class="contents">
+        <div class="content-area">
+			
+			<!--
+				탭 클릭시 스크롤 이동으로 구현은 따로 하지 않았어요.
+			-->
+			<!-- [공통] 탭 -->
+			<!-- 상단 고정 : .is-fixed -->
+			<div class="tab">
+				<div class="tab-row">
+					<a href="#anchor1" class="tab-item on">BEST</a>
+					<a href="#anchor2" class="tab-item">디자이너 A-Z</a>
+				</div>
+			</div>
+
+			<!-- [공통] 탭 컨테이너 -->
+			<div class="tab-container">
+				
+				<!-- 디자이너 BEST 목록 -->
+				<div class="bestdesigner">
+
+					<div class="bestdesigner-head">
+						<h3>베스트 디자이너</h3>
+					</div>
+
+					<!-- 디자이너 목록 컨테이너 -->
+					<div id="bestDesignerList" class="bestdesigner-content">
+
+						<div class="bestdesigner-row">
+							<!-- 디자이너 목록 없을 때 col-body div 숨김 -->
+							<div class="bestdesigner-col">
+								<div class="col-head">
+									<a href="#">
+										<span class="tx_eng">Brand Name Eng</span>
+										<span class="tx_kor">브랜드네임</span>
+									</a>
+
+									<!--LIKE -->
+									<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+								</div>
+
+								<!-- <div class="col-body"></div> -->
+							</div>
+						</div>
+
+						<!-- 반복 -->
+						<!-- 마크업 참고 : 하단 #디자이너목록 JS 
+							<div class="bestdesigner-row">
+
+								<div class="bestdesigner-col">
+
+									<div class="col-head">
+										<a href="#">
+											<span class="tx_eng">Brand Name Eng</span>
+											<span class="tx_kor">브랜드네임</span>
+										</a>
+
+										<! -- LIKE -- >
+										<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+									</div>
+
+									<div class="col-body">
+										
+										<! -- [공통] 상품 목록 -- >
+										<div class="bestdesignerlist">
+
+											< !-- 스와이프 프리모드, 이미지 너비 css지정했어요 -- >
+											<div class="swiper-container bestdesigner-swiper">
+												<div class="swiper-wrapper">
+
+													<div class="swiper-slide">
+														<a href="#" target="_blank"><div class="img-area"><img src="https://img.ihanstyle.com/prod/S/SE/SE01/SE014_2022_460754572/SE014_2022_460754572_01.jpg?RS=720x720&AR=0" alt=""></div></a>
+													</div>
+
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2112FRJK084BKBK/N2112FRJK084BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2113FRPN027BKBK/N2113FRPN027BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2113FRDR045BKBK/N2113FRDR045BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N218/N2182PN203BIBI/N2182PN203BIBI_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRSW902MUMU/MGM12FRSW902MUMU_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRSW902PPPP/MGM12FRSW902PPPP_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRTS904YEYE/MGM12FRTS904YEYE_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/Q/QM/QMM2/QMM22FROT001BRBR/QMM22FROT001BRBR_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+													<div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/H/HK/HKN2/HKN23FRTO803IVIV/HKN23FRTO803IVIV_01.jpg?RS=570x570&AR=0" alt=""></div></a></div>
+												</div>
+
+												<div class="swiper-button-prev"></div>
+												<div class="swiper-button-next"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						-->
+
+						
+					</div>
+
+				</div>
+				
+				<!-- 디자이너 A-Z 목록 -->
+				<div class="designer-az">
+
+					<div class="designer-az-head">
+						<h3>디자이너 A-Z</h3>
+					</div>
+
+					<div class="designer-az-body">
+						<!-- 디자이너 검색 영역 -->
+						<div class="search-input">
+							<label for="SEARCHID2">돋보기 아이콘</label>
+							<input type="text" id="SEARCHID2" class="ipt-srch" placeholder="검색어를 입력해주세요.">
+							<button type="button" class="btn-del" onclick="">X</button>
+						</div>
+
+						<!-- 디자이너 카테고리 -->
+						<div class="navlist">
+							<ul>
+								<li class="active"><button type="button" class="tab">전체</button></li>
+								<li><button type="button" class="tab">여성</button></li>
+								<li><button type="button" class="tab">남성</button></li>
+								<li><button type="button" class="tab">키즈</button></li>
+								<li><button type="button" class="tab">라이프</button></li>
+							</ul>
+						</div>
+						
+						<!-- 상단 고정 : .is-fixed -->
+						<div class="initial">
+							<!-- 디자이너 이니셜(알파벳) 목록 -->
+							<ul class="initiallist">
+								<li class="active"><button type="button" class="btn_all">ALL</button></li>
+								<li class="active"><button type="button" class="btn_like">❤️</button></li>
+								<li><button type="button">'</button></li><li><button type="button">0</button></li><li><button type="button">1</button></li>
+								<li><button type="button">2</button></li><li><button type="button">3</button></li><li><button type="button">4</button></li>
+								<li><button type="button">5</button></li><li><button type="button">6</button></li>
+								<li><button type="button">A</button></li><li><button type="button">B</button></li><li><button type="button">C</button></li>
+								<li><button type="button">D</button></li><li><button type="button">E</button></li><li><button type="button">F</button></li>
+								<li><button type="button">G</button></li><li><button type="button">H</button></li><li><button type="button">I</button></li>
+								<li><button type="button">J</button></li><li><button type="button">K</button></li><li><button type="button">L</button></li>
+								<li><button type="button">M</button></li><li><button type="button">N</button></li><li><button type="button">O</button></li>
+								<li><button type="button">P</button></li><li><button type="button">Q</button></li><li><button type="button">R</button></li>
+								<li><button type="button">S</button></li><li><button type="button">T</button></li><li><button type="button">U</button></li>
+								<li><button type="button">V</button></li><li><button type="button">W</button></li><li><button type="button">X</button></li>
+								<li><button type="button">Y</button></li><li><button type="button">Z</button></li>
+							</ul>
+						</div>
+						
+						<!-- 디자이너 목록 추가 -->
+						<div class="initial-wrap">
+
+							<div class="initial-group">
+								<!-- 옵션 그룹 : 자음별 -->
+								<div class="initialbox">
+									<p class="tx_tit">A</p>
+
+									<ul class="brandlist">
+										<li>
+											<a href="#">
+												<span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span>
+												<span class="tx_kor">어콜드월</span>
+											</a>		
+											<!--LIKE -->
+											<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+										</li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">글자수가 길어지면 한줄 말줄임 처리를 할 건데용 더 길어지면 말줄임이 될거에용 아마두</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">어콜드월</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">어콜드월</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">어콜드월</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+									</ul>
+								</div>
+								
+								<div class="initialbox">
+									<p class="tx_tit">B</p>
+
+									<ul class="brandlist">
+										<li>
+											<a href="#">
+												<span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span>
+												<span class="tx_kor">어콜드월</span>
+											</a>		
+											<!--LIKE -->
+											<button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button>
+										</li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">어콜드월</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">어콜드월</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">어콜드월</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">어콜드월</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+										<li><a href="#"><span class="tx_eng">AGL(ATTILIO GIUSTI LEOMBRUNI)</span><span class="tx_kor">어콜드월</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>				
+		</div>
+    </section>
+
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">designer</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+
+	<!-- 하단 공통 영역 -->
+	<section include-html="../layout/footer.html"></section>
+</div>
+
+<script>
+	// #디자이너목록 JS
+	// BEST 디자이너 상품 목록 APPEND
+	let productCol = `
+		<div class="bestdesigner-row">
+			<div class="bestdesigner-col"><div class="col-head"><a href="#"><span class="tx_eng">Brand Name Eng</span><span class="tx_kor">브랜드네임</span></a><button type="button" class="toggle-like" onclick="this.classList.toggle('on');" title="Like it!">LIKE</button></div><div class="col-body"><div class="bestdesignerlist"><div class="swiper-container bestdesigner-swiper"><div class="swiper-wrapper"><div class="swiper-slide">	<a href="#" target="_blank"><div class="img-area"><img src="https://img.ihanstyle.com/prod/S/SE/SE01/SE014_2022_460754572/SE014_2022_460754572_01.jpg?RS=720x720&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2112FRJK084BKBK/N2112FRJK084BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2113FRPN027BKBK/N2113FRPN027BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N211/N2113FRDR045BKBK/N2113FRDR045BKBK_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/N/N2/N218/N2182PN203BIBI/N2182PN203BIBI_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRSW902MUMU/MGM12FRSW902MUMU_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRSW902PPPP/MGM12FRSW902PPPP_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/M/MG/MGM1/MGM12FRTS904YEYE/MGM12FRTS904YEYE_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/Q/QM/QMM2/QMM22FROT001BRBR/QMM22FROT001BRBR_01.jpg?RS=570x570&AR=0" alt=""></div></a></div><div class="swiper-slide"><a href="#" target="_blank"><div class="img-area"><img src="//prd.ihanstyle.com/prod/H/HK/HKN2/HKN23FRTO803IVIV/HKN23FRTO803IVIV_01.jpg?RS=570x570&AR=0" alt=""></div></a></div></div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div></div></div></div>
+		</div>
+	`
+	if(document.querySelector("#bestDesignerList")){
+		for(let i=0; i<5; i++) {
+			document.querySelector("#bestDesignerList").insertAdjacentHTML("beforeend", productCol)
+		}
+	}
+
+	// 디자이너 브랜드별 스와이프
+	const swiperBrand = new Swiper('.bestdesigner-swiper', {
+		slidesPerView: "auto",
+		spaceBetween: 8,
+		freeMode: true,
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			768: { spaceBetween: 24 }
+		}
+	})
+</script>
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+
+<script>
+	includeHTML();
+</script>
+
+</body>
+</html>

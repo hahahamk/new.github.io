@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body class="">
+
+<!-- 
+	카테고리 페이지 : categoryWrap
+	태블릿 해상도 이상에서 상단 .gnb 히든처리를 위해 최상위 div 클래스 추가
+-->
+<div class="wrap categoryWrap">
+
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+
+	<header class="header-sub" style="position:fixed">
+		<h2>CATEGORY</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="search">검색</a></li>
+			<li><a href="javascript:;" class="cart">장바구니</a></li>
+		</ul>
+	</header>
+
+    <!-- 컨텐츠 영역 -->
+    <section class="contents">
+        <div class="content-area">
+
+			<!-- 카테고리(MO) -->
+			<div class="category-wrap">
+
+				<!-- 카테고리 상단 스페셜 메뉴 -->
+				<!-- 
+					****************************************
+					메뉴 갯수 고정이 아님 
+					- 갯수 늘어날 경우 좌,우 스크롤 -> 태블릿에서 가운데 정렬(최대 너비 768px)
+					- 버튼 너비 80px 고정
+					****************************************
+				-->
+				<div class="special-menu">
+					<ul>
+						<li>
+							<a href="#" class="special-item">
+								<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-cate01.png" alt="">
+								<span class="tx_nm">테마(?)</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="special-item">
+								<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-cate02.png" alt="">
+								<span class="tx_nm">리미티드</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="special-item">
+								<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-cate03.png" alt="">
+								<span class="tx_nm">아울렛</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="special-item">
+								<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-cate04.png" alt="">
+								<span class="tx_nm">기획전</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="special-item">
+								<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-cate03.png" alt="">
+								<span class="tx_nm">아울렛</span>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="special-item">
+								<img src="https://d2zjlxn1rmjreq.cloudfront.net/assets/images/testonly/test-cate04.png" alt="">
+								<span class="tx_nm">아울렛</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 카테고리 상단 스페셜 메뉴 -->
+
+				<!-- 카테고리 목록 -->
+				<div class="category-list">
+					<div class="cate-flex">
+
+						<!--
+							****************************************
+							좌측 : 대대메뉴 (여성, 남성, 키즈, 라이프)
+							우측 : 하위메뉴 1~3뎁스
+
+							대대메뉴-하위메뉴 는 탭 컨텐츠로 노출/숨김
+
+							하위 1~3뎁스는 아코디언 메뉴 
+							****************************************
+						-->
+
+						<!-- 대대 메뉴 : href ~ id 로 링크 연결 -->
+						<div class="cate-parents">
+							<div id="cateTab">
+								<a href="#cateFemale" class="cate-tit active">여성</a>
+								<a href="#cateMale" class="cate-tit">남성</a>
+								<a href="#cateKids" class="cate-tit">키즈</a>
+								<a href="#cateLife" class="cate-tit">라이프</a>
+							</div>
+						</div>
+						<!--//대대메뉴-->
+
+						<!-- 하위 메뉴 -->
+						<div class="cate-childs">
+
+							<nav>
+								<!-- 
+									각 뎁스별 버튼("전체" 포함) 중 cate-link 클래스는 링크 이동
+									그 외 버튼은 어코디언 펼침 액션
+								-->
+								<ul class="childs-container">
+									<li id="cateFemale" class="childs-item">
+										
+										<!-- 1뎁스 : UL.depth1 -->
+										<ul class="depth1">
+											<li><a href="#" class="cate-tit cate-link">여성 전체</a></li>
+
+											<!-- 하위메뉴가 있을 때 : li.has-submenu -->
+											<li class="has-submenu">
+												<a href="#" class="cate-tit">신상품</a>
+
+												<!-- 2뎁스 : UL.depth2 -->
+												<ul class="sub-menu depth2">
+													<li>
+														<a href="#" class="cate-tit cate-link">전체</a>
+													</li>
+													<li class="has-submenu">
+														<a href="#" class="cate-tit">의류</a>
+
+														<!-- 3뎁스 : UL.depth3 -->
+														<ul class="sub-menu depth3">
+															<li><a href="#" class="cate-tit cate-link">전체</a></li>
+															<li><a href="#" class="cate-tit cate-link">스니커즈</a></li>
+															<li><a href="#" class="cate-tit cate-link">슬리퍼</a></li>
+															<li><a href="#" class="cate-tit cate-link">샌들</a></li>
+															<li><a href="#" class="cate-tit cate-link">슈즈</a></li>
+															<li><a href="#" class="cate-tit cate-link">부츠</a></li>
+															<li><a href="#" class="cate-tit cate-link">기타 슈즈</a></li>
+														</ul>
+														<!-- //3뎁스 : UL.depth3 -->
+
+													</li>
+													<li class="has-submenu">
+														<a href="#" class="cate-tit">신발</a>
+
+														<ul class="sub-menu depth3">
+															<li><a href="#" class="cate-tit cate-link">전체</a></li>
+															<li><a href="#" class="cate-tit cate-link">스니커즈</a></li>
+															<li><a href="#" class="cate-tit cate-link">슬리퍼</a></li>
+															<li><a href="#" class="cate-tit cate-link">샌들</a></li>
+															<li><a href="#" class="cate-tit cate-link">슈즈</a></li>
+															<li><a href="#" class="cate-tit cate-link">부츠</a></li>
+															<li><a href="#" class="cate-tit cate-link">기타 슈즈</a></li>
+														</ul>
+													</li>
+													<li class="has-submenu">
+														<a href="#" class="cate-tit">액세서리</a>
+
+														<ul class="sub-menu depth3">
+															<li><a href="#" class="cate-tit cate-link">전체</a></li>
+															<li><a href="#" class="cate-tit cate-link">스니커즈</a></li>
+															<li><a href="#" class="cate-tit cate-link">슬리퍼</a></li>
+															<li><a href="#" class="cate-tit cate-link">샌들</a></li>
+															<li><a href="#" class="cate-tit cate-link">슈즈</a></li>
+															<li><a href="#" class="cate-tit cate-link">부츠</a></li>
+															<li><a href="#" class="cate-tit cate-link">기타 슈즈</a></li>
+														</ul>
+													</li>
+												</ul>
+												<!-- //2뎁스 : UL.depth2 -->
+												
+											</li>
+											<li class="has-submenu">
+												<a href="#" class="cate-tit">의류</a>
+
+												<ul class="sub-menu depth2">
+													<li><a href="#" class="cate-tit">전체</a></li>
+													<li><a href="#" class="cate-tit">의류</a></li>
+													<li><a href="#" class="cate-tit">신발</a></li>
+													<li><a href="#" class="cate-tit">액세서리</a></li>
+												</ul>
+											</li>
+											<li class="has-submenu">
+												<a href="#" class="cate-tit">신발</a>
+
+												<ul class="sub-menu depth2">
+													<li><a href="#" class="cate-tit">전체</a></li>
+													<li><a href="#" class="cate-tit">의류</a></li>
+													<li><a href="#" class="cate-tit">신발</a></li>
+													<li><a href="#" class="cate-tit">액세서리</a></li>
+												</ul>
+											</li>
+											<li class="has-submenu">
+												<a href="#" class="cate-tit">액세서리</a>
+
+												<ul class="sub-menu depth2">
+													<li><a href="#" class="cate-tit">전체</a></li>
+													<li><a href="#" class="cate-tit">의류</a></li>
+													<li><a href="#" class="cate-tit">신발</a></li>
+													<li><a href="#" class="cate-tit">액세서리</a></li>
+												</ul>
+											</li>
+										</ul>
+										<!-- //1뎁스 : UL.depth1 -->
+
+									</li>
+									<li id="cateMale" class="childs-item">
+										<ul class="depth1">
+											<li><a href="#" class="cate-tit">남성 전체</a></li>
+											<li><a href="#" class="cate-tit">신상품</a></li>
+											<li><a href="#" class="cate-tit">의류</a></li>
+											<li><a href="#" class="cate-tit">신발</a></li>
+											<li><a href="#" class="cate-tit">액세서리</a></li>
+										</ul>
+									</li>
+									<li id="cateKids" class="childs-item">
+										<ul class="depth1">
+											<li><a href="#" class="cate-tit">키즈 전체</a></li>
+											<li><a href="#" class="cate-tit">신상품</a></li>
+											<li><a href="#" class="cate-tit">의류</a></li>
+											<li><a href="#" class="cate-tit">신발</a></li>
+											<li><a href="#" class="cate-tit">액세서리</a></li>
+										</ul>
+									</li>
+									<li id="cateLife" class="childs-item">
+										<ul class="depth1">
+											<li><a href="#" class="cate-tit">라이프 전체</a></li>
+											<li><a href="#" class="cate-tit">신상품</a></li>
+											<li><a href="#" class="cate-tit">가구</a></li>
+											<li><a href="#" class="cate-tit">조명</a></li>
+											<li><a href="#" class="cate-tit">키친</a></li>
+											<li><a href="#" class="cate-tit">패브릭</a></li>
+											<li><a href="#" class="cate-tit">홈데코</a></li>
+											<li><a href="#" class="cate-tit">오디오&amp;테크</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<!--//하위 메뉴-->
+					</div>
+				</div>
+			</div>
+			<!-- 카테고리(MO) -->
+
+			<script>
+				// 퍼블 참고
+				$(function(){
+					$('.childs-container .childs-item').hide();
+					$('#cateTab a').click(function () {
+						$('.childs-container .childs-item').hide().filter(this.hash).show();
+						$('#cateTab a').removeClass('active');
+						$(this).addClass('active');
+						return false;
+					}).filter(':eq(0)').click();
+
+					$(".childs-container .childs-item ul li.has-submenu > a").on("click", function(){
+						if($(this).closest("li").hasClass("is-expanded")){
+							$(this).closest("li").removeClass("is-expanded")
+							$(this).siblings(".sub-menu").stop().slideUp()
+						}else{
+							$(this).closest("li").addClass("is-expanded")
+							$(this).siblings(".sub-menu").stop().slideDown()
+						}
+					})
+				});
+			</script>
+
+		</div>
+    </section>
+
+	<nav class="service-gnb-btm show" style="position:fixed;">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+
+<script>
+	includeHTML();
+</script>
+
+</body>
+</html>

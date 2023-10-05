@@ -1,0 +1,169 @@
+/****** LIST STYLE ******/
+
+/*
+    신규이미지 파일명
+    이미지 파일 제외한 아이콘 등 .svg 파일
+    상품이미지, 배너 등 .png 파일 (2배수 export)
+    - common/ico-share@20x20.svg
+    - common/ico-facobook@16x16.svg
+    - common/ico-clipboard@16x16.svg
+*/
+
+
+// 상품리스트 브랜드관 상단 헤더 투명도 적용을 위한 테스트 스타일이라 상황에 맞게 적용해 주세요.
+.listWrap {
+    @include mobile {
+        .page-header {display: none;}
+        .contents {padding-top: 0;}
+    }
+
+    .header-sub--transparent {background-color: transparent; filter: brightness(0) invert(1);
+        &.sa-attached {background-color:#fff; filter:none;}
+    }
+}
+ 
+.list-wrapper {
+    // 상품리스트 기획전 상단
+    .exhibition {
+        &-head {position:relative; padding:12px 0;
+            .tx-tit {width:calc(100% - 84px); margin-bottom:0; font-weight:600; font-size:14px; line-height:18px; letter-spacing:-0.4px; color:$co-bk; @include txt-hd2}
+            .d-day {width:calc(100% - 84px); display:flex; flex-wrap:wrap; gap:0 16px; margin-top:4px;
+                > p {font-weight:400px; font-size:12px; line-height:16px; color:#b5b4b9; letter-spacing:0.3px;
+                    &.tx-end {font-weight:600; color:#0000f0; letter-spacing:-0.3px;}
+                    &.tx-date {position:relative;
+                        &::before {content:""; position:absolute; top:50%; left:-8px; width:1px; height:8px; margin-top:-4px; background-color:#d9d8dd;}
+                        > span {}
+                    }
+                }
+            }
+
+            // 기획전 공유 레이어
+            .ex-share {position:absolute; top:2px; right:-10px; width:40px; height:40px;
+                .btn-share {width:100%; height:100%; font-size:0; background:url($--image-url + "/common/ico-share@20x20.svg") center no-repeat;}
+
+                .share-layer {display:none; position:absolute; top:calc(100% - 6px); right:0; z-index:10; width:110px; background-color:#fff; border-radius: 2px 2px 0px 0px; background: var(--flowkit-white, #FFF); box-shadow: 0px 25px 35px 0px rgba(0, 0, 0, 0.03), 0px 0px 5px 0px rgba(0, 0, 0, 0.05);
+                    > ul {padding:16px;
+                        li {
+                            [class*="btn-"] {position:relative; width:100%; padding:12px 0 12px 24px; font-size:14px; line-height:18px; letter-spacing:-0.3px; color:#1b1b1f; text-align:left; transition:all 0.15s ease-in-out;
+                                &::before {content:""; position:absolute; top:50%; left:0; transform:translateY(-50%); width:16px; height:16px;}
+                                &.btn-kakao::before {background:url($--image-url + "/common/ico-kakao@16x16.svg") center no-repeat;}
+                                &.btn-facebook::before {background:url($--image-url + "/common/ico-facebook@16x16.svg") center no-repeat;}
+                                &.btn-clipboard::before {background:url($--image-url + "/common/ico-clipboard@16x16.svg") center no-repeat;}
+
+                                &:hover {opacity:0.6; padding-left:25px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-cont {width:100%;
+
+            @media screen and (min-width: ($desktop + 20px)) {
+                & {width:1280px; margin:0 -40px;}
+            }
+        }
+    }
+
+    .corner-sticky {position:sticky; top:0; left:0; right:0; z-index:100; padding:8px 40px; background-color:#1b1b1f;
+        .corner-list {display:flex; flex-wrap:wrap;
+            li {
+                .corner-item {display:block; padding:12px 16px; font-weight:400; font-size:14px; color:#b5b4b9; line-height:16px; letter-spacing:0.3px; transition:all 0.15s ease-in-out;
+                    &:hover {color:#fff;}
+                }
+
+                &.active {
+                    .corner-item {font-weight:600; color:#fff;}
+                }
+            }
+        }
+        @media screen and (min-width: ($desktop + 20px)) {
+            & {width:1280px; margin:0 -40px;}
+        }
+    }
+
+    // URL 복사 토스트
+    .toast-alarm {opacity:0; position:absolute; top:40px; right:0; z-index:10; visibility:hidden; pointer-events:none; transition:all 0.3s ease-in-out;
+        .tx_msg {display:block; width:320px; padding:12px 16px; border-radius:2px; font-size:14px; line-height:18px; letter-spacing:-0.4px; color:#E9E8EE; background-color:#1B1B1F;}
+        &.active {opacity:1; visibility:visible; pointer-events:auto;}
+    }
+
+    // 상품리스트 디자이너 상단
+    .brand-visual {position:relative;
+        .brand-img {overflow:hidden; position:relative; width:100%; padding-bottom:328px; 
+            > img {position:absolute; top:50%; left:50%; z-index:0; transform:translate(-50%, -50%); width:1200px; max-width:none; height:328px;}
+            &::after {content:""; display:block; position:absolute; top:0; bottom:0; left:0; right:0; z-index:1; background-color:rgba(0,0,0,50%);}
+
+            @include mobile {
+                & {padding-bottom:248px;
+                    > img {width:auto; height:248px;}
+                }
+            }
+        }
+
+        .brand-name {position:absolute; bottom:20px; left:20px; right:52px; z-index:2;
+            .tx_kor {display:block; font-size:14px; line-height:18px; letter-spacing:-0.4px; color:#F2F1F7; @include txt-hd; max-height:36px;}
+            .tx_eng {display:block; margin-top:4px; font-weight:600; font-size:20px; line-height:26px; color:#fff; @include txt-hd3; max-height:78px;}
+
+            .btn-more {display:inline-block; position:relative; margin-top:12px; padding:4px 24px 4px 0; font-weight:600; font-size:12px; line-height:16px; letter-spacing:0.3px; color:#D9D8DD; transition:all .15s ease-in-out;
+                &::after {content:""; position:absolute; top:6px; right:8px; width:12px; height:12px; background:url($--image-url + "/common/icon-plus@12x12.svg") center no-repeat;}
+                &:hover {color:#fff;}
+            }
+
+            @media (max-width: ($desktop - 1)){
+                .tx_eng {
+                    br {display:none;}
+                }
+            }
+            @include desktop {
+                & {bottom:40px; left:40px; right:120px;
+                    .tx_eng {font-size:28px; line-height:36px; max-height:108px;}
+                }
+            }
+        }
+
+        .brand-like {position:absolute; bottom:14px; right:14px; z-index:2; width:36px; height:36px;
+            .toggle-like {top:50%; left:50%; width:24px; height:24px; transform:translate(-50%, -50%); background-image: url($--image-url + "/common/ico-like@24x24.svg"); background-size:100%;
+                &:hover {filter:none;}
+                &.on {background-image:url($--image-url + "/common/ico-like@24x24-active.svg"); background-size:100%;}
+            }
+
+            @include desktop {
+                & {bottom:40px; right:40px; width:32px; height:32px;
+                    .toggle-like {width:32px; height:32px; background-size:32px;}
+                }
+            }
+        }
+    }
+
+    .list-contents {
+
+        // @/css/scss/page/_search.scss
+        .filter-box {margin-top:24px;
+            @media (max-width: ($desktop - 1)) {
+                & {margin-top:0;}
+            }
+        }
+    }
+}
+
+
+.designer-modal-layer {
+    .modal-content {
+        .modal-body {
+            // 디자이너 소개
+            .designer-intro {margin-top:16px;
+                p {font-size:12px; font-weight:400; line-height:20px; letter-spacing:-.3px; color:$co-bk; word-break:keep-all;}
+            }
+
+            @media screen and (min-width: $tablet) {
+                & {overflow:hidden; overflow-y:auto; height:100%; max-height:472px;
+                    .designer-intro {margin-top:0;
+                        p {font-size:16px; line-height:26px; letter-spacing:-.4px;}
+                    }
+                } 
+            }
+        }
+    }
+}

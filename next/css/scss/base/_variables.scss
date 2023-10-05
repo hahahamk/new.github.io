@@ -1,0 +1,73 @@
+//variables
+//color
+$co-bk:#3A3A3E;
+$co-blue:#0000F0;
+$co-gr:#ACAAAE;
+$co-disable:#E9E8EE;
+$co-red:#DD3730;
+$co-w:#ffffff;
+$co-lgr:#b5b4b9;
+
+//weight
+$fs_w:300;
+$fs_n:400;
+$fs_b:600;
+$fs_bb:900;
+$ls-1:-1px;
+$ls-2:-2px;
+
+//images
+$--image-url: "https://d2zjlxn1rmjreq.cloudfront.net/assets/images"; // AWS S3 (s3://leenhan-frontend)
+$--default-font-family: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue",
+  "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+  "Segoe UI Symbol", sans-serif;
+$--font-messapia: "Messapia", $--default-font-family;
+$--font-monospace: monospace, "Courier New", sans-serif;
+
+//align
+$tlx: translateX(-50%);
+$tly: translateY(-50%);
+$tla: translate(-50%, -50%);
+
+// vh 높이 버그 계산
+$vh100: calc(100vh - 56px); // DOCUMENT - HEADER
+
+//미디어쿼리
+$tablet: 767px;
+$desktop: 1280px;
+
+@media screen and (max-width: 340px) { html { font-size:14px; } }
+@mixin mobile{
+    @media (max-width: $tablet){
+        @content;
+    }
+}
+// 크기가 tablet+1 이상, desktop 이하
+@mixin tablet{
+    @media (min-width: ($tablet + 1)) and (max-width: $desktop){
+        @content;
+    }
+}
+// 크기가 desktop 이상
+@mixin desktop{
+    @media (min-width: $desktop){
+        @content;
+    }
+}
+
+//mixin
+@mixin txt-blind{text-indent:-9999em; font-size:0; line-height:0;}
+@mixin clear{content:""; display:block; clear:both;}
+@mixin border{border:1px solid #dddddd; border-radius:10px;}
+@mixin txt-hd{overflow:hidden; white-space: nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; -ms-text-overflow:ellipsis; -moz-text-overflow:ellipsis;}
+@mixin txt-hd2{overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; word-wrap:break-word;}
+@mixin txt-hd3{@include txt-hd2; -webkit-line-clamp: 3;}
+
+//rem계산
+$html-font-size: 16px;
+@function stripUnit($value) {
+    @return calc($value / ($value * 0 + 1px));
+}
+@function rem($pxValue) {
+    @return #{calc(stripUnit($pxValue) / stripUnit($html-font-size))}rem;
+}

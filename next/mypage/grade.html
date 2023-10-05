@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<div class="wrap">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+	<!--모바일용 헤더 Q&A
+	<header class="header-sub">
+		<h2 class="sub"><button type="button" class="btn-back">이전</button>회원별 등급혜택</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="home">홈</a></li>
+		</ul>
+	</header>
+	-->
+
+	<section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+		<section class="content-area member-grade">
+			<h3>회원별 등급혜택</h3>
+			
+			<!-- 내 정보 영역 -->
+			<div class="my-grade">
+				<span class="lv">이윤선님의 회원등급<a href="#layer-benefit" class="open-modal">?</a></span>
+				<strong>SILVER</strong>
+				<p class="benefit">장바구니 7% 쿠폰 , 장바구니 2만원 쿠폰<br />[생일쿠폰]장바구니 1만원 쿠폰혜택</p>
+				<button type="button" class="btn btn-white" onclick="goToScroll('m-silver')">혜택 자세히보기</button>
+				<dl class="lv-history">
+					<dt>다음 달 예정 등급</dt>
+					<dd>PLATINUM</dd>
+					<dt>누적 구매 금액</dt>
+					<dd>2,268,820원</dd>
+					<dt>주문 산정 기간</dt>
+					<dd>2022.03.01 -2023.02.28</dd>
+				</dl>
+			</div>
+			<!-- 회원등급 레이어 -->
+			<div id="layer-benefit" class="modal-layer">
+				<div class="modal-content">
+					<h2>회원등급 기준안내</h2>
+					<button class="btn-close close-modal">닫기</button>
+					<div class="modal-body">
+						<ul class="lv-info">
+							<li>최근 12개월간의 배송 완료된 주문내역을 반영하여<br />매월 1일 새로운 회원등급이 부여됩니다.</li>
+							<li>향후 멤버십 등급별 혜택 및 선정 기준은 사전 통지 후 
+								변경될 수 있습니다.</li>
+							<li>등급 변경 주기 : 매월 1일 오전 9시</li>
+							<li>등급 산정기준 : 등급 변경 시점으로부터 직전 12개월간의배송 완료 상태 주문금액 합계<br />(온/오프라인 합산 결제금액 기준이며, 취소/반품 완료 상태의 주문금액은 제외됩니다.)<br /> 예시) 2022.07.01 등급 산정 매출 기준 - 2021.07.01 00시~2022.06.30 24시</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--// 회원등급 레이어 -->
+			<!--// 내 정보 영역 -->
+
+			<!-- 회원등급 혜택안내 -->
+			<div class="member-benefit">
+				<h5>회원등급 혜택안내</h5>
+				<ul class="accordion">
+					<li class="accordion-items m-platinum">
+						<div class="summary">
+							PLATINUM
+							<span class="expandIcon"></span>
+						</div>
+						<div class="details">
+							<dl class="benefit-info">
+								<dt>구매 금액</dt>
+								<dd>연간 구매 금액 1,000만 원 이상</dd>
+								<dt>등급 할인 혜택</dt>
+								<dd>장바구니 쿠폰 15% (최대 할인 금액 : 5만 원)</dd>
+								<dd>장바구니 쿠폰 5만 원 (최소 구매 금액 : 30만 원)</dd>
+								<dd>[생일 쿠폰] 장바구니 쿠폰 1만 원<br />(최소 구매 금액 : 1천 원)</dd>
+							</dl>
+						</div>
+					</li>
+					<li class="accordion-items m-gold">
+						<div class="summary">
+							GOLD
+							<span class="expandIcon"></span>
+						</div>
+						<div class="details">
+							<dl class="benefit-info">
+								<dt>구매 금액</dt>
+								<dd>연간 구매 금액 500만 원 이상</dd>
+								<dt>등급 할인 혜택</dt>
+								<dd>장바구니 쿠폰 10% (최대 할인 금액 : 3만 원)</dd>
+								<dd>장바구니 쿠폰 3만 원 (최소 구매 금액 : 30만 원)</dd>
+								<dd>[생일 쿠폰] 장바구니 쿠폰 1만 원<br />(최소 구매 금액 : 1천 원)</dd>
+							</dl>
+						</div>
+					</li>
+					<li class="accordion-items m-silver">
+						<div class="summary active">
+							SILVER
+							<span class="expandIcon"></span>
+						</div>
+						<div class="details show">
+							<dl class="benefit-info">
+								<dt>구매 금액</dt>
+								<dd>연간 구매 금액 150만 원 이상</dd>
+								<dt>등급 할인 혜택</dt>
+								<dd>장바구니 쿠폰 7% (최대 할인 금액 : 2만 원)</dd>
+								<dd>장바구니 쿠폰 2만 원 (최소 구매 금액 : 20만 원)</dd>
+								<dd>[생일 쿠폰] 장바구니 쿠폰 1만 원<br />(최소 구매 금액 : 1천 원)</dd>
+							</dl>
+						</div>
+					</li>
+					<li class="accordion-items m-bronze">
+						<div class="summary">
+							BRONZE
+							<span class="expandIcon"></span>
+						</div>
+						<div class="details">
+							<dl class="benefit-info">
+								<dt>구매 금액</dt>
+								<dd>연간 구매 금액 50만 원 이상 / 연간 구매 금액 20만 원 이상</dd>
+								<dt>등급 할인 혜택</dt>
+								<dd>장바구니 쿠폰 5% (최대 할인 금액 : 1만 원)</dd>
+								<dd>[생일 쿠폰] 장바구니 쿠폰 1만 원<br />(최소 구매 금액 : 1천 원)</dd>
+							</dl>
+						</div>
+					</li>
+					<li class="accordion-items m-family">
+						<div class="summary">
+							FAMILY
+							<span class="expandIcon"></span>
+						</div>
+						<div class="details">
+							<dl class="benefit-info">
+								<dt>구매 금액</dt>
+								<dd>연간 구매 금액 50만 원 이상 / 연간 구매 금액 20만 원 이상</dd>
+								<dt>등급 할인 혜택</dt>
+								<dd>장바구니 쿠폰 5% (최대 할인 금액 : 1만 원)</dd>
+								<dd>[생일 쿠폰] 장바구니 쿠폰 1만 원<br />(최소 구매 금액 : 1천 원)</dd>
+							</dl>
+						</div>
+					</li>
+					<li class="accordion-items m-welcome">
+						<div class="summary">
+							WELCOME
+							<span class="expandIcon"></span>
+						</div>
+						<div class="details">
+							<dl class="benefit-info">
+								<dt>구매 금액</dt>
+								<dd>연간 구매 금액 20만 원 미만</dd>
+								<dt>등급 할인 혜택</dt>
+								<dd>[신규 가입] 장바구니 쿠폰 20% (최대 할인 금액 : 3만 원 / 가입 즉시 자동 발급)</dd>
+								<dd>첫 구매 시, 장바구니 5천 원 쿠폰 증정 (배송 완료로부터 7일 후 자동 발급 / 7일 이내 반품 시 미발급)</dd>
+								<dd>신규 가입 / 첫 구매 쿠폰 유효 기간 : 발급일로부터 14일까지</dd>
+								<dd>등급 할인 혜택은 가입 후 최초 1회 한정</dd>
+							</dl>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<dl class="caution-txt">
+				<dt>생일 쿠폰 유의 사항</dt>
+				<dd>생일 입력 고객에 한하여 생일 7일 전 자동 발급됩니다. (생일 등록 방법 : 마이 페이지 > 회원 정보 수정)</dd>
+				<dd>쿠폰 유효 기간은 발급일로부터 14일까지입니다.</dd>
+				<dd>일부 상품 쿠폰 적용 제외될 수 있습니다.</dd>
+				<dd>주문 취소 및 환불 시 쿠폰 재발급 불가합니다.</dd>
+				<dd>쿠폰 적용 방법 : 주문하기 > 쿠폰 사용 > 적용 가능 쿠폰 > 쿠폰 적용하기</dd>
+				<dd>생일은 처음 등록 이후 수정 불가합니다.</dd>
+			</dl>
+			<!--// 회원등급 혜택안내 -->
+		</section>
+	</section>
+
+	<!-- 모바일용 하단 -->
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+	includeHTML();
+
+	//스크롤이동
+	function goToScroll(name) {
+    var location = document.querySelector("." + name).offsetTop;
+    window.scrollTo({top: location - 60, behavior: 'smooth'});
+	}
+</script>
+</body>
+</html>

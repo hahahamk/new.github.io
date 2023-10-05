@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type ="text/css" href="../css/scss/main.css">
+	
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<div class="wrap">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+
+	<section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+		<section class="content-area">
+			<h3>매장안내</h3>
+
+			<section class="map-area">
+				<div class="mapbox">map 438*540</div>
+
+				<div class="shopbox">
+					<div class="shop-choice">
+						<!-- selectbox-->
+						<div class="custom-select">
+							<div class="selected">
+								<div class="selected-value">지역 전체</div>
+								<div class="arrow"></div>
+							</div>
+							<div class="sheet">
+								<div class="lycontents">
+									<div class="dim"></div>
+									<div class="controls">
+										<div class="draggable-area" style="">
+										<div class="draggable-thumb"></div>
+										</div>
+									</div>
+									<h4 class="btm-tit">정렬 선택</h4>
+									<ul>
+										<li class="option active">지역전체</li>
+										<li class="option">부산광역시</li>
+										<li class="option">서울특별시</li>
+										<li class="option">대구광역시</li>
+										<li class="option">충청남도 천안시</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="custom-select">
+							<div class="selected">
+								<div class="selected-value">매장 전체</div>
+								<div class="arrow"></div>
+							</div>
+							<div class="sheet">
+								<div class="lycontents">
+									<div class="dim"></div>
+									<div class="controls">
+										<div class="draggable-area" style="">
+										<div class="draggable-thumb"></div>
+										</div>
+									</div>
+									<h4 class="btm-tit">정렬 선택</h4>
+									<ul>
+										<li class="option active">매장 전체</li>
+										<li class="option">MSGM 매장</li>
+										<li class="option">필림모델 매장</li>
+										<li class="option">프리미아타 매장</li>
+										<li class="option">N21 매장</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!--// selectbox-->
+					</div>
+
+					<ul class="shop-list">
+						<li>
+							<strong>N21 매장-롯데백화점 잠실 에비뉴얼</strong>
+							<p>서울특별시 송파구 올림픽로 300 롯데백화점 에비뉴엘 월드타워점 3F<a href="javascript:;" class="btn-copy">복사</a></p>
+							<a href='tel:02-323-2345'>02-323-2345</a>
+						</li>
+					</ul>
+					
+				</div>
+			</section>
+			
+		</section>
+	</section>
+
+	<!-- 모바일용 하단 -->
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+
+	<!-- 하단 공통 영역 -->
+	<section include-html="../layout/footer.html"></section>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+<script>
+	includeHTML();
+</script>
+<script>
+	const ulEl = document.querySelector('.shop-list')
+	for (let i = 0; i <6; i += 1) {
+	const li = document.createElement('li')
+	li.innerHTML = `<strong>한스타일 매장 - 더현대 서울</strong>
+	<p>서울특별시 송파구 올림픽로 300 롯데백화점에비뉴엘 월드타워점 3F<a href="javascript:;" class="btn-copy">복사</a></p>
+					<a href='tel:02-323-2345'>02-323-2345</a>`
+	ulEl.appendChild(li)
+	}
+</script>
+
+</body>
+</html>

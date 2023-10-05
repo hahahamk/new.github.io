@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./css/scss/main.css?cVer=20221209">
+	<style>
+		h2.sample{padding:50px 0 20px; font-weight:600; font-size:16px; border-top:1px solid #000; margin-top:50px;}
+		h2.sample02{padding:20px; font-weight:600; font-size:16px; border-bottom:1px solid #ddd}
+	</style>
+</head>
+
+<div class="app-wrapper">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+
+	<section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+		
+		<section class="content-area">
+			<!-- 공통요소 모음 -->
+			<h2 class="sample">select</h2>
+			<div class="custom-select">
+				<div class="selected">
+					<div class="selected-value">지역 전체</div>
+					<div class="arrow"></div>
+				</div>
+				
+				<div class="sheet">
+					<div class="lycontents">
+						<div class="dim"></div>
+						<div class="controls">
+							<div class="draggable-area" style="">
+							<div class="draggable-thumb"></div>
+							</div>
+						</div>
+						<h4 class="btm-tit">정렬 선택</h4>
+						<ul>
+							<li class="option active">지역전체</li>
+							<li class="option">부산광역시</li>
+							<li class="option">서울특별시</li>
+							<li class="option">대구광역시</li>
+							<li class="option">충청남도 천안시</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="sample">inputbox</h2>
+			<input type="text" class="txt" placeholder="Place holder" />
+			<input type="text" class="txt wrong" placeholder="Place holder" />
+			<p class="error-msg">Error</p>
+			<input type="text" class="txt" placeholder="Place holder" disabled/>
+			<label class="btn-type"><input type="text" class="txt" placeholder="사용가능한 쿠폰이 있으니 적용해주세요." /><button class="btn">LABEL</button></label>
+			<label class="btn-type"><input type="text" class="txt" placeholder="사용가능한 쿠폰이 있으니 적용해주세요." disabled/><button class="btn" disabled>LABEL</button></label>
+
+			<h2 class="sample">textarea</h2>
+			<textarea class="txt scroll-bk" placeholder="내용을 입력하세요(100자이내)"></textarea>
+
+			<h2 class="sample">checkbox, radio</h2>
+			<label class="inp">checkbox 01
+				<input type="checkbox" checked="checked">
+				<span class="checkmark"></span>
+			</label>
+			<label class="inp">checkbox 02
+				<input type="checkbox" />
+				<span class="checkmark"></span>
+			</label>
+			<label class="inp">checkbox 03
+				<input type="checkbox" disabled />
+				<span class="checkmark"></span>
+			</label>
+			<br /><br />
+			<label class="inp">radio 01
+				<input type="radio" checked="checked" name="radio">
+				<span class="checkmark radio"></span>
+			</label>
+			<label class="inp">radio 02
+				<input type="radio" name="radio">
+				<span class="checkmark radio"></span>
+			</label>
+			<label class="inp">radio 03
+				<input type="radio" name="radio" disabled>
+				<span class="checkmark radio"></span>
+			</label>
+
+			<h2 class="sample">button 기본형</h2>
+			<button type="button" class="btn">LABEL</button>
+			<button type="button" class="btn btn-white">LABEL</button>
+			<button type="button" class="btn" disabled>LABEL</button>
+			<button type="button" class="btn btn-white" disabled>LABEL</button>
+
+			<h2 class="sample">modal layer</h2>
+			<button class="open-modal" href="#myModal1">버튼1개 modal</button>
+			<div id="myModal1" class="modal-layer">
+				<div class="modal-content">
+					<h2>타이틀</h2>
+					<button class="btn-close close-modal">닫기</button>
+					<div class="modal-body">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident est qui hic non quas eos et praesentium fuga recusandae doloremque adipisci perferendis temporibus totam reiciendis maiores aspernatur nulla, suscipit veritatis!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn close-modal">LABEL</button>
+					</div>
+				</div>
+			</div>
+
+			<button class="open-modal" href="#myModal2">버튼2개 modal</button>
+			<div id="myModal2" class="modal-layer">
+				<div class="modal-content">
+					<h2>타이틀</h2>
+					<button class="btn-close close-modal">닫기</button>
+					<div class="modal-body">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident est qui hic non quas eos et praesentium fuga recusandae doloremque adipisci perferendis temporibus totam reiciendis maiores aspernatur nulla, suscipit veritatis!</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-white">LABEL</button>
+						<button type="button" class="btn close-modal">LABEL</button>
+					</div>
+				</div>
+			</div>
+
+			<h2 class="sample">상품 뱃지</h2>
+			<span class="badge bk">새벽도착</span><span class="badge">해외배송</span><span class="badge blue">취소상품</span><span class="badge blue">반품상품</span><span class="badge blue">교환상품</span><span class="badge">리미티드</span><span class="badge">뉴시즌</span>
+
+			<h2 class="sample">filter chip</h2>
+			<ul class="filter-chip">
+				<li class="active"><a href="javascript:;">전체</a></li>
+				<li><a href="javascript:;">주문/결제</a></li>
+				<li><a href="javascript:;">교환/반품/취소/AS</a></li>
+				<li><a href="javascript:;">배송</a></li>
+				<li><a href="javascript:;">마일리지/쿠폰</a></li>
+				<li><a href="javascript:;">기타</a></li>
+			</ul>
+
+			<h2 class="sample">pagination</h2>
+			<ul class="pagination">
+				<li class="first"><a href="javascript:;">처음으로</a></li>
+				<li class="prev"><a href="javascript:;">이전</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li class="active"><a href="javascript:;">2</a></li>
+				<li><a href="javascript:;">3</a></li>
+				<li><a href="javascript:;">4</a></li>
+				<li><a href="javascript:;">5</a></li>
+				<li><a href="javascript:;">6</a></li>
+				<li><a href="javascript:;">7</a></li>
+				<li class="next"><a href="javascript:;">다음</a></li>
+				<li class="last"><a href="javascript:;">마지막</a></li>
+			</ul>
+			<ul class="pagination">
+				<li class="first disable"><a href="javascript:;">처음으로</a></li>
+				<li class="prev disable"><a href="javascript:;">이전</a></li>
+				<li><a href="javascript:;">9991</a></li>
+				<li class="active"><a href="javascript:;">9992</a></li>
+				<li><a href="javascript:;">9993</a></li>
+				<li class="next disable"><a href="javascript:;">다음</a></li>
+				<li class="last disable"><a href="javascript:;">마지막</a></li>
+			</ul>
+
+			<h2 class="sample">검색 영역</h2>
+			<!-- 검색 영역 -->
+			<div class="search-input">
+				<label for="SEARCHID">돋보기 아이콘</label>
+				<input type="text" id="SEARCHID" class="ipt-srch" placeholder="검색어를 입력해주세요.">
+				<button type="button" class="btn-del" onclick="">X</button>
+			</div>
+
+			<h2 class="sample">검색결과 없을 때 텍스트</h2>
+			<!-- 검색결과 없을 때 노출 -->
+			<div class="result-none">
+				<p class="tx_msg">검색한 디자이너 브랜드가 없습니다.<br>디자이너명을 변경해보세요.</p>
+			</div>
+			<!-- 관심브랜드 없을 때 노출 -->
+			<div class="result-none brand-none">
+				<p class="tx_msg">관심 브랜드를 추가해주세요.</p>
+			</div>
+		</section>
+	</section>
+
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+
+	<!-- 하단 공통 영역 -->
+	<section include-html="../layout/footer.html"></section>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script>
+	includeHTML();
+</script>
+</body>
+</html>

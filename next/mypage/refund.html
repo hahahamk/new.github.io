@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body class="">
+
+<div class="wrap designerWrap">
+
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+
+    <!--모바일용 헤더 Q&A -->
+	<header class="header-sub">
+		<h2 class="sub"><button type="button" class="btn-back">이전</button>환불계좌관리</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="home">홈</a></li>
+		</ul>
+	</header>
+
+    <!-- 컨텐츠 영역 -->
+    <section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+        <div class="content-area">
+			<h3>환불계좌관리</h3>
+
+            <div class="delivery-wrap">
+				
+				<!-- 검색결과 없을 때 -->
+				<div class="result-none delivery-none">
+					<p class="tx_msg">등록하신 계좌정보가 없습니다.<br>계좌를 추가해주세요</p> 
+				</div>
+
+				<!-- 환불계좌 목록 -->
+				<div class="delivery-list">
+					<div class="new-delivery" style="z-index:10;">
+						<a href="./refund_regist.html" class="btn btn-full btn-add"><i class="i-plus"></i>환불계좌 추가</a>
+					</div>
+
+					<ul>
+						<li>
+							<p class="tx_name">우리은행 (예금주 : 이*선) <span class="badge">기본계좌</span></p>
+							<p class="tx_addr">10024****7929</p>
+							<div class="btn-group">
+								<a href="javascript:;" class="btn">삭제</a>
+							</div>
+						</li>
+						<li>
+							<p class="tx_name">카카오뱅크 (예금주 : 이*선)</p>
+							<p class="tx_addr">33330****8937</p>
+							<div class="btn-group">
+								<a href="javascript:;" class="btn">삭제</a>
+								<button type="button" class="btn">기본계좌 선택</button>
+							</div>
+						</li>
+						<li>
+							<p class="tx_name">카카오뱅크 (예금주 : 이*규)</p>
+							<p class="tx_addr">33330****5830</p>
+							<div class="btn-group">
+								<a href="javascript:;" class="btn">삭제</a>
+								<button type="button" class="btn">기본계좌 선택</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 알람 팝업 -->
+				<!-- keyframes 2s : active 클래스 호출 후 2.5s 뒤 removeClass 해주세요 -->
+				<div class="toast-alarm" style="z-index:20;">
+					<p class="tx_msg">기본배송지로 설정되었습니다.</p>
+					<!-- <p class="tx_msg">배송지 정보가 등록되었습니다.</p>
+					<p class="tx_msg">배송지 정보가 삭제되었습니다.</p> -->
+				</div>
+
+				<script>
+					// 퍼블 참고
+					$(function(){
+						$("button.btn").on("click", function(){
+							let defaultDeli = confirm('기본 계좌로 설정하시겠습니까?')
+
+							if(defaultDeli){
+								if(!$(".toast-alarm").hasClass("active")){
+									$(".toast-alarm").addClass("active");
+
+									setTimeout(function(){
+										$(".toast-alarm").removeClass("active");
+									}, 2500)
+								}
+							}
+						})
+					})
+				</script>
+            </div>
+		</div>
+    </section>
+
+	<!-- MY>배송지관리 앱바 없음. -->
+	<!-- <nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!- - 페이지 활성화 시 active - ->
+			<li><a href="javascript:;" class="btm-designer">designer</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav> -->
+
+	<!-- 하단 공통 영역 -->
+	<!-- [MO] MY>배송지관리 풋터 없음. -->
+	<!-- <section include-html="../layout/footer.html"></section> -->
+</div>
+
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+
+<script>
+	includeHTML();
+</script>
+
+</body>
+</html>

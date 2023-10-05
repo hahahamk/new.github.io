@@ -1,0 +1,221 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="author" content="한스타일, 리앤한, HANSTYLE">
+	<meta name="Title" content=" HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta name="description" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="HANSTYLE.com, 한스타일 해외 브랜드 온라인 편집몰">
+	<meta property="og:image" content="https://img.ihanstyle.com/images/hsweb/common/kakaotalk_thum2.png">
+	<meta property="og:url" content=" https://shop.ihanstyle.com">
+	<meta property="og:description" content="럭셔리 해외 브랜드 온라인 편집몰">
+	<meta property="og:locale" content="ko_KR">
+	<meta property="og:site_name" content="한스타일 | HANSTYLE.com">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="shortcut icon" href="//img.ihanstyle.com/images/hsmob/hsmob_favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/scss/main.css">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<div class="wrap">
+	<!-- 상단 공통 영역 -->
+	<section include-html="../layout/header.html"></section>
+	<header class="header-sub" id="mypage-scroll">
+		<h2>MY</h2>
+		<ul class="side-menu">
+			<li><a href="javascript:;" class="search">검색</a></li>
+			<li><a href="javascript:;" class="cart">장바구니</a></li>
+		</ul>
+	</header>
+
+	<section class="contents">
+		<!-- 사이드바 -->
+		<section include-html="../layout/snb.html"></section>
+
+		<section class="content-area">
+
+            <h3>회원등급</h3>
+			<!-- 마일리지 마크업 -->
+			<div class="mileage-wrap">
+
+                <!-- 내 마일리지 내역 -->
+                <div class="my-mileage">
+                    <div class="my_use">
+                        <div class="my_use_tit">
+                            <p class="tx_tit">사용가능 마일리지</p>
+                            <a href="#layer-mileage" class="open-modal">?</a>
+                        </div>
+                        <div class="my_use_m">12,800</div>
+                    </div>
+
+                    <dl class="my_history">
+                        <dt>적립예정 마일리지</dt>
+                        <dd>540</dd>
+                        <dt>적립누적 마일리지</dt>
+                        <dd>42,670</dd>
+                        <dt>사용누적 마일리지</dt>
+                        <dd>1,442,220</dd>
+                    </dl>
+                </div>
+
+                <!-- 회원등급 레이어 -->
+                <!-- MUI 모달 넣어주세요 -->
+                <div id="layer-mileage" class="modal-layer">
+                    <div class="modal-content">
+                        <h2>마일리지 이용안내</h2>
+                        <button class="btn-close close-modal">닫기</button>
+
+                        <div class="tab">
+                            <div class="tab-row">
+                                <button type="button" class="tab-item on" onclick="tabOnoff(0)">주의사항</button>
+                                <button type="button" class="tab-item" onclick="tabOnoff(1)">사용안내</button>
+                                <button type="button" class="tab-item" onclick="tabOnoff(2)">소멸안내</button>
+                            </div>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="tab-container">
+                                <div id="1" class="tab-content shown">
+                                    <div class="info-group">
+                                        <p class="tx_tit">온라인</p>
+                                        <ul class="info">
+                                            <li>마일리지는 구매금액의 0.5% 가 적립되며, 리뷰 작성 시 1,000  마일리지가 적립됩니다. <br>
+                                                (쿠폰, 마일리지 사용 후 실 결제금액 기준)</li>
+                                            <li>상품당 실 결제금액이 1,000원 미만일 경우 마일리지가 적립되지 않습니다. <br>
+                                                (구매 후 적립 / 리뷰 마일리지에 해당되며, 실 결제 금액에는 배송비가 포함되지 않습니다.)</li>
+                                            <li>취소/반품 시 적립 예정이거나 적립된 마일리지는 모두 회수됩니다.</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="info-group">
+                                        <p class="tx_tit">오프라인</p>
+                                        <ul class="info">
+                                            <li>매장별, 브랜드별 마일리지 적립률은 상이 합니다.</li>
+                                            <li>적립된 마일리지는 구매 후 익일부터 사용 가능합니다.</li>
+                                            <li>결제 취소/반품 시 적립된 마일리지는 회수됩니다</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="2" class="tab-content">
+                                    <div class="info-group">
+                                        <p class="tx_tit">마일리지 사용</p>
+                                        <ul class="info">
+                                            <li>마일리지는 제품 구매 시에 보조 결제수단으로 활용 가능합니다.</li>
+                                            <li>마일리지 구매 시 최소 결제금액은 1,000원 이상 결제 가능하며, 최소 사용금액은 100원 이상입니다.</li>
+                                            <li>해외배송 상품의 경우 마일리지 사용 불가합니다</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div id="3" class="tab-content">
+                                    <div class="info-group">
+                                        <p class="tx_tit">마일리지 소멸</p>
+                                        <ul class="info">
+                                            <li>마일리지는 미 사용시 적립일 기준 차차년도 1월 1일에 일괄 소멸합니다.<br>
+                                                (해당 시점에 적립 예정인 마일리지 또는 해당 시점 이후 발생하는 반품으로 인한 마일리지는 재발생 예외)</li>
+                                            <li>단, 기존 회원이 한스타일 멤버십 회원으로 전환하는 경우, 기존 마일리지 유효 기간은 전환 시점 기준 차년도 12월 31일로 연장됩니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--// 회원등급 레이어 -->
+
+                <!-- 구분선 -->
+                <hr class="div_line" />
+
+                <!-- 마일리지 히스토리 내역 -->
+                <div class="my-history">
+                    <p class="tx_tit">마일리지 히스토리</p>
+
+                    <div class="calendar">
+                        <div class="calendar_inner">
+                            <!-- MUI 컴퍼넌트 넣어주세용 -->
+                            <label><input type="text" value="2023.03.03" placeholder="시작일" readonly /></label>
+                            <label><input type="text" value="2023.06.03" placeholder="종료일" readonly /></label>
+                            <button type="button" class="btn">검색</button>
+                        </div>
+
+                        <!-- <p class="tx_info">※ 최근 3개월 내에 주문건만 조회 가능합니다.</p> -->
+                    </div>
+
+                    <!-- 적립/사용 내역 -->
+                    <div class="history">
+                        <ul class="filter-chip">
+                            <li class="active"><a href="javascript:;">전체</a></li>
+                            <li><a href="javascript:;">포인트 적립</a></li>
+                            <li><a href="javascript:;">포인트 차감</a></li>
+                        </ul>
+
+                        <div class="historylist">
+                            <li>
+                                <div>
+                                    <p class="tx_nm">[포인트사용] 포인트사용</p>
+                                    <p class="tx_domain">HANSTYLE.com</p>
+                                    <p class="tx_date">2022.11.07</p>
+                                </div>
+                                <div>
+                                    <!-- -,+ : minus, plus 클래스 (단위는 ::before, ::after 에 넣어두었어요) -->
+                                    <p class="tx_mile minus">1,313,200</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <p class="tx_nm">[예정발생] 가용포인트 예정발생</p>
+                                    <p class="tx_domain">한스타일 슈매장 - 신세계 백화점 강남점</p>
+                                    <p class="tx_date">2022.11.07</p>
+                                </div>
+                                <div>
+                                    <p class="tx_mile plus">200</p>
+                                </div>
+                            </li>
+                            <li><div><p class="tx_nm">[상품평 등록] 상품평 등록</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile plus">1,313,200</p></div></li>
+                            <li><div><p class="tx_nm">[예정발생] 가용포인트 예정발생</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile minus">1,313,200</p></div></li>
+                            <li><div><p class="tx_nm">[포인트사용] 포인트사용</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile plus">1,313,200</p></div></li>
+                            <li><div><p class="tx_nm">[포인트사용] 포인트사용</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile minus">60</p></div></li>
+                            <li><div><p class="tx_nm">[포인트사용] 포인트사용</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile plus">200</p></div></li>
+                            <li><div><p class="tx_nm">[포인트사용] 포인트사용</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile minus">11,200</p></div></li>
+                            <li><div><p class="tx_nm">[포인트사용] 포인트사용</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile plus">1,200</p></div></li>
+                            <li><div><p class="tx_nm">[포인트사용] 포인트사용</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile minus">650</p></div></li>
+                            <li><div><p class="tx_nm">[포인트사용] 포인트사용</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile plus">200</p></div></li>
+                            <li><div><p class="tx_nm">[포인트사용] 포인트사용</p><p class="tx_domain">HANSTYLE.com</p><p class="tx_date">2022.11.07</p></div><div><p class="tx_mile minus">1,313,200</p></div></li>
+                        </ol>
+                    </div>
+                </div>
+
+                
+			</div>
+
+
+		</section>
+	</section>
+
+	<!-- 모바일용 하단 -->
+	<nav class="service-gnb-btm show">
+		<ul>
+			<li class="active"><a href="javascript:;" onclick="catego()" class="btm-cate">CATEGORY</a></li><!-- 페이지 활성화 시 active -->
+			<li><a href="javascript:;" class="btm-designer">DESIGNER</a></li>
+			<li><a href="javascript:;" class="btm-home">HOME</a></li>
+			<li><a href="javascript:;" class="btm-like">LIKE</a></li>
+			<li><a href="javascript:;" class="btm-my">MY</a></li>
+		</ul>
+	</nav>
+
+	<!-- 하단 공통 영역 -->
+	<section include-html="../layout/footer.html"></section>
+</div>
+
+<!-- 마크업 확인용 -->
+<script type="text/javascript" src="../js/includeHTML.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+
+</body>
+</html>
