@@ -1,0 +1,8 @@
+/* Messapia */
+@font-face {
+  font-family: "messapia";
+  font-display: swap;
+  src: local("Messapia Bold"),
+  url("https://d2zjlxn1rmjreq.cloudfront.net/assets/fonts/Messapia-Bold.woff2") format("woff2"),
+  url("https://d2zjlxn1rmjreq.cloudfront.net/assets/fonts/Messapia-Bold.woff") format("woff");
+}

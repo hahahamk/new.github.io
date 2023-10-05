@@ -1,0 +1,207 @@
+//전체 layout
+.app-wrapper{min-width: 280px;
+    @include tablet{
+        min-width:100%;
+    }
+
+    @include desktop{
+        min-width:1280px;
+    }
+}
+.contents{width:100%; padding:64px 0 0 220px;
+    @include tablet{
+        padding: 55px 0 0; 
+    }
+    @include mobile{
+        padding: 55px 0 0; 
+    }
+}
+
+//상단공통영역
+.page-header{
+    position:fixed; padding:0 40px; height:64px;font-size:20px; width:100%;border-bottom:1px solid #F2F1F7;display:flex; justify-content: space-between; align-items: center; background:#fff; z-index:100;
+    h1{
+        a{display:flex; font-size:14px; font-weight:600;}
+        img{width:200px;padding-right:16px;}
+    }
+    .util{display:flex; 
+        li{font-size:12px; line-height:26px;
+            span{color:$co-blue;display:block; padding:0 10px; font-weight:600 }
+            a{padding:0 12px; color:#B5B4B9; position:relative;
+                &::after{content:""; position:absolute; left:0; top:2px; width:1px; height:10px; background: #F2F1F7;}
+            }
+            &:last-child a{padding-right:0;} 
+        }
+    }
+    
+    @include tablet{
+        height:55px; justify-content: right;
+        h1{display:none}
+        li{font-size:10px;
+            a{padding:5px;}
+        }
+    }
+
+    @include mobile{
+        height:55px; justify-content: right;
+        h1{display:none}
+        li{font-size:10px;
+            a{padding:5px;}
+        }
+    }
+}
+
+.nav-icon {
+    display:none; cursor: pointer; position:fixed; padding: 8px 0; top: 15px; left: 25px; user-select: none; width: auto; margin: 0; z-index:100;
+    .nav-sticks{background: #333; display: block; height: 2px; position: relative; transition: background .2s ease-out; width: 18px;
+        &::before, &::after{background: #333; content: ''; display: block; height: 100%; position: absolute; transition: all .2s ease-out; width: 100%;}
+        &::before{top: 5px;}
+        &::after{top: -5px;}
+    }
+    @include tablet{
+        display:block;
+    }
+    @include mobile{
+        display:block;
+    }
+}
+.nav-check {display: none;
+    &:checked~.side-navigation {left:0;}
+}
+.nav-check:checked~.nav-icon .nav-sticks { background: transparent;}
+.nav-check:checked~.nav-icon .nav-sticks:before {transform: rotate(-45deg);}
+.nav-check:checked~.nav-icon .nav-sticks:after {transform: rotate(45deg);}
+.nav-check:checked~.nav-icon:not(.steps) .nav-sticks:before,
+.nav-check:checked~.nav-icon:not(.steps) .nav-sticks:after {top: 0;}
+
+
+//사이드메뉴
+.side-navigation{
+    transition: all .2s ease-out; position:fixed; left:0px; top:0; width:220px; height:100%; overflow:auto; padding-top:65px; border-right:1px solid #F2F1F7; background:#fff; z-index:10; @include scroll;
+    h4{font-size:14px; color:$co-bk; line-height:48px; font-weight:600}
+    .nav-setting{opacity:.7; background:url(https://cdn-icons-png.flaticon.com/128/2099/2099058.png) no-repeat right 5px top 11px; font-size:11px; background-size:12px; text-align:right; display:block; padding:10px 20px 0;}
+    .lnb{margin-bottom:48px; padding:0 20px;
+        li{border-bottom:1px solid #F2F1F7; background: url($--image-url + '/common/admin-arrow-gray.svg') no-repeat left top 12px; background-size:16px;
+            &:hover{background-color:#F8F7FB}
+            &.on{background: url($--image-url + '/common/admin-arrow-bk.svg') no-repeat left -3px top 12px;}
+            &:last-child{border-bottom:none;}
+            a{font-weight:400; font-size:14px; padding:12px 0 11px 17px; line-height:16px; color:#6C6C71; display: block;  background: url($--image-url + '/common/icon-plus@12x12.svg') no-repeat right 12px; background-size:16px;
+                &:hover, &.on{color:$co-bk; font-weight:600;}
+            }
+            &.on > ul{display:block;}
+            &.on > a{font-weight:600; color: $co-bk; background: url($--image-url + '/common/icon-minus@16x16.svg') no-repeat center right 0/10px auto; background-size:16px;}
+            ul{display: none;
+                li{border-bottom:none; background: none;
+                    a{font-size:12px; color:#959499; padding: 10px 15px 10px 20px; display: block;position:relative; background-position: right top 7px}
+                    &.on{background:none;}
+                    ul{display:none;
+                        li{background: none; position:relative; padding-left: 10px;
+                            &::after{content:""; position:absolute; left:10px; top:11px; width:3px; height:3px; background:#959499; border-radius:50%;}
+                        }
+                        li > a{padding-right:0;
+                                &::after{display:none;}
+                        }
+                    }
+                }
+            }
+            &.noDepth a{ background-image: none; }
+        }
+    }
+
+    @include tablet{
+        left:-40%; width:40%;
+    }
+
+    @include mobile{
+        left:-70%; width:70%;
+    }
+}
+
+//본문 서브 메뉴
+.sub-aside {position:sticky; top:68px; padding:20px;
+	li{
+        a{font-weight:400; font-size:14px; padding:10px 0 10px 15px; line-height:16px; color:#6C6C71; display: block;  background: url($--image-url + '/common/admin-arrow-gray.svg') no-repeat 0px 12px; background-size:13px;
+            &:hover, &.on{color:$co-bk; font-weight:600;}
+        }
+        &.on > ul{display:block;}
+        &.on > a{font-weight:600; color: $co-blue; background:url($--image-url + '/common/admin-arrow-bk.svg') no-repeat 0 12px; background-size:13px;}
+        ul{display: none;  padding-left:5px;
+            li{
+                a{font-size:12px; color:#000; padding:7px 15px; display: block;background: url('https://cdn-icons-png.flaticon.com/512/1828/1828925.png') no-repeat center right 0/10px auto; position:relative;
+                    &::after{content:""; width:3px; height:3px; border-radius:50%; background:$co-bk; position:absolute; left:5px; top:12px;}
+                }
+                &.on > a{color:#000; font-weight:600; background: url('https://cdn-icons-png.flaticon.com/512/860/860821.png') no-repeat center right 0/10px auto; }
+                ul{display:none;
+                   li > a{padding-right:0;
+                        &::after{display:none;}
+                    }
+                }
+            }
+        }
+        &.noDepth a{ background-image: none; }
+    }
+}
+
+//본문영역
+.nav-category{display:flex; line-height:40px; padding:0 20px; background:$co-w;font-size:12px; display:flex; border-bottom:1px solid #F2F1F7;
+    strong{font-weight:600; padding-left:5px; color:$co-blue;}
+}
+.content-area{position:relative; z-index:1; width:100%; min-height:600px;
+    h3{font-weight:600; font-size:20px; padding:20px; letter-spacing:-0.5px;}   
+}
+
+//푸터
+.page-footer{font-size:12px; color:#B5B4B9; text-align:center; letter-spacing: 0.24px; line-height:20px; padding:20px 0 50px;
+    span{padding:0 10px; color:#D9D8DD;}
+    a{display:inline-block; color:#B5B4B9;
+        img{width:113px; opacity:.3}
+    }
+}
+
+//main
+.main-info-txt{text-align: right; width:100%; font-size:12px; color:#959499; padding:40px 40px 0; margin-bottom:-20px;}
+.main-area{padding:40px; display:flex; gap:20px; flex-wrap: wrap;
+    .notice-list{background:$co-w; padding:24px 24px 36px; flex: 1 1 30%; 
+        .title{display:flex; justify-content: space-between; align-items: center; border-bottom:1px solid #F2F1F7; position:relative; padding-bottom:20px;
+            &::after{content:""; position:absolute; left:-24px; top:0; width:4px; height:32px; background:$co-blue}
+            strong{font-size:24px; font-weight:600; 
+                span{font-weight:400; font-size:12px; color:#B5B4B9; vertical-align: 4px; padding-left:8px;}
+            }
+            button{background:url($--image-url + '/common/ico-restore.svg'); background-size:20px; width:20px; height:20px; @include txt-blind; position:relative;
+                &.alarm{
+                    &::after{content:""; position:absolute; right:0; top:0; width:4px; height:4px; background:#FF5449; border-radius:50%; }
+                }
+            }
+            a{background:url($--image-url + '/common/ico-arrow-right-gray@20x20.svg') top 0 right 4px no-repeat; font-size:12px; color:#B5B4B9;background-size:14px; padding-right:20px;}
+        }
+        .alarm-msg{color:#FF5449; font-size:12px; text-align: center; line-height:16px; padding:76px 0 35px; background:url($--image-url + '/common/ico-red-error.svg') top 50px center no-repeat; background-size:20px; }
+        .refresh{text-align: center;  height:160px; padding-top:75px;
+            img{margin:0 auto; width:40px;}
+        }
+        .no-data{color:#B5B4B9; font-size:12px; text-align: center; padding:97px 0 85px;}
+        &:last-of-type{
+            .title::after{display:none;}
+        }
+
+        @include tablet{
+            flex:1 1 40%;
+        }
+
+        @include mobile{
+            flex:1 1 90%;
+        }
+    }
+
+    .detail-list{
+        li{padding-top:22px;display:flex; align-items: center; color:#6C6C71; justify-content: space-between;
+            span{width:65%; 
+                a{color:#6C6C71; max-width:90%; display:inline-block;height:19px; @include txt-hd; cursor: pointer;
+                    &:hover{text-decoration: underline;}
+                }
+                img{display:inline-block; vertical-align:3px; margin-left:8px;}
+                strong{font-weight:600; padding-right:4px; color:#3A3A3E}
+                &:last-of-type{text-align: right; width:30%}
+            }
+        }
+    }
+}
